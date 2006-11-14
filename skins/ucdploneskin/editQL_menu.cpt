@@ -1,0 +1,108 @@
+<metal:page define-macro="master">
+<metal:master use-macro="here/main_template/macros/master">
+
+<metal:block metal:fill-slot="top_slot" define-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border',1)" />
+
+<metal:fillbase fill-slot="base">
+  <metal:baseslot define-slot="base">
+    <base href="" tal:attributes="href template/absolute_url" />
+  </metal:baseslot>
+</metal:fillbase>
+
+    <metal:cssslot fill-slot="css_slot">
+      <!-- A slot where you can insert CSS in the header from a template -->
+      <metal:cssslot define-slot="css_slot" />
+    </metal:cssslot>
+
+    <metal:override fill-slot="portlets_one_slot">
+      <metal:prefs use-macro="here/portlet_prefs/macros/portlet" />
+    </metal:override>
+
+    <metal:override fill-slot="column_two_slot" />
+
+<body>
+
+<div metal:fill-slot="main" metal:define-slot="prefs_configlet_main"
+    tal:define="errors python:request.get('errors', {});">
+
+<div class="configlet">
+
+<div class="documentEditable">
+
+
+<h2>Edit or Remove Quick Links</h2>
+
+<form tal:define="errors options/state/getErrors"
+      tal:attributes="action string:${here/absolute_url}/${template/id};"
+    method="post">
+
+    <input type="hidden" name="form.submitted" value="1" />
+
+    <tal:qlRepeat tal:repeat="quicklink  python:here.getQuickLinks()">
+
+      <table border="0" cellpadding="5"
+       tal:condition="python:quicklink.qlID == context.REQUEST.get('qlID', None)">
+
+      <tr>
+        <td>
+          Text:
+        </td>
+        <td>
+
+          <input type="hidden" name="qlID"
+            tal:attributes="value quicklink/qlID" />
+
+          <input type="text"
+                 name="qlText"
+                 size="40"
+                 tal:define="val request/qlText|nothing"
+                 tal:attributes="value quicklink/text" />
+          <tal class="fieldRequired" tal:define="err errors/qlText|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          URL:
+        </td>
+        <td>
+          <input type="text"
+                 name="qlURL"
+                 size="40"
+                 tal:define="val request/qlURL|nothing"
+                 tal:attributes="value quicklink/url" />
+          <tal class="fieldRequired" tal:define="err errors/qlURL|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Delete?
+        </td>
+
+        <td>
+          <input type="checkbox" name="delete" value="1">
+        </td>
+      </tr>
+
+    </table>
+
+  </tal:qlRepeat>
+
+  <input type="submit" name="form.button.editQL" value="Submit" />
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+  </metal:master>
+</metal:page>
+
+

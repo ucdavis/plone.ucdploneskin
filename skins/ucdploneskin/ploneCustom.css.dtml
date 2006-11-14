@@ -1,0 +1,603 @@
+/*
+ *  This is the file where you put your CSS changes. 
+ *  You should preferrably use this and override the 
+ *  relevant properties you want to change here instead 
+ *  of customizing plone.css to survive upgrades. Writing
+ *  your own plone.css only makes sense for very heavy 
+ *  customizations. Useful variables from Plone are 
+ *  documented at the bottom of this file.
+ *
+ 
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+a {
+  text-decoration: none;
+  border-bottom: 1px #2F4D6A solid;
+}
+
+a:hover {
+  color: #77160B;
+  border-bottom: 0;
+}
+
+a.link-parent {
+  border: 0;
+}
+
+.documentContent {
+  color: #4C4C4C;
+}
+
+.documentContent p a {
+  text-decoration: none;
+  border-bottom: 1px #2F4D6A solid;
+}
+
+.documentContent p a:hover {
+  color: #77160B;
+  border-bottom: 0;
+}
+
+.documentContent ul {
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.documentContent li a {
+  border-bottom: 1px #2F4D6A solid;
+}
+
+.documentContent li a:hover {
+  border-bottom: 0;
+}
+
+
+.link-external {
+  background: 0; 
+  padding: 0;
+}
+
+#portal-top {
+  margin: 0;
+  padding: 0;
+  background-color: #002666;  
+  margin: 0.0em 0.0em 0.0em 0.0em;
+}
+ 
+#portal-logo {
+  background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat;
+  border: 0;
+  padding: 0;
+  margin: 0.3em 0.0em 0.2em 0.5em;
+}
+
+#portal-logo a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: <dtml-var "_[logoName].height">px;
+  height: 0px !important;
+  width: <dtml-var "_[logoName].width">px;
+  cursor: pointer;
+}
+
+#ucd-search a {
+  float: right;
+  text-align: right;
+  text-decoration: none;  
+  color: #FFFFFF;
+  font-size: 1.1em	;
+  margin: 0 4px 0 5px;
+  padding: 3px 8px 4px 8px;
+  border: 0;
+}	
+
+#ucd-search a:hover {
+  background-color: #335185;
+}
+
+#dept-name {
+  padding: 0.27em 0 0.35em 13px;
+  margin: 0;
+  font-family: georgia, "times new roman", times, serif;
+  font-weight: normal;
+  font-size: 3.3em;
+  color: #002666;
+  background-color: #FFFFFF;
+}
+
+#dept-name a {
+  text-decoration: none;  
+  border: 0;
+}
+
+#dept-name a:hover {
+  text-decoration: none;  
+  color: #77160B;
+  border: 0;
+}
+
+#portal-globalnav {
+  background-color: #D2B84C;
+  padding: 0;
+  border-top: 1px solid #BF9900;
+  border-bottom: 1px solid #002666;
+  height: 2em;
+}
+
+#portal-globalnav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #002666;
+  background-color: transparent;
+  float: left;
+  padding: 0.34em 0.55em 0.34em 0.55em;  
+  margin: 0;
+  border-color: #BF9900;
+  border-style: none &dtml-borderStyle; none none;
+}
+
+#portal-globalnav li a:hover {
+  background-color: #CCAD33;
+  color: #77160B;
+  border-color: #BF9900;
+}
+
+#portal-globalnav li.selected a {
+  background-color: #CCAD33;
+  border-color: #BF9900;
+  border-style: none &dtml-borderStyle; none none;
+  color: #8B6000;
+}
+
+#portal-globalnav li a.first-tab {
+  background-image: url(&dtml-portal_url;/nav_pointer_2.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 13px;
+}
+
+/* use this if you want a blue nav bar
+
+#portal-globalnav {
+  background-color: #ACB8C3;
+  padding: 0;
+  border-top: 1px solid #6D8297;
+  border-bottom: 1px solid #002666;
+  height: 2em;
+}
+
+#portal-globalnav ul {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#portal-globalnav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #002666;
+  background-color: #ACB8C3;
+  float: left;
+  padding: 0.35em 0.55em 0.35em 0.55em;
+  margin: 0;
+  border-color: #8294A6;
+  border-style: none &dtml-borderStyle; none none;
+}
+
+#portal-globalnav li a:hover {
+  background-color: #97A6B4;
+  color: #77160B;
+  border-color: #8294A6;
+}
+
+#portal-globalnav li.selected a {
+  background-color: #97A6B4;
+  border-color: #8294A6;
+  border-style: none &dtml-borderStyle; none none;
+  color: #2F4D6A;
+}
+
+#portal-globalnav li a.first-tab {
+  background-image: url(&dtml-portal_url;/nav_pointer_1.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 13px;
+}
+
+*/
+
+#portal-breadcrumbs {
+  background-color: #EAEDF0;
+  line-height: 2.1em;
+  color: #002666;
+  padding: 0em 1em 0em 3em;
+  margin: 0;
+  text-align: right;
+  list-style: none;
+  border-bottom-color: #FFFFFF;
+  text-transform: none;
+  font-size: 95%;
+}
+
+#portal-breadcrumbs a {
+  border: 0;
+}
+
+#portal-breadcrumbs a:hover {
+  color: #77160B;
+}
+
+.breadcrumbSeparator {
+  font-size: 100%;
+  color: #000000;
+}
+
+#portal-column-one {
+  background-color: #E5D699;
+  width:  14.4em;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-footer {
+  background-color: #FFFFFF;
+  border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  border-bottom: #FFFFFF;
+  float: none;
+  margin: 0em 0em 1em 0em;
+  padding: 0.5em 0em 0em 0em;
+  text-align: center;
+  color: #4C4C4C;
+}
+
+#portal-footer p {
+  line-height: 1.9em;
+}
+
+#portal-footer a {
+  text-decoration: none;
+  border-bottom: 1px #2F4D6A solid;
+}
+
+#portal-footer a:hover {
+  color: #77160B;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+#portal-column-one  {
+  padding: 0em;
+}
+
+#portal-column-one .visualPadding {
+  padding: 2.9em 0em 1em 0em; 
+}
+
+#quick-links h2 {
+  position: relative;
+  margin: 0;
+  padding: 0.4em 0em 0px 14px;
+  background-color: #F2EBCC;
+  background-image: url(&dtml-portal_url;/quicklinks_corner.gif);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  border-bottom: 1px solid #E5D699;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2F4D6A;
+}
+
+#quick-links ul {
+  list-style: none;
+  margin: 0;
+  background-color: #ECE0B2;  
+}
+
+#quick-links ul li {
+  margin: 0; 
+  /* This is a hack to correct line spacing problem in Windows Internet Explorer */
+  padding-top: 1px;
+  padding-bottom: 1px;
+}	
+
+#quick-links li a {
+  display: block;
+  padding: 0.15em 0.4em 0.15em 14px; 
+  text-decoration: none;
+  color: #002666;
+  margin: 0px;
+  border: 0;  
+}
+
+#quick-links li a:hover {
+  background-color: #D9C266;
+  color: #77160B;
+}
+
+#ownership {
+  margin: 0em 14px 20px 14px;
+  padding: 1.2em 0 0.5em 0;
+  border-top: 1px solid #C4A440;
+  border-bottom: 1px solid #C4A440;
+  color: #2F4D6A;
+}
+
+#ownership a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 110%;
+  border-bottom: 0;
+}
+
+#ownership a:hover {
+  color: #77160B;  
+}
+
+#ownership p.address {
+  padding: 5px 0 0 0;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+#in-this-section {
+  font-weight: bold;
+  color: #2F4D6A;
+}
+
+#in-this-section h2 {
+  position: relative;
+  margin: 0;
+  padding: 1.1em 0.4em 1px 14px;
+  border-bottom: 1px solid #D2B84C;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2F4D6A;
+}
+
+#in-this-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 14px 0;
+}
+
+#in-this-section ul li {
+  margin: 0;
+  /* This is a hack to correct line spacing problem in Windows Internet Explorer */
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+	
+#in-this-section li a {
+  display: block;
+  padding: 0.15em 0.4em 0.15em 14px;
+  text-decoration: none;
+  color: #002666;
+  font-weight: normal;
+  border: 0;
+}
+
+#in-this-section li a:hover {
+  background-color: #D9C266;
+  color: #77160B;
+}
+
+#in-this-section li a.selected {
+  color: #000000; 
+  background-color: #DFCC80;
+}
+
+#in-this-section li a.selected:hover {
+  color: #000000;
+  background-color: #DFCC80;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: 0; 
+  color: #2F4D6A;
+  font-weight: bold;
+}
+
+.documentDescription {
+  color: #666;
+   font-weight: normal;
+}
+
+#portal-personaltools {
+  background-color: #FFFFFF;
+  padding: 0.4em 1em 0 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#portal-personaltools ul {
+  background-color: #FFFFFF;
+  padding: 0.4em 1em 0 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#portal-personaltools-wrapper ul {
+  background-color: #FFFFFF;
+  padding: 0.4em 0em 0 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#portal-personaltools-wrapper li {
+  text-transform: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+}
+
+#portal-personaltools li a {
+  color: #002666; 
+  border: 0;
+}
+
+#portal-personaltools li a:hover {
+  color: #77160B; 
+}	
+
+.state-private {  
+  color: Red !important;
+}
+
+.state-visible {
+  color: Red !important;
+}
+
+.state-published {
+  color: &dtml-linkColor; !important;
+}
+
+.state-pending {
+  color: Red !important;
+}
+
+.state-expired {
+  color: &dtml-discreetColor; !important;
+}
+
+.syndicated {
+  color: #008000 !important;
+}
+
+/* this isn't visable in the default skin, but might be 
+   useful if you find a spot for the recent changes portlet
+
+#portlet-recent a {
+  color: #002666;
+  border: 0;
+}
+
+#portlet-recent a:hover {
+  color: #77160B;
+}
+
+*/
+
+.actionMenuHeader a {
+  border: 0;
+}
+
+.actionMenuContent a {
+  border: 0;
+}
+
+.contentActions a {
+  border: 0;
+}
+
+.fieldRequired {
+  color: red;
+}
+
+#relatedItems ul {
+  padding: 0 0 0 0.5em;
+}
+
+.tileItem {
+  border-top: 0;
+  margin-top: 2.5em;
+}
+
+.tile {
+  border: 0;
+}
+
+.card {
+  margin: 2em;
+}
+
+.card a {
+  border: 0;
+}
+
+#portlet-prefs {
+  background-color: transparent;
+}
+
+
+/* </dtml-with> */
+
+/* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */
+
+ /* You can insert colors and other variables from Plone's 
+    base_properties by doing:
+    
+    & dtml-variableName ; (without the spaces, excluded here to not make it render)
+    
+    Example:
+    
+    myLink {
+        color: & dtml-fontColor ;   (again, without the spaces)
+    }
+ 
+   This means you can generate your own elements that use Plone's defaults,
+   and respect any customizations people have done. See base_properties for
+   the default values.
+ 
+   These are the available properties:
+   
+   logoName - the file name of the portal logo
+   
+   fontFamily - the font family used for all text that is not headers
+   
+   fontBaseSize - the base font size that everything is calculated from
+   
+   fontColor - the main font color
+   
+   fontSmallSize - used for various elements like buttons and discreet text
+   
+   discreetColor - the font color of discreet text
+
+   backgroundColor - the background color 
+   
+   linkColor - the color used on normal links
+
+   linkActiveColor - color used on active links
+
+   linkVisitedColor - color used on visited links
+   
+   borderWidth - the width of most borders in Plone
+   
+   borderStyle - the style of the border lines, normally solid
+   
+   borderStyleAnnotations - style of border lines on comments etc
+   
+   globalBorderColor - the border color used on the main tabs, the portlets etc
+   
+   globalBackgroundColor - background color for the selected tabs, portlet headings etc
+   
+   globalFontColor - the color of the font in the tabs and in portlet headings
+   
+   headingFontFamily - font family for h1/h2/h3/h4/h5/h6 headlines
+   
+   contentViewBorderColor - the content view tabs border color
+   
+   contentViewBackgroundColor - the content view tabs background color
+   
+   contentViewFontColor - the font color used in the content view tabs
+   
+   inputFontColor - the font color used for input elements
+   
+   textTransform - whether to lowercase text in portlets, tabs etc.
+   
+   evenRowBackgroundColor - the background color of even rows in listings
+   
+   oddRowBackgroundColor - the background color of even rows in listings
+   
+   notifyBorderColor - border color of notification elements like the status message, the calendar focus
+   
+   notifyBackgroundColor - background color of notification elements like the status message, the calendar focus
+   
+   helpBackgroundColor - background color of information pop-ups (currently not used)
+          
+ */
+
+

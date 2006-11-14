@@ -1,0 +1,6 @@
+[security]
+View = 0:Manager
+
+[actions]
+action.failure = traverse_to:string:join_form
+action.sucess = string:register

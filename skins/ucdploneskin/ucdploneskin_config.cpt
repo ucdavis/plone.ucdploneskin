@@ -1,0 +1,322 @@
+<metal:page define-macro="master">
+<metal:master use-macro="here/main_template/macros/master">
+
+<metal:block metal:fill-slot="top_slot" define-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border',1)" />
+
+<metal:fillbase fill-slot="base">
+  <metal:baseslot define-slot="base">
+    <base href="" tal:attributes="href template/absolute_url" />
+  </metal:baseslot>
+</metal:fillbase>
+
+    <metal:cssslot fill-slot="css_slot">
+      <!-- A slot where you can insert CSS in the header from a template -->
+      <metal:cssslot define-slot="css_slot" />
+    </metal:cssslot>
+
+    <metal:override fill-slot="portlets_one_slot">
+      <metal:prefs use-macro="here/portlet_prefs/macros/portlet" />
+    </metal:override>
+
+    <metal:override fill-slot="column_two_slot" />
+
+<body>
+
+<div metal:fill-slot="main" metal:define-slot="prefs_configlet_main"
+    tal:define="errors python:request.get('errors', {});">
+
+<div class="configlet">
+
+<div class="documentEditable">
+
+
+<h2>UCDPloneSkin Product Configuration</h2>
+This form allows you to change the portal title, department contact information and add/edit/remove quick links.
+
+<br>
+<br>
+
+<form tal:define="errors options/state/getErrors"
+      tal:attributes="action string:${here/absolute_url}/${template/id};"
+    method="post">
+
+    <input type="hidden" name="form.submitted" value="1" />
+
+    <table border="0" cellpadding="5">
+
+      <tr>
+        <td colspan="2">
+          <h2>Contact Info</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Department Name:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="deptName"
+                 size="40"
+                 tal:define="val request/deptName|nothing"
+                 tal:attributes="value here/title" />
+          <tal class="fieldRequired" tal:define="err errors/deptName|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>       
+
+      <tr>
+        <td>   
+          Address Line 1:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="address1"
+                 size="40"
+                 tal:define="val request/address1|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/address1" />
+          <tal class="fieldRequired" tal:define="err errors/address1|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Address Line 2:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="address2"
+                 size="40"
+                 tal:define="val request/address2|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/address2" />
+          <tal class="fieldRequired" tal:define="err errors/address2|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Address Line 3:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="address3"
+                 size="40"
+                 tal:define="val request/address3|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/address3" />
+          <tal class="fieldRequired" tal:define="err errors/address3|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Address Line 4:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="address4"
+                 size="40"
+                 tal:define="val request/address4|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/address4" />
+          <tal class="fieldRequired" tal:define="err errors/address4|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          Phone Number 1:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="phone1"
+                 size="40"
+                 tal:define="val request/phone1|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/phone1" />
+          <tal class="fieldRequired" tal:define="err errors/phone1|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Phone Number 2:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="phone2"
+                 size="40"
+                 tal:define="val request/phone2|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/phone2" />
+          <tal class="fieldRequired" tal:define="err errors/phone2|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          Fax Number 1:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="fax1"
+                 size="40"
+                 tal:define="val request/fax1|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/fax1" />
+          <tal class="fieldRequired" tal:define="err errors/fax1|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Fax Number 2:
+        </td>
+
+        <td>
+          <input type="text"
+                 name="fax2"
+                 size="40"
+                 tal:define="val request/fax2|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/fax2" />
+          <tal class="error" tal:define="err errors/fax2|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+
+      <tr>    
+        <td colspan="2">
+          <input type="submit" name="form.button.contactInfo" value="Submit" />
+        </td>
+      </tr>
+
+    </table>
+
+</form>
+
+
+<tal:comment replace="nothing">
+  only show edit/delete form if quick links exist
+</tal:comment>
+
+<span tal:define="quickLinkList python:here.getQuickLinks()">
+  <tal:qlCheck tal:condition="quickLinkList">
+
+    <br>
+
+    <form tal:define="errors options/state/getErrors"
+          tal:attributes="action string:${here/absolute_url}/${template/id};"
+          method="post">
+
+        <input type="hidden" name="form.submitted" value="1" />
+
+        <table border="0" cellpadding="5">
+
+          <tr>
+            <td>    
+              <h2>Edit or Remove Quick Links</h2>
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              Select: &nbsp;
+
+              <select name="qlID">
+
+                <tal:qlRepeat repeat="quicklink  python:here.getQuickLinks()">
+  
+                  <option tal:attributes="value quicklink/qlID">
+                    <tal tal:content="quicklink/text" />
+                  </option>
+
+                </tal:qlRepeat>
+
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="submit" name="form.button.editQL" value="Submit" />
+            </td>
+          </tr>
+
+        </table>
+
+    </form>
+
+  </tal:qlCheck>
+</span>    
+    
+
+
+<br>
+
+<form tal:define="errors options/state/getErrors"
+      tal:attributes="action string:${here/absolute_url}/${template/id};"
+    method="post">
+
+    <input type="hidden" name="form.submitted" value="1" />
+
+    <table border="0" cellpadding="5">
+
+      <tr>
+        <td colspan="2">
+          <h2>Add a Quick Link</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Text:
+        </td>
+        <td>
+          <input type="text"
+                 size="40"
+                 name="qlText"
+                 tal:define="val request/qlText|nothing" />
+          <tal class="fieldRequired" tal:define="err errors/qlText|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          URL
+        </td> 
+        <td>
+          <input type="text"
+                 name="qlURL"
+                 size="40"
+                 tal:define="val request/qlURL|nothing" />
+          <tal class="fieldRequired" tal:define="err errors/qlURL|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <input type="submit" name="form.button.addQL" value="Submit" />
+        </td>
+      </tr>
+
+    </table>
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+  </metal:master>
+</metal:page>
+
+

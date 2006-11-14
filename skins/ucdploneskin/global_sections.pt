@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<!-- THE SECTION TABS DEFINITION -->
+<div metal:define-macro="portal_tabs"
+     tal:omit-tag=""
+     tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
+                 selected_portal_tab selected_tabs/portal;"
+     tal:condition="portal_tabs">
+    <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+
+    <ul id="portal-globalnav">
+        <tal:tabs tal:repeat="tab portal_tabs">
+
+
+            <tal:comment replace="nothing">
+              hack for comparing tab['id'] and selected_portal_tabs, which evaluate to
+              index_html and front-page respectively when viewing the home page
+            </tal:comment>
+
+            <tal:checkTabID tal:condition="python: tab['id'] == 'index_html'">
+
+                <tal:setTabID tal:define="global tabID string:front-page">
+                </tal:setTabID>
+ 
+            </tal:checkTabID> 
+
+            <tal:checkTabID tal:condition="python: tab['id'] != 'index_html'">
+
+                <tal:setTabID tal:define="global tabID tab/id">
+                </tal:setTabID>
+
+            </tal:checkTabID>
+
+
+            <li tal:attributes="id string:portaltab-${tab/id};
+                                class python:test(selected_portal_tab==tabID, 'selected', 'plain');">
+
+
+               <tal:comment replace="nothing">
+                 not selected, not first tab
+               </tal:comment>
+
+               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
+                                 cond2 repeat/tab/index;"
+                     tal:condition="python: cond1 and cond2">
+
+                   <a tal:content="tab/name"
+                      tal:attributes="href tab/url;
+                                      title tab/description|nothing">
+                      Tab Name
+                   </a>
+
+               </span>
+
+               <tal:comment replace="nothing">
+                 selected, not first tab
+               </tal:comment>
+
+               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
+                                 cond2 repeat/tab/index;"
+                     tal:condition="python: cond1 and cond2">
+
+                   <a tal:content="tab/name"
+                      tal:attributes="title tab/description|nothing">
+                      Tab Name
+                   </a>
+
+               </span>
+
+               <tal:comment replace="nothing">
+                 not selected, first tab
+               </tal:comment>
+
+               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
+                                 cond2 repeat/tab/index;"
+                     tal:condition="python: cond1 and not cond2">
+
+                   <a tal:content="tab/name"
+                      tal:define="tabclass string: first-tab"
+                      tal:attributes="href tab/url;
+                                      title tab/description|nothing;
+                                      class tabclass">
+
+                      Tab Name
+                   </a>
+
+               </span>
+
+
+               <tal:comment replace="nothing">
+                 selected, first tab
+               </tal:comment>
+
+               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
+                                 cond2 repeat/tab/index;"
+                     tal:condition="python: cond1 and not cond2">
+
+                   <a tal:content="tab/name"
+                      tal:define="tabclass string: first-tab"
+                      tal:attributes="title tab/description|nothing;
+                                      class tabclass">
+                      Tab Name
+                   </a>
+
+               </span>
+
+
+            </li>
+
+        </tal:tabs>
+    </ul>
+</div>
+
+</body>
+</html>

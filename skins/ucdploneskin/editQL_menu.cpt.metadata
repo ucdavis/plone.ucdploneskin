@@ -1,0 +1,8 @@
+[validators]
+validators..editQL = editQL_validate
+
+[actions]
+action.success..editQL = traverse_to:string:editQL_action
+
+[security]
+View = 0:Manager

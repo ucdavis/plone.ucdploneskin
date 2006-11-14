@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<!-- THE PORTAL LOGO DEFINITION -->
+<h1 id="portal-logo" metal:define-macro="portal_logo">
+    <a href="http://www.ucdavis.edu/"
+       alt="University of California, Davis"
+       accesskey="1">
+    </a>
+</h1>
+
+
+</body>
+</html>

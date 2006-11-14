@@ -1,0 +1,165 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+        xmlns:metal="http://xml.zope.org/namespaces/metal"
+        i18n:domain="plone">
+
+<body>
+
+<div metal:define-macro="portlet">
+
+  <tal:comment replace="nothing">
+    In this section
+    don't print when in the portal root, etc
+  </tal:comment>
+  
+  <span tal:condition="python:here.checkSectionPath()">
+
+    <div id="in-this-section">
+
+      <tal:comment replace="nothing">
+        don't print when in the portal root, etc
+      </tal:comment>
+
+      <span tal:define="sectionCount python:here.getSections('.', levels=1, types=['Folder', 'Document'], getLen=1)">
+
+        <tal:comment replace="nothing">
+          Only print if there are items in this section
+        </tal:comment>
+
+        <span tal:condition="sectionCount">
+          <h2>
+            In this section
+          </h2>
+
+          <span tal:define="sections python:here.getSections('.', levels=1, types=['Folder', 'Document'])">
+
+            <ul>
+              <li tal:repeat="section sections">
+
+                <a tal:condition="python:test(section['active'], 'selected', '') == 'selected'"
+                   tal:attributes="class python:test (section['active'], 'selected', '');"  
+                   tal:content="section/item/Title">
+                  Top level section
+                </a>
+
+                <a tal:condition="python:test(section['active'], 'selected', '') != 'selected'"
+                    tal:attributes="href section/item/getURL;
+                        class python:test (section['active'], 'selected', '');" 
+                   tal:content="section/item/Title">
+                  Top level section
+                </a>
+
+              </li>
+            </ul>
+
+          </span>
+
+        </span>
+
+      </span>
+
+    </div>
+
+  </span>
+
+
+  <tal:comment replace="nothing">
+    Quick Links
+    don't display if there are no quick links
+  </tal:comment>
+
+  <span tal:define="quickLinkList python:here.getQuickLinks()">
+    <tal:qlCheck tal:condition="quickLinkList">
+  
+      <div id="quick-links">
+        <h2>Quick links</h2>
+        <ul>
+
+          <li tal:repeat="quicklink quickLinkList">
+
+            <a tal:attributes="href quicklink/url">
+              <tal tal:content="quicklink/text" />
+            </a>
+
+          </li>
+
+        </ul>
+      </div>
+
+      <br><br>
+
+    </tal:qlCheck>
+
+  </span>
+
+
+  <tal:comment replace="nothing">
+    Dept Info
+  </tal:comment>
+
+  <div id="ownership">
+
+    <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">  
+      <tal tal:content="portal_title" />
+    </a>
+
+    <p class="address">
+
+      <tal tal:content="portal_properties/ucdploneskin_properties/address1" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/address1">
+        <br>
+      </tal:br>
+
+      <tal tal:content="portal_properties/ucdploneskin_properties/address2" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/address2">
+        <br>
+      </tal:br>
+
+      <tal tal:content="portal_properties/ucdploneskin_properties/address3" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/address3">
+        <br>
+      </tal:br>
+
+      <tal tal:content="portal_properties/ucdploneskin_properties/address4" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/address4">
+        <br>
+      </tal:br>
+
+    </p>
+
+    <p>
+      <tal tal:content="portal_properties/ucdploneskin_properties/phone1" />
+      <tal tal:condition="portal_properties/ucdploneskin_properties/phone1" tal:content="string: phone" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/phone1">
+        <br>
+      </tal:br>
+
+      <tal tal:condition="portal_properties/ucdploneskin_properties/phone2"
+           tal:content="portal_properties/ucdploneskin_properties/phone2" />
+      <tal tal:condition="portal_properties/ucdploneskin_properties/phone2" tal:content="string: phone" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/phone2">
+        <br>
+      </tal:br>
+
+      <tal tal:content="portal_properties/ucdploneskin_properties/fax1" />
+      <tal tal:condition="portal_properties/ucdploneskin_properties/fax1" tal:content="string: fax" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/fax1">
+        <br>
+      </tal:br>
+
+      <tal tal:condition="portal_properties/ucdploneskin_properties/fax2"
+           tal:content="portal_properties/ucdploneskin_properties/fax2" />
+      <tal tal:condition="portal_properties/ucdploneskin_properties/fax2" tal:content="string: fax" />
+      <tal:br tal:condition="portal_properties/ucdploneskin_properties/fax2">
+        <br>
+      </tal:br>
+
+    </p>
+  
+  </div>
+
+
+</div>
+
+</body>
+
+</html>

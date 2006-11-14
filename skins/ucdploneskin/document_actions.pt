@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+<div metal:define-macro="document_actions"
+     class="documentActions"
+     tal:define="document_actions actions/document_actions|nothing;
+                 getIconFor nocall:putils/getIconFor">
+
+<tal:comment replace="nothing">
+  It is easier to remove this in one place as opposed to every place it is included
+</tal:comment>
+
+</div>
+</body>
+</html>

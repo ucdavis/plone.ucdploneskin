@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+
+<tal:comment replace="nothing">
+  Don't hyper link to the portal root if we are viewing the front-page
+</tal:comment>
+
+<p id="dept-name" metal:define-macro="dept_name">
+
+  <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'">
+    <tal:portaltitle replace="portal_title">
+      Inserts portal title
+     </tal:portaltitle>
+  </span>
+
+  <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'">
+    <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">  
+      <tal:portaltitle replace="portal_title">
+        Inserts portal title
+       </tal:portaltitle>
+    </a>
+  </span>
+
+</p>
+
+</body>
+</html>

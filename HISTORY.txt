@@ -1,0 +1,107 @@
+Changelog for UCDPloneSkin
+
+    [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+
+UCDPloneSkin 0.4.4 - Released - Nov 14 2006
+    - retain quicklinks on product upgrade - for plone 2.5
+
+UCDPloneSkin 0.4.3 - Released - Nov 7 2006
+    - member search "card" margin
+
+UCDPloneSkin 0.4.2 - Released - Nov 6 2006
+    - portlet bg transparency
+
+UCDPloneSkin 0.4.1 - Released - Nov 1 2006
+    - replaced html comments with tal comments
+
+UCDPloneSkin 0.4 - Released - Oct 27 2006
+    - fixed member card border
+    - added atct_topic_view.pt to remove "Contained Smart Folder" in Events
+
+UCDPloneSkin 0.3.9 - Released - Oct 20 2006
+    - updated documentation
+
+UCDPloneSkin 0.3.8 - Released - Oct 16 2006
+    - fixed join_form security
+
+UCDPloneSkin 0.3.7 - Released - Oct 13 2006
+    - fixed personal tools alignment
+    - set localLongTimeFormat too
+
+UCDPloneSkin 0.3.6 - Released - Oct 9 2006
+    - added address field checks
+    - removed horz lines from summary view
+    - restored the right slot
+
+UCDPloneSkin 0.3.5 - Released - Oct 7 2006
+    - Added quick link example
+    - Removed address requirement
+    - Fixed member tools css for Ubuntu 6
+    - Updated documentation
+    - Hid rss feed on search results
+
+UCDPloneSkin 0.3.4 - Released - Oct 6 2006
+    - Simplified search form
+    - Moved ucd-search into main template
+    - Indented related item <ul>
+    - Fixed browser window title
+
+UCDPloneSkin 0.3.3 - Released - Oct 5 2006
+    - Added confliglet form, validators and actions
+    - Check for previous versions upon installation/upgrade
+    - Remove the configlet upon uninstall
+    - Moved personal-tools into main body area
+    - Don't show quick links header if there are none
+    - Don't show edit/delete quick link form if there are none
+
+UCDPloneSkin 0.3.2 - Released - Sep 28 2006
+    - Added a product configlet with a pretty icon (form isn't functional yet)
+
+UCDPloneSkin 0.3.1 - Released - Sep 27 2006
+    - Moved department info & quicklinks into
+      portal_properties/ucdploneskin_properties
+
+UCDPloneSkin 0.3 - Released - Sep 24 2006
+    - Stylized portal_tabs
+    - Removed border from Add Smart Folder link
+    - Removed Recent Changes portlet (long names made the left nav too wide)
+    - Revised documentation
+
+UCDPloneSkin 0.2.1 - Released - Sep 22 2006
+    - Removed border from "up one level" link
+    - Vertical spacing before entire Quick Link block now displays uniformly
+      on all pages, including home page and pages w/o In This Section
+
+UCDPloneSkin 0.2 - Released - Sep 22 2006
+    - Fixed li vertical spacing problem in Quick Links and In This Section
+
+UCDPloneSkin 0.1.8 - Released - Sep 21 2006
+    - Added css for a:hovers, ordered lists, colors in the body/content area
+    - Fixed underline on links caused by the above additions
+    - Fixed quick links bg color
+
+UCDPloneSkin 0.1.7 - Released - Sep 19 2006
+    - Changed "Recent Changes" portal to "My Recent Changes"
+
+UCDPloneSkin 0.1.6 - Released - Sep 19 2006
+    - Added custom search form and results (removed "advanced" text)
+
+UCDPloneSkin 0.1.5 - Released - Sep 15 2006
+    - Hid "In this section" when in the portal root
+
+UCDPloneSkin 0.1.4 - Released - Sep 13 2006
+    - Set security settings for join_form so that only managers can view it
+    - Hid Join link
+
+UCDPloneSkin 0.1.3 - Released - Sep 13 2006
+    - Updated documentation
+
+UCDPloneSkin 0.1.2 - Released - Sep 12 2006
+    - Added code to Install.py to set localTimeFormat in
+      portal_properties\site_properties
+
+UCDPloneSkin 0.1.1 - Released - Sep 12 2006
+    - Used Plone Skin Dump instead since it can set the portal slots
+
+UCDPloneSkin 0.1 - Released - Sep 12 2006
+    - Initial build using DIYPloneStyle

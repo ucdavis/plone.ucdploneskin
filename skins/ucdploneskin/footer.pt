@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+<body>
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+
+<p>
+<a href="contact-info">Questions or comments?</a> | 
+
+<span i18n:translate="box_last_modified">
+  <b>Last updated:</b>
+</span>
+<span tal:replace="python:here.toLocalizedTime(here.ModificationDate(),long_format=0)">
+  August 16, 2001 at 23:35:59
+</span>
+
+<br>
+Copyright &copy; The Regents of the University of California, Davis campus, 2005-06. All Rights Reserved.
+</p>
+
+</div>
+</body>
+</html>
