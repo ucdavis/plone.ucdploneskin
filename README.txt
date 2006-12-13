@@ -70,12 +70,10 @@ Known Issues
 
   The spacing doesn't exactly match the original template
 
-  The page horizontal scrolls in some browsers
- 
   There is a very small gap in between the portal tabs and the bottom border
 
   There is a 1px gap between Quick Links and In This Section <li> elements
 
   RSS is hiden, but not turned off
 
-  The uninstaller doesn't reset all settings, such as time format
+  The uninstaller doesn't reset all settings, such as time format 

@@ -4,7 +4,8 @@
 <div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
 
 <p>
-<a href="contact-info">Questions or comments?</a> | 
+<a href="accessibility-info">Accessibility</a> | 
+<a href="contact-info">Webmaster</a> | 
 
 <span i18n:translate="box_last_modified">
   <b>Last updated:</b>
@@ -14,7 +15,7 @@
 </span>
 
 <br>
-Copyright &copy; The Regents of the University of California, Davis campus, 2005-06. All Rights Reserved.
+Copyright &copy; Regents of the University of California, Davis 2005-06. All Rights Reserved.
 </p>
 
 </div>

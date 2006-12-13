@@ -10,6 +10,9 @@
  
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+body {
+    margin-right:1px;
+}
 
 a {
   text-decoration: none;
@@ -90,7 +93,7 @@ a.link-parent {
   text-align: right;
   text-decoration: none;  
   color: #FFFFFF;
-  font-size: 1.1em	;
+  font-size: 1.1em;
   margin: 0 4px 0 5px;
   padding: 3px 8px 4px 8px;
   border: 0;
@@ -401,6 +404,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #2F4D6A;
   font-weight: bold;
 }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: underline;
+}
+
 
 .documentDescription {
   color: #666;

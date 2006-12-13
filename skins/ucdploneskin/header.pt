@@ -74,7 +74,7 @@
         </style>
     <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
 
-<!--    <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/favicon.ico" /> -->
+    <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/favicon.ico" /> 
 
     <link rel="home"
           href=""
@@ -86,11 +86,6 @@
           title="Search this site"
           i18n:attributes="title title_search_this_site"
           tal:attributes="href string:$portal_url/search_form" />
-    <link rel="author"
-          href=""
-          title="Author information"
-          i18n:attributes="title title_author_info"
-          tal:attributes="href string:${portal_url}/author/${here/Creator}" />
     <link rel="contents"
           href=""
           title="Site Map"
