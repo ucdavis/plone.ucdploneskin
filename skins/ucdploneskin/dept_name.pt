@@ -16,8 +16,9 @@
   </span>
 
   <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'">
-    <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">  
-      <tal:portaltitle replace="portal_title">
+    <a i18n:translate="tabs_home" tal:attributes="href python:portal_url;
+                                                  title portal_title">  
+      <tal:portaltitle replace="portal_title" tal:omit-tag="">
         Inserts portal title
        </tal:portaltitle>
     </a>

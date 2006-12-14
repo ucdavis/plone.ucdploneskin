@@ -11,7 +11,7 @@
     don't print when in the portal root, etc
   </tal:comment>
   
-  <span tal:condition="python:here.checkSectionPath()">
+  <span tal:condition="python:here.checkSectionPath()" tal:omit-tag="">
 
     <div id="in-this-section">
 

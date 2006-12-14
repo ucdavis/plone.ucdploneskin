@@ -15,7 +15,7 @@
     </tal:comment>
 
     <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'">
-      <a href="http://www.ucdavis.edu">UC Davis home</a>
+      <a href="http://www.ucdavis.edu" title="UC Davis Home Page">UC Davis home</a>
       <span class="breadcrumbSeparator">
           &gt;      
       </span>
@@ -28,12 +28,12 @@
 
     <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'"
 	style="color : #000000; font-weight: bold;">
-      <tal tal:content="portal_title" />
+      <span tal:content="portal_title" tal:omit-tag="" />
     </span>
 
     <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'">
-      <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">  
-        <tal tal:content="portal_title" />
+      <a i18n:translate="tabs_home" tal:attributes="href python:portal_url;title portal_title">  
+        <span tal:content="portal_title" tal:omit-tag="" />
       </a>
     </span>
 
