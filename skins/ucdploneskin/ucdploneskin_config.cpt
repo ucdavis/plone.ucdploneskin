@@ -34,8 +34,8 @@
 <h2>UCDPloneSkin Product Configuration</h2>
 This form allows you to change the portal title, department contact information and add/edit/remove quick links.
 
-<br>
-<br>
+<br/>
+<br/>
 
 <form tal:define="errors options/state/getErrors"
       tal:attributes="action string:${here/absolute_url}/${template/id};"
@@ -207,7 +207,7 @@ This form allows you to change the portal title, department contact information 
 <span tal:define="quickLinkList python:here.getQuickLinks()">
   <tal:qlCheck tal:condition="quickLinkList">
 
-    <br>
+    <br/>
 
     <form tal:define="errors options/state/getErrors"
           tal:attributes="action string:${here/absolute_url}/${template/id};"
@@ -256,7 +256,7 @@ This form allows you to change the portal title, department contact information 
     
 
 
-<br>
+<br/>
 
 <form tal:define="errors options/state/getErrors"
       tal:attributes="action string:${here/absolute_url}/${template/id};"

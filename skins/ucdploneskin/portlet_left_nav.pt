@@ -67,7 +67,7 @@
     don't display if there are no quick links
   </tal:comment>
 
-  <span tal:define="quickLinkList python:here.getQuickLinks()" tal-omit-tag="">
+  <span tal:define="quickLinkList python:here.getQuickLinks()" tal:omit-tag="">
     <tal:qlCheck tal:condition="quickLinkList">
   
       <div id="quick-links">
@@ -85,7 +85,7 @@
         </ul>
       </div>
 
-      <br><br>
+      <br/><br/>
 
     </tal:qlCheck>
 
