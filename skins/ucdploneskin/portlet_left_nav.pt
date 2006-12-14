@@ -19,18 +19,18 @@
         don't print when in the portal root, etc
       </tal:comment>
 
-      <span tal:define="sectionCount python:here.getSections('.', levels=1, types=['Folder', 'Document'], getLen=1)">
+      <span tal:define="sectionCount python:here.getSections('.', levels=1, types=['Folder', 'Document'], getLen=1)" tal:omit-tag="">
 
         <tal:comment replace="nothing">
           Only print if there are items in this section
         </tal:comment>
 
-        <span tal:condition="sectionCount">
+        <span tal:condition="sectionCount" tal:omit-tag="">
           <h2>
             In this section
           </h2>
 
-          <span tal:define="sections python:here.getSections('.', levels=1, types=['Folder', 'Document'])">
+          <span tal:define="sections python:here.getSections('.', levels=1, types=['Folder', 'Document'])" tal:omit-tag="">
 
             <ul>
               <li tal:repeat="section sections">
