@@ -67,7 +67,7 @@
     don't display if there are no quick links
   </tal:comment>
 
-  <span tal:define="quickLinkList python:here.getQuickLinks()">
+  <span tal:define="quickLinkList python:here.getQuickLinks()" tal-omit-tag="">
     <tal:qlCheck tal:condition="quickLinkList">
   
       <div id="quick-links">
@@ -77,7 +77,7 @@
           <li tal:repeat="quicklink quickLinkList">
 
             <a tal:attributes="href quicklink/url">
-              <tal tal:content="quicklink/text" />
+              <span tal:content="quicklink/text" tal:omit-tag="" />
             </a>
 
           </li>
@@ -99,58 +99,58 @@
   <div id="ownership">
 
     <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">  
-      <tal tal:content="portal_title" />
+      <span tal:content="portal_title" tal:omit-tag="" />
     </a>
 
     <p class="address">
 
-      <tal tal:content="portal_properties/ucdploneskin_properties/address1" />
+      <span tal:content="portal_properties/ucdploneskin_properties/address1" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/address1">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:content="portal_properties/ucdploneskin_properties/address2" />
+      <span tal:content="portal_properties/ucdploneskin_properties/address2" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/address2">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:content="portal_properties/ucdploneskin_properties/address3" />
+      <span tal:content="portal_properties/ucdploneskin_properties/address3" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/address3">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:content="portal_properties/ucdploneskin_properties/address4" />
+      <span tal:content="portal_properties/ucdploneskin_properties/address4" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/address4">
-        <br>
+        <br/>
       </tal:br>
 
     </p>
 
     <p>
-      <tal tal:content="portal_properties/ucdploneskin_properties/phone1" />
-      <tal tal:condition="portal_properties/ucdploneskin_properties/phone1" tal:content="string: phone" />
+      <span tal:content="portal_properties/ucdploneskin_properties/phone1" tal:omit-tag="" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/phone1" tal:content="string: phone" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/phone1">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:condition="portal_properties/ucdploneskin_properties/phone2"
-           tal:content="portal_properties/ucdploneskin_properties/phone2" />
-      <tal tal:condition="portal_properties/ucdploneskin_properties/phone2" tal:content="string: phone" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/phone2"
+            tal:content="portal_properties/ucdploneskin_properties/phone2" tal:omit-tag="" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/phone2" tal:content="string: phone" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/phone2">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:content="portal_properties/ucdploneskin_properties/fax1" />
-      <tal tal:condition="portal_properties/ucdploneskin_properties/fax1" tal:content="string: fax" />
+      <span tal:content="portal_properties/ucdploneskin_properties/fax1" tal:omit-tag="" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/fax1" tal:content="string: fax" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/fax1">
-        <br>
+        <br/>
       </tal:br>
 
-      <tal tal:condition="portal_properties/ucdploneskin_properties/fax2"
-           tal:content="portal_properties/ucdploneskin_properties/fax2" />
-      <tal tal:condition="portal_properties/ucdploneskin_properties/fax2" tal:content="string: fax" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/fax2"
+            tal:content="portal_properties/ucdploneskin_properties/fax2" tal:omit-tag="" />
+      <span tal:condition="portal_properties/ucdploneskin_properties/fax2" tal:content="string: fax" tal:omit-tag="" />
       <tal:br tal:condition="portal_properties/ucdploneskin_properties/fax2">
-        <br>
+        <br/>
       </tal:br>
 
     </p>

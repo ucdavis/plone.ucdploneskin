@@ -9,6 +9,7 @@ UCDPloneSkin 1.0.1 - Released - Dec, 13 2006
     - removed Author info in header (gave me probs)
     - join_form should import now (typos)
     - a tags inside h1..h6 now have underlines
+    - fixed "tal" tags and other XHTML issues
 	
 UCDPloneSkin 1.0 - Released - Nov, 14 2006
   [ Scott Beardsley, sbeardsley@ucdavis.edu ]

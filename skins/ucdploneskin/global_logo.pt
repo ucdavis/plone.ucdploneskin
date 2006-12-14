@@ -6,7 +6,7 @@
 <!-- THE PORTAL LOGO DEFINITION -->
 <h1 id="portal-logo" metal:define-macro="portal_logo">
     <a href="http://www.ucdavis.edu/"
-       alt="University of California, Davis"
+       title="University of California, Davis"
        accesskey="1">
     </a>
 </h1>
