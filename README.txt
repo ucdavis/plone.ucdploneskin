@@ -37,7 +37,8 @@ Further Customization
 
   If you choose to turn off the "Automatically generate tabs" option and use
   portal_actions instead, be very careful that the action Id that you specify 
-  matches the short name of the object that the tab should link to.  The tab Id  needs to match the object Id so we can determine which tab is currently
+  matches the short name of the object that the tab should link to.  The tab Id
+  needs to match the object Id so we can determine which tab is currently
   selected, compare, and "dim" the selected tab.
 
   Also regarding the portal_tabs, if you have a "content item selected as
