@@ -11,6 +11,12 @@ Install
   This product is known to work with Plone 2.5.1, but should also work with
   older versions.
 
+  Please note that Plone 2.5.1 has a security flaw and the hotfix should be
+  applied. See http://plone.org/products/plone-hotfix/releases/20061031/
+
+  See https://svn.cse.ucdavis.edu/trac/UCDPloneSkin/wiki/Install for the
+  latest installation instructions.
+
 Basic Customization
 
   Click the 'Preferences' link in Plone, scroll down to
@@ -91,6 +97,7 @@ Known Issues
 
   There is a 1px gap between Quick Links and In This Section <li> elements
 
-  RSS is hiden, but not turned off
+  RSS is hidden, but not turned off, to see it: add "/RSS" to the end of a
+  smart folder
 
   The uninstaller doesn't reset all settings, such as time format 

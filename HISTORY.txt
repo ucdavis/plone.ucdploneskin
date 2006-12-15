@@ -1,5 +1,12 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 1.0.3 - Released - Dec, 15 2006
+  [ Scott Beardsley, sbeardsley@ucdavis.edu ]
+    - reverted webmaster link in footer
+    - removed accessibility statement in footer
+    - reverted copyright statement in footer
+    - removed favicon.ico link in header
+
 UCDPloneSkin 1.0.2 - Released - Dec, 14 2006
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - a tags inside h1..h6 are now blue

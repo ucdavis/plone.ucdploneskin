@@ -74,7 +74,9 @@
         </style>
     <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
 
+<!-- favicon is not in the original UCD template
     <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/favicon.ico" /> 
+-->
 
     <link rel="home"
           href=""
