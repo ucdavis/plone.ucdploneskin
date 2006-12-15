@@ -5,6 +5,8 @@ UCDPloneSkin 1.0.2 - Released - Dec, 14 2006
     - a tags inside h1..h6 are now blue
     - added folder_listing.pt, changed "last modified" to "last updated"
     - Allow all content types to show up in "in this section"
+    - Display fullname in member search
+    - Fixed member search wrapping
 
 UCDPloneSkin 1.0.1 - Released - Dec, 13 2006
   [ Scott Beardsley, sbeardsley@ucdavis.edu ]
