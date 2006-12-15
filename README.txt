@@ -35,6 +35,18 @@ Further Customization
   determine how certain skin elements should display, such as the breadcrumbs
   and browser title bar.
 
+  If you choose to turn off the "Automatically generate tabs" option and use
+  portal_actions instead, be very careful that the action Id that you specify 
+  matches the short name of the object that the tab should link to.  The tab Id  needs to match the object Id so we can determine which tab is currently
+  selected, compare, and "dim" the selected tab.
+
+  Also regarding the portal_tabs, if you have a "content item selected as
+  default view" in one of the folders that represents a portal_tab, it should
+  have the same short name as the folder.  For instance, lets say  I have a
+  portal tab with an Id of foo and in my portal I have a folder named foo.  If
+  I create a page to serve as the default for that folder, it should also have
+  the Id foo.
+
   During the installation of this skin an attempt is made at hiding the Join
   link, although it seems to fail occasionaly.  I assume most departments don't
   want to open the portal membership to the general public and will probably
@@ -47,6 +59,10 @@ Further Customization
   portlet_login page template.  It causes a login area to display in the left
   nav.  I wonder if this skin product can override it with some sort of reverse
   inheritance?
+
+  Also, if you use CAS you should consider turning off member folder creation
+  in portal_membership.  If you don't, random CAS users will have valid member
+  folders (temporarily?) where they can create content.
 
 Credits
 
