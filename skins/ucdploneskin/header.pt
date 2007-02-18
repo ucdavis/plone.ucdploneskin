@@ -80,7 +80,7 @@
 
     <link rel="home"
           href=""
-          title="Front page"
+          title="Home"
           i18n:attributes="title title_frontpage"
           tal:attributes="href string:$portal_url" />
     <link rel="search"
@@ -88,11 +88,12 @@
           title="Search this site"
           i18n:attributes="title title_search_this_site"
           tal:attributes="href string:$portal_url/search_form" />
-    <link rel="contents"
-          href=""
-          title="Site Map"
-          i18n:attributes="title title_sitemap"
-          tal:attributes="href string:$portal_url/sitemap" />
+
+    <a class="hiddenStructure"
+          accesskey="3"
+          tal:attributes="href string:$portal_url/sitemap"
+          i18n:translate="label_sitemap">Site Map</a>
+
 
     <tal:fixme tal:replace="nothing">
       <link rel="help" href="" title="Help" tal:attributes="href string:$portal_url/help" />

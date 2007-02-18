@@ -103,6 +103,18 @@ a.link-parent {
   background-color: #335185;
 }
 
+#portal-searchbox {
+  float: right;
+  clear: right;
+  background-color: transparent;
+  margin: 0 0 0 0;
+  padding: 0 1em 0 0;
+  text-align: right;
+  text-transform: &dtml-textTransform;;
+  white-space: nowrap;
+  z-index: 2;
+}
+
 #dept-name {
   padding: 0.27em 0 0.35em 13px;
   margin: 0;

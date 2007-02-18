@@ -4,7 +4,16 @@
 <div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
 
 <p>
-<a href="contact-info">Questions or comments?</a> |
+
+<a tal:attributes="href python:portal_url + '/contact-info'" accesskey="9">
+  Questions or comments?
+</a> |
+
+
+<a tal:attributes="href python:portal_url + '/accessibility-info'" accesskey="0">
+  Accessibility
+</a> |
+
 
 <span i18n:translate="box_last_modified">
   <b>Last updated:</b>

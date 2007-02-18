@@ -200,6 +200,51 @@ This form allows you to change the portal title, department contact information 
 </form>
 
 
+
+<br/>
+
+<form tal:define="errors options/state/getErrors"
+      tal:attributes="action string:${here/absolute_url}/${template/id};"
+      method="post">
+
+    <input type="hidden" name="form.submitted" value="1" />
+
+    <table border="0" cellpadding="5">
+
+      <tr>
+        <td colspan="2">
+          <h2>Customization</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Show searchbox instead of a link to the main campus search page?
+        </td>
+        <td>
+
+          <input type="checkbox"
+                 name="searchbox"
+                 tal:define="val request/searchbox|nothing"
+ 		 tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.searchbox" />
+          <tal class="fieldRequired" tal:define="err errors/searchbox|nothing"
+		tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <input type="submit" name="form.button.customization" value="Submit" />
+        </td>
+      </tr>
+
+    </table>
+
+</form>
+
+
+
+
 <tal:comment replace="nothing">
   only show edit/delete form if quick links exist
 </tal:comment>

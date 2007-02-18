@@ -6,6 +6,8 @@ validators..addQL = addQL_validate
 action.success..contactInfo = traverse_to:string:contactInfo_action
 action.success..editQL = traverse_to:string:editQL_menu
 action.success..addQL = traverse_to:string:addQL_action
+action.success..customization = traverse_to:string:customization_action
+
 
 [security]
 View = 0:Manager

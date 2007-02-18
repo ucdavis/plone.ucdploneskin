@@ -1,5 +1,18 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 - Released - Feb, 18 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - updated docs for clearing left slot after PloneCASLogin install
+    - link to contact-info in footer is now absolute using $portal_url
+    - removed atct_topic_view.pt
+      - originally removed "contained smart folders" text from template
+        users can customize this template on their own if needed
+    - fixed skip to navigation link
+    - fixed accesskeys
+    - re-enabled accessibility-info link
+    - added option for livesearch
+      - hide accesskey details on accessibility-info page if not in use
+   
 UCDPloneSkin 1.0.3 - Released - Dec, 15 2006
   [ Scott Beardsley, sbeardsley@ucdavis.edu ]
     - reverted webmaster link in footer

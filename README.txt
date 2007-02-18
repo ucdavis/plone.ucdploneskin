@@ -62,14 +62,14 @@ Further Customization
   use the ZMI to navigate to portal_registration, find the Join action,
   select Visable and click Save.
 
-  Speaking of CAS, if you use it you should probably customize or delete the
-  portlet_login page template.  It causes a login area to display in the left
-  nav.  I wonder if this skin product can override it with some sort of reverse
-  inheritance?
+  Speaking of CAS, if you use install PloneCASLogin after installing this skin,
+  it will add a portlet_login item to the left slot.  To remove this, go to the
+  ZMI and go to your plone site's property tab.  There you can clear the left
+  slot.
 
   Also, if you use CAS you should consider turning off member folder creation
   in portal_membership.  If you don't, random CAS users will have valid member
-  folders (temporarily?) where they can create content.
+  folders where they can create content.
 
 Credits
 

@@ -53,7 +53,7 @@
 
           <a class="hiddenStructure"
              accesskey="6"
-             tal:attributes="href string:${request/ACTUAL_URL}#portlet-navigation-tree"
+             tal:attributes="href string:${request/ACTUAL_URL}#portal-globalnav"
              i18n:translate="label_skiptonavigation">Skip to navigation</a>
 
 
@@ -69,11 +69,20 @@
                    </a>
                  </td>
 
-                 <td>
+                 <td valign="center">
 
-                   <span id="ucd-search">
-                     <a href="http://www.ucdavis.edu/search/">Search UC Davis</a>
-                   </span>
+                   <tal:searchbox tal:condition="python:context.portal_properties.ucdploneskin_properties.searchbox">
+                     <div metal:use-macro="here/global_searchbox/macros/quick_search">
+                       The quicksearch box, normally placed at the top right
+                     </div>
+                   </tal:searchbox>
+               
+                   <tal:searchbox tal:condition="python:not context.portal_properties.ucdploneskin_properties.searchbox">
+                     <span id="ucd-search">
+                       <a href="http://www.ucdavis.edu/search/" accesskey="5">
+	                 Search UC Davis</a>
+                     </span>
+                   </tal:searchbox>
 
                  </td>
                </tr>
@@ -87,7 +96,9 @@
 
       </div>
 
+
       <div metal:use-macro="here/global_sections/macros/portal_tabs">
+
         The global sections tabs. (Welcome, News etc)
       </div>
 

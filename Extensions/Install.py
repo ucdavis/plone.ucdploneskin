@@ -91,6 +91,9 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('fax2'):
       addProperty(pp_ucd_props, 'fax2', '', 'string', out)
  
+    if not pp_ucd_props.hasProperty('searchbox'):
+      addProperty(pp_ucd_props, 'searchbox', '', 'string', out)
+
 
     # add quicklink examples if none exist
 
