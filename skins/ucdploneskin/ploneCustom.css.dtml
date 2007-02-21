@@ -123,6 +123,10 @@ a.link-parent {
   font-size: 3.3em;
   color: #002666;
   background-color: #FFFFFF;
+
+  background-image: url(&dtml-portal_url;/portal_properties/ucdploneskin-bgImage);
+  background-repeat: no-repeat;
+
 }
 
 #dept-name a {

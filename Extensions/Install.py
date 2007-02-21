@@ -60,6 +60,10 @@ def afterInstall(self,product,reinstall):
             action.visible = 0
 
 
+    # turn off byline for anon users
+    pp.site_properties.manage_changeProperties(allowAnonymousViewAbout=0)
+
+
     # add dept info properties
 
     if not ('ucdploneskin_properties' in pp.objectIds()):
@@ -92,7 +96,17 @@ def afterInstall(self,product,reinstall):
       addProperty(pp_ucd_props, 'fax2', '', 'string', out)
  
     if not pp_ucd_props.hasProperty('searchbox'):
-      addProperty(pp_ucd_props, 'searchbox', '', 'string', out)
+      addProperty(pp_ucd_props, 'searchbox', '', 'boolean', out)
+
+    if not pp_ucd_props.hasProperty('showAccessibility'):
+      addProperty(pp_ucd_props, 'showAccessibility', '1', 'boolean', out)
+
+    if not pp_ucd_props.hasProperty('copyright'):
+      addProperty(pp_ucd_props, 'copyright', 'Copyright &copy; The Regents of the University of California, Davis campus 2005-06. All Rights Reserved.', 'string', out)
+
+    if not pp_ucd_props.hasProperty('privacyStatement'):
+      addProperty(pp_ucd_props, 'privacyStatement', 'http://manuals.ucdavis.edu/ppm/310/310-70a.htm', 'string', out)
+
 
 
     # add quicklink examples if none exist

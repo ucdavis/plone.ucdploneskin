@@ -1,6 +1,10 @@
 Changelog for UCDPloneSkin
 
-UCDPloneSkin 2.0 - Released - Feb, 18 2007
+UCDPloneSkin 2.0 - Released - Feb, 20 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - added configlet option for header background image
+
+UCDPloneSkin 2.0 - Released - Feb, 19 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - updated docs for clearing left slot after PloneCASLogin install
     - link to contact-info in footer is now absolute using $portal_url
@@ -9,10 +13,13 @@ UCDPloneSkin 2.0 - Released - Feb, 18 2007
         users can customize this template on their own if needed
     - fixed skip to navigation link
     - fixed accesskeys
-    - re-enabled accessibility-info link
+    - re-enabled accessibility-info link w/ configlet option for hiding it
     - added option for livesearch
       - hide accesskey details on accessibility-info page if not in use
-   
+    - configlet option for copyright string
+    - configlet option for privacy statement
+    - hide byline from anon users during install (AllowAnonymousViewAbout)
+
 UCDPloneSkin 1.0.3 - Released - Dec, 15 2006
   [ Scott Beardsley, sbeardsley@ucdavis.edu ]
     - reverted webmaster link in footer

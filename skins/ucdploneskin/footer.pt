@@ -3,27 +3,34 @@
 <body>
 <div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
 
-<p>
+  <p>
 
-<a tal:attributes="href python:portal_url + '/contact-info'" accesskey="9">
-  Questions or comments?
-</a> |
+    <a tal:attributes="href python:portal_url + '/contact-info'" accesskey="9">
+      Questions or comments?
+    </a> |
 
+    <span tal:condition="here/portal_properties/ucdploneskin_properties/showAccessibility">
+      <a tal:attributes="href python:portal_url + '/accessibility-info'" accesskey="0">
+        Accessibility
+      </a> |
+    </span>
 
-<a tal:attributes="href python:portal_url + '/accessibility-info'" accesskey="0">
-  Accessibility
-</a> |
+    <span tal:condition="here/portal_properties/ucdploneskin_properties/privacyStatement">
+      <a tal:attributes="href here/portal_properties/ucdploneskin_properties/privacyStatement">
+        Privacy Statement
+      </a> |
+    </span>
 
+    <span i18n:translate="box_last_modified">
+      <b>Last updated:</b>
+    </span>
 
-<span i18n:translate="box_last_modified">
-  <b>Last updated:</b>
-</span>
-<span tal:replace="python:here.toLocalizedTime(here.ModificationDate(),long_format=0)">
-  August 16, 2001 at 23:35:59
-</span>
+    <span tal:replace="python:here.toLocalizedTime(here.ModificationDate(),long_format=0)" />
 
-<br/>
-Copyright &copy; The Regents of the University of California, Davis campus 2005-06. All Rights Reserved.
+    <br/>
+
+    <span tal:replace="structure here/portal_properties/ucdploneskin_properties/copyright" />
+
 </p>
 
 </div>

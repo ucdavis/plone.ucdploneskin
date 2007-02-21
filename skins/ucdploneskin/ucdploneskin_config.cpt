@@ -32,7 +32,7 @@
 
 
 <h2>UCDPloneSkin Product Configuration</h2>
-This form allows you to change the portal title, department contact information and add/edit/remove quick links.
+This page allows you configure and customize UCDPloneSkin.
 
 <br/>
 <br/>
@@ -201,50 +201,6 @@ This form allows you to change the portal title, department contact information 
 
 
 
-<br/>
-
-<form tal:define="errors options/state/getErrors"
-      tal:attributes="action string:${here/absolute_url}/${template/id};"
-      method="post">
-
-    <input type="hidden" name="form.submitted" value="1" />
-
-    <table border="0" cellpadding="5">
-
-      <tr>
-        <td colspan="2">
-          <h2>Customization</h2>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Show searchbox instead of a link to the main campus search page?
-        </td>
-        <td>
-
-          <input type="checkbox"
-                 name="searchbox"
-                 tal:define="val request/searchbox|nothing"
- 		 tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.searchbox" />
-          <tal class="fieldRequired" tal:define="err errors/searchbox|nothing"
-		tal:condition="err" tal:content="err" />
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan="2">
-          <input type="submit" name="form.button.customization" value="Submit" />
-        </td>
-      </tr>
-
-    </table>
-
-</form>
-
-
-
-
 <tal:comment replace="nothing">
   only show edit/delete form if quick links exist
 </tal:comment>
@@ -352,6 +308,149 @@ This form allows you to change the portal title, department contact information 
     </table>
 
 </form>
+
+
+
+
+<br/>
+
+<form tal:define="errors options/state/getErrors"
+      tal:attributes="action string:${here/absolute_url}/${template/id};"
+      method="post"
+      enctype="multipart/form-data">
+
+    <input type="hidden" name="form.submitted" value="1" />
+
+    <table border="0" cellpadding="5">
+
+      <tr>
+        <td colspan="2">
+          <h2>Customization</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Show searchbox instead of a link to the main campus search page?
+        </td>
+        <td>
+
+          <input type="checkbox"
+                 name="searchbox"
+                 tal:define="val request/searchbox|nothing"
+                 tal:attributes="checked here/portal_properties/ucdploneskin_properties/searchbox" />
+          <tal class="fieldRequired" tal:define="err errors/searchbox|nothing"
+                tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Link to Accessibility Info in the footer?<br/>
+          <span class="discreet">
+            This isn't part of the original campus template, but we need
+            to explain the access keys.
+          </span>
+        </td>
+        <td>
+
+          <input type="checkbox"
+                 name="showAccessibility"
+                 tal:define="val request/showAccessibility|nothing"
+                 tal:attributes="checked here/portal_properties/ucdploneskin_properties/showAccessibility" />
+          <tal class="fieldRequired" tal:define="err errors/showAccessibility|nothing"
+                tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Copyright String<br/>
+          <span class="discreet">
+            See
+            <a href="http://manuals.ucdavis.edu/ppm/250/250-01.htm">PPM 250-01
+            </a> for acceptable wording variations for copyright notices.
+          </span>
+        </td>
+
+        <td>
+          <input type="text"
+                 name="copyright"
+                 size="40"
+                 tal:define="val request/copyright|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/copyright" />
+          <tal class="fieldRequired" tal:define="err errors/copyright|nothing" tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Link to privacy statement<br/>
+          <span class="discreet">
+            By default, we link to the privacy statement in 
+            <a href="http://manuals.ucdavis.edu/ppm/310/310-70.htm">
+            PPM 310-70 Exhibit A</a>.  Alternatively, you can link to a
+            different Plone object, a page outside of this site or delete it
+            all together.
+          </span>
+        </td>
+
+        <td>
+          <input type="text"
+                 name="privacyStatement"
+                 size="40"
+                 tal:define="val request/privacyStatement|nothing"
+                 tal:attributes="value here/portal_properties/ucdploneskin_properties/privacyStatement" />
+          <tal class="fieldRequired" tal:define="err errors/privacyStatement|nothing"
+	    tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Department Name Background Image<br/>
+
+          <span class="discreet">
+            Delete image?
+          </span>
+
+          <input type="checkbox"
+                 name="deleteBgImage"
+                 tal:define="val request/deleteBgImage|nothing" />
+        </td>
+
+        <td>
+          <input type="file"
+                 name="bgImage"
+                 size="40"
+                 tal:define="val request/bgImage|nothing" />
+          <tal class="fieldRequired" tal:define="err errors/bgImage|nothing"
+            tal:condition="err" tal:content="err" />
+
+        </td>
+      </tr>
+
+      <span tal:condition="exists: here/portal_properties/ucdploneskin-bgImage">
+        <tr> 
+          <td colspan="2">
+            <img tal:attributes="src python:portal_url + '/portal_properties/ucdploneskin-bgImage'"/>
+          </td>
+        </tr>
+      </span>
+
+
+      <tr>
+        <td colspan="2">
+          <br/>
+          <input type="submit" name="form.button.customization" value="Submit" />
+        </td>
+      </tr>
+
+    </table>
+
+</form>
+
+
 
 
 </div>
