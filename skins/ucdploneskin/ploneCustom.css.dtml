@@ -124,9 +124,14 @@ a.link-parent {
   color: #002666;
   background-color: #FFFFFF;
 
-  background-image: url(&dtml-portal_url;/portal_properties/ucdploneskin-bgImage);
-  background-repeat: no-repeat;
+  <dtml-if checkBgImage>
+    background-image: url(&dtml-portal_url;/portal_properties/ucdploneskin-bgImage);
 
+    <dtml-if checkBgImageNoRepeat>
+      background-repeat: no-repeat;
+    </dtml-if>
+
+  </dtml-if>
 }
 
 #dept-name a {
@@ -139,6 +144,8 @@ a.link-parent {
   color: #77160B;
   border: 0;
 }
+
+
 
 #portal-globalnav {
   background-color: #D2B84C;

@@ -107,6 +107,9 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('privacyStatement'):
       addProperty(pp_ucd_props, 'privacyStatement', 'http://manuals.ucdavis.edu/ppm/310/310-70a.htm', 'string', out)
 
+    if not pp_ucd_props.hasProperty('bgImageNoRepeat'):
+      addProperty(pp_ucd_props, 'bgImageNoRepeat', '', 'boolean', out)
+
 
 
     # add quicklink examples if none exist

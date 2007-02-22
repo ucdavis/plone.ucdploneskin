@@ -419,6 +419,18 @@ This page allows you configure and customize UCDPloneSkin.
             <input type="checkbox"
                    name="deleteBgImage"
                    tal:define="val request/deleteBgImage|nothing" />
+
+            <br/>
+
+            <span class="discreet">
+              Disable image tiling?
+            </span>
+
+            <input type="checkbox"
+                   name="bgImageNoRepeat"
+                   tal:attributes="checked here/portal_properties/ucdploneskin_properties/bgImageNoRepeat"
+                   tal:define="val request/bgImageNoRepeat|nothing" />
+
           </span>
 
         </td>

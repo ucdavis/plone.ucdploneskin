@@ -1,5 +1,13 @@
 Changelog for UCDPloneSkin
 
+
+UCDPloneSkin 2.0 - Released - Feb, 22 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - finished configlet option for header bg image
+      - added condition in ploneCustom.css.dtml to avoid 404s if user disables
+        image
+      - added option for disable image tiling
+
 UCDPloneSkin 2.0 - Released - Feb, 20 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - added configlet option for header background image
