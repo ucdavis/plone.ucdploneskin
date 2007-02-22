@@ -410,13 +410,17 @@ This page allows you configure and customize UCDPloneSkin.
         <td>
           Department Name Background Image<br/>
 
-          <span class="discreet">
-            Delete image?
+          <span tal:condition="exists: here/portal_properties/ucdploneskin-bgImage">
+
+            <span class="discreet">
+              Delete image?
+            </span>
+
+            <input type="checkbox"
+                   name="deleteBgImage"
+                   tal:define="val request/deleteBgImage|nothing" />
           </span>
 
-          <input type="checkbox"
-                 name="deleteBgImage"
-                 tal:define="val request/deleteBgImage|nothing" />
         </td>
 
         <td>
