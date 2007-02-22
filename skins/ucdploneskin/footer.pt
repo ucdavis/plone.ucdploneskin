@@ -6,19 +6,16 @@
   <p>
 
     <a tal:attributes="href python:portal_url + '/contact-info'" accesskey="9">
-      Questions or comments?
-    </a> |
+      Questions or comments?</a> | 
 
     <span tal:condition="here/portal_properties/ucdploneskin_properties/showAccessibility">
       <a tal:attributes="href python:portal_url + '/accessibility-info'" accesskey="0">
-        Accessibility
-      </a> |
+        Accessibility</a> | 
     </span>
 
     <span tal:condition="here/portal_properties/ucdploneskin_properties/privacyStatement">
       <a tal:attributes="href here/portal_properties/ucdploneskin_properties/privacyStatement">
-        Privacy Statement
-      </a> |
+        Privacy Statement</a> |
     </span>
 
     <span i18n:translate="box_last_modified">
