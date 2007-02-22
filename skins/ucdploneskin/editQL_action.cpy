@@ -34,7 +34,7 @@ if not delete:
 # saved quicklinks, sort by id, then re-add
 # this ensures that the links are sorted by date added
 # we could do this in getQuickLinks.py, but that would require
-# sorting during every page access - this kinda messy, but it is
+# sorting during every page access - this is kinda messy, but it is
 # only a one time operation
 
 propList = context.portal_properties.ucdploneskin_properties.propertyItems()
