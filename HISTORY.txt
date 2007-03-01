@@ -1,18 +1,25 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 in progress - Released - Mar, 01 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Added bool configlet option for turning on/off privacy statement link
+      It is off by default.  Deleting the "link to privacy statement" would
+      provide equal functionality, but the bool allows us to set the link value
+      while having this option turned off by default (since it isn't part of
+      the original template.
 
-UCDPloneSkin 2.0 - Released - Feb, 22 2007
+UCDPloneSkin 2.0 in progress - Released - Feb, 22 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - finished configlet option for header bg image
       - added condition in ploneCustom.css.dtml to avoid 404s if user disables
         image
       - added option for disable image tiling
 
-UCDPloneSkin 2.0 - Released - Feb, 20 2007
+UCDPloneSkin 2.0 in progress - Released - Feb, 20 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - added configlet option for header background image
 
-UCDPloneSkin 2.0 - Released - Feb, 19 2007
+UCDPloneSkin 2.0 in progress - Released - Feb, 19 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - updated docs for clearing left slot after PloneCASLogin install
     - link to contact-info in footer is now absolute using $portal_url
