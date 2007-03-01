@@ -89,8 +89,6 @@ Credits
 
 Known Issues
   
-  Hover problem near page title/up one level
-
   The spacing doesn't exactly match the original template
 
   There is a very small gap in between the portal tabs and the bottom border
@@ -101,3 +99,5 @@ Known Issues
   smart folder
 
   The uninstaller doesn't reset all settings, such as time format 
+
+  See https://svn.cse.ucdavis.edu/trac/UCDPloneSkin/report for more issues
