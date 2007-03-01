@@ -13,7 +13,9 @@
         Accessibility</a> | 
     </span>
 
-    <span tal:condition="here/portal_properties/ucdploneskin_properties/privacyStatement">
+    <span tal:define="cond1 here/portal_properties/ucdploneskin_properties/privacyStatement;
+                      cond2 here/portal_properties/ucdploneskin_properties/showPrivacyStatement;"
+          tal:condition="python: cond1 and cond2">
       <a tal:attributes="href here/portal_properties/ucdploneskin_properties/privacyStatement">
         Privacy Statement</a> |
     </span>

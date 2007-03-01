@@ -385,13 +385,27 @@ This page allows you configure and customize UCDPloneSkin.
 
       <tr>
         <td>
+          Show link to privacy statement?
+        </td>
+        <td>
+
+          <input type="checkbox"
+                 name="showPrivacyStatement"
+                 tal:define="val request/showPrivacyStatement|nothing"
+                 tal:attributes="checked here/portal_properties/ucdploneskin_properties/showPrivacyStatement" />
+          <tal class="fieldRequired" tal:define="err errors/showPrivacyStatement|nothing"
+                tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
           Link to privacy statement<br/>
           <span class="discreet">
-            By default, we link to the privacy statement in 
+            If you choose to show the privacy statement, the default link is
             <a href="http://manuals.ucdavis.edu/ppm/310/310-70.htm">
             PPM 310-70 Exhibit A</a>.  Alternatively, you can link to a
-            different Plone object, a page outside of this site or delete it
-            all together.
+            different Plone object or a page outside of this site.
           </span>
         </td>
 

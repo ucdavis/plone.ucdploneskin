@@ -110,6 +110,9 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('bgImageNoRepeat'):
       addProperty(pp_ucd_props, 'bgImageNoRepeat', '', 'boolean', out)
 
+    if not pp_ucd_props.hasProperty('showPrivacyStatement'):
+      addProperty(pp_ucd_props, 'showPrivacyStatement', '', 'boolean', out)
+
 
 
     # add quicklink examples if none exist
