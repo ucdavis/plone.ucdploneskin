@@ -9,6 +9,9 @@
 
 <p id="dept-name" metal:define-macro="dept_name">
 
+  <img tal:attributes="src python:portal_url + '/portal_properties/ucdploneskin-logo'"
+       tal:condition="exists: here/portal_properties/ucdploneskin-logo">
+
   <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'">
     <tal:portaltitle replace="portal_title">
       Inserts portal title

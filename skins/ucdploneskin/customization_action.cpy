@@ -9,7 +9,8 @@ showAccessibility = context.REQUEST.get('showAccessibility', None)
 bgImage = context.REQUEST.get('bgImage', None)
 deleteBgImage = context.REQUEST.get('deleteBgImage', None)
 bgImageNoRepeat = context.REQUEST.get('bgImageNoRepeat', None)
-
+logo = context.REQUEST.get('logo', None)
+deleteLogo = context.REQUEST.get('deleteLogo', None)
 
 
 portal = context.portal_url.getPortalObject()
@@ -38,6 +39,20 @@ if bgImage:
     pass # ignore error in case img doesn't exist
 
   pp.manage_addImage('ucdploneskin-bgImage', bgImage)
+
+
+
+if deleteLogo:
+  pp.manage_delObjects(['ucdploneskin-logo'])
+
+if logo:
+
+  try:
+    pp.manage_delObjects(['ucdploneskin-logo'])
+  except:
+    pass # ignore error in case img doesn't exist
+
+  pp.manage_addImage('ucdploneskin-logo', logo)
 
 
 

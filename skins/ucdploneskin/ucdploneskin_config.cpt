@@ -470,6 +470,51 @@ This page allows you configure and customize UCDPloneSkin.
 
 
       <tr>
+        <td>
+          Logo<br/>
+
+          <span class="discreet">
+            Will display to the left of the department name in the header.
+          </span>
+
+          <span tal:condition="exists: here/portal_properties/ucdploneskin-logo">
+
+            <span class="discreet">
+              <br/>
+               Delete image?
+            </span>
+
+            <input type="checkbox"
+                   name="deleteLogo"
+                   tal:define="val request/deleteLogo|nothing" />
+
+            <br/>
+
+          </span>
+
+        </td>
+
+        <td>
+          <input type="file"
+                 name="logo"
+                 size="40"
+                 tal:define="val request/logo|nothing" />
+          <tal class="fieldRequired" tal:define="err errors/logo|nothing"
+            tal:condition="err" tal:content="err" />
+
+        </td>
+      </tr>
+
+      <span tal:condition="exists: here/portal_properties/ucdploneskin-logo">
+        <tr>
+          <td colspan="2">
+            <img tal:attributes="src python:portal_url + '/portal_properties/ucdploneskin-logo'"/>
+          </td>
+        </tr>
+      </span>
+
+
+      <tr>
         <td colspan="2">
           <br/>
           <input type="submit" name="form.button.customization" value="Submit" />
