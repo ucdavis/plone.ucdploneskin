@@ -424,6 +424,10 @@ This page allows you configure and customize UCDPloneSkin.
         <td>
           Department Name Background Image<br/>
 
+          <span class="discreet">
+            Will display behind the department name in the header.<br/>
+          </span>
+
           <span tal:condition="exists: here/portal_properties/ucdploneskin-bgImage">
 
             <span class="discreet">
@@ -474,13 +478,12 @@ This page allows you configure and customize UCDPloneSkin.
           Logo<br/>
 
           <span class="discreet">
-            Will display to the left of the department name in the header.
+            Will display to the left of the department name in the header.<br/>
           </span>
 
           <span tal:condition="exists: here/portal_properties/ucdploneskin-logo">
 
             <span class="discreet">
-              <br/>
                Delete image?
             </span>
 
