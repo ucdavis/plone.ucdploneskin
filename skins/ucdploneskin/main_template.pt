@@ -63,13 +63,13 @@
 
              <table border="0" width="100%">
                <tr>
-                 <td>
+                 <td width="1%">
                    <a metal:use-macro="here/global_logo/macros/portal_logo">
                      The portal logo, linked to the portal root
                    </a>
                  </td>
 
-                 <td valign="center">
+                 <td valign="right" width="99%">
 
                    <tal:searchbox tal:condition="python:context.portal_properties.ucdploneskin_properties.searchbox">
                      <div metal:use-macro="here/global_searchbox/macros/quick_search">

@@ -46,17 +46,17 @@ This page allows you configure and customize UCDPloneSkin.
     <table border="0" cellpadding="5">
 
       <tr>
-        <td colspan="2">
+        <td colspan="2" valign="top">
           <h2>Contact Info</h2>
         </td>
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Department Name:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="deptName"
                  size="40"
@@ -67,11 +67,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>       
 
       <tr>
-        <td>   
+        <td valign="top">   
           Address Line 1:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="address1"
                  size="40"
@@ -82,11 +82,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Address Line 2:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="address2"
                  size="40"
@@ -97,11 +97,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Address Line 3:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="address3"
                  size="40"
@@ -112,11 +112,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Address Line 4:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="address4"
                  size="40"
@@ -128,11 +128,11 @@ This page allows you configure and customize UCDPloneSkin.
 
 
       <tr>
-        <td>
+        <td valign="top">
           Phone Number 1:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="phone1"
                  size="40"
@@ -143,11 +143,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Phone Number 2:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="phone2"
                  size="40"
@@ -159,11 +159,11 @@ This page allows you configure and customize UCDPloneSkin.
 
 
       <tr>
-        <td>
+        <td valign="top">
           Fax Number 1:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="fax1"
                  size="40"
@@ -174,11 +174,11 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Fax Number 2:
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="fax2"
                  size="40"
@@ -190,7 +190,7 @@ This page allows you configure and customize UCDPloneSkin.
 
 
       <tr>    
-        <td colspan="2">
+        <td colspan="2" valign="top">
           <input type="submit" name="form.button.contactInfo" value="Submit" />
         </td>
       </tr>
@@ -219,13 +219,13 @@ This page allows you configure and customize UCDPloneSkin.
         <table border="0" cellpadding="5">
 
           <tr>
-            <td>    
+            <td valign="top">    
               <h2>Edit or Remove Quick Links</h2>
             </td>
           </tr>
     
           <tr>
-            <td>
+            <td valign="top">
               Select: &nbsp;
 
               <select name="qlID">
@@ -243,7 +243,7 @@ This page allows you configure and customize UCDPloneSkin.
           </tr>
 
           <tr>
-            <td>
+            <td valign="top">
               <input type="submit" name="form.button.editQL" value="Submit" />
             </td>
           </tr>
@@ -330,10 +330,10 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
-        <td>
+        <td valign="top">
           Show searchbox instead of a link to the main campus search page?
         </td>
-        <td>
+        <td valign="top">
 
           <input type="checkbox"
                  name="searchbox"
@@ -352,7 +352,7 @@ This page allows you configure and customize UCDPloneSkin.
             to explain the access keys.
           </span>
         </td>
-        <td>
+        <td valign="top">
 
           <input type="checkbox"
                  name="showAccessibility"
@@ -373,7 +373,7 @@ This page allows you configure and customize UCDPloneSkin.
           </span>
         </td>
 
-        <td>
+        <td valign="top">
           <input type="text"
                  name="copyright"
                  size="40"
@@ -415,8 +415,9 @@ This page allows you configure and customize UCDPloneSkin.
                  size="40"
                  tal:define="val request/privacyStatement|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/privacyStatement" />
-          <tal class="fieldRequired" tal:define="err errors/privacyStatement|nothing"
-	    tal:condition="err" tal:content="err" />
+          <tal class="fieldRequired"
+               tal:define="err errors/privacyStatement|nothing"
+	       tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -456,7 +457,7 @@ This page allows you configure and customize UCDPloneSkin.
         <td>
           <input type="file"
                  name="bgImage"
-                 size="40"
+                 size="25"
                  tal:define="val request/bgImage|nothing" />
           <tal class="fieldRequired" tal:define="err errors/bgImage|nothing"
             tal:condition="err" tal:content="err" />
@@ -500,7 +501,7 @@ This page allows you configure and customize UCDPloneSkin.
         <td>
           <input type="file"
                  name="logo"
-                 size="40"
+                 size="25"
                  tal:define="val request/logo|nothing" />
           <tal class="fieldRequired" tal:define="err errors/logo|nothing"
             tal:condition="err" tal:content="err" />

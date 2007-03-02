@@ -4,6 +4,9 @@ UCDPloneSkin 2.0 in progress - Released - Mar, 02 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Added confliglet option for logo to the left of department name
       in the header.
+    - Fixed "Search UC Davis" text wrapping with a bad table width hack
+      Should be redone with CSS
+    - Vertically aligned form fields in the configlet
 
 UCDPloneSkin 2.0 in progress - Released - Mar, 01 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
