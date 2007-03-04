@@ -345,6 +345,71 @@ This page allows you configure and customize UCDPloneSkin.
       </tr>
 
       <tr>
+        <td valign="top">
+          Second row of portal tabs<br/>
+          <span class="discreet">
+            Here you can choose which tabs, if any,  should display in the
+            second row of portal tabs. Hold down control (PC) or command
+            (Mac) to select multiple values.
+          </span>
+        </td>
+
+        <td valign="top">
+          <select name="secondTabRow" multiple>
+
+            <tal:tabs tal:repeat="tab portal_tabs">
+
+              <option tal:attributes="value tab/id;
+                                      selected python: tab['id'] in context.portal_properties.ucdploneskin_properties.secondTabRow.split(',')">
+                <tal tal:replace="tab/name" />
+              </option>
+
+            </tal:tabs>
+
+          </select>
+        </td>
+      </tr>
+
+
+      <tal:hiddenTabColor tal:condition="here/portal_properties/ucdploneskin_properties/secondTabRow">
+        
+        <input type="hidden" name="altPrimaryNavColor"
+           tal:attributes="value here/portal_properties/ucdploneskin_properties/altPrimaryNavColor">
+
+      </tal:hiddenTabColor>
+      
+      <tal:primaryTabColor tal:condition="not:here/portal_properties/ucdploneskin_properties/secondTabRow">
+
+        <tr>
+          <td valign="top">
+            Blue or Gold portal tabs? <br/>
+            <span class="discreet">
+              This option is only available when you have one row of tabs.
+          </td>
+
+          <td valign="top">
+
+            <input type="radio"
+                   name="altPrimaryNavColor"
+                   value="gold"
+                   tal:define="val request/altPrimaryNavColor|nothing"
+                   tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.altPrimaryNavColor
+                                   == 'gold' " />
+            Gold
+
+            <input type="radio"
+                   name="altPrimaryNavColor"
+                   value="blue"
+                   tal:define="val request/altPrimaryNavColor|nothing"
+                   tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.altPrimaryNavColor                                         == 'blue' " />
+            Blue
+
+          </td>
+        </tr>
+
+      </tal:primaryTabColor>
+
+      <tr>
         <td>
           Link to Accessibility Info in the footer?<br/>
           <span class="discreet">

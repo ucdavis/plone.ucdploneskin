@@ -1,4 +1,5 @@
 from Products.CMFCore.utils import getToolByName
+#from types import ListType
 
 
 searchbox = context.REQUEST.get('searchbox', None)
@@ -11,6 +12,8 @@ deleteBgImage = context.REQUEST.get('deleteBgImage', None)
 bgImageNoRepeat = context.REQUEST.get('bgImageNoRepeat', None)
 logo = context.REQUEST.get('logo', None)
 deleteLogo = context.REQUEST.get('deleteLogo', None)
+altPrimaryNavColor = context.REQUEST.get('altPrimaryNavColor', None)
+secondTabRow = context.REQUEST.get('secondTabRow', None)
 
 
 portal = context.portal_url.getPortalObject()
@@ -25,6 +28,22 @@ pp_ucd_props.manage_changeProperties(privacyStatement=privacyStatement)
 pp_ucd_props.manage_changeProperties(showPrivacyStatement=showPrivacyStatement)
 pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
 pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
+pp_ucd_props.manage_changeProperties(altPrimaryNavColor=altPrimaryNavColor)
+
+
+# convert the array to csv
+# if the user only selects one element, then we have a single string
+# not an array
+
+#if type(secondTabRow) is ListType:
+
+if secondTabRow:
+  secondTabRow = ','.join(secondTabRow)
+  pp_ucd_props.manage_changeProperties(secondTabRow=secondTabRow)
+
+else:
+  pp_ucd_props.manage_changeProperties(secondTabRow='')
+
 
 
 if deleteBgImage:
@@ -53,6 +72,7 @@ if logo:
     pass # ignore error in case img doesn't exist
 
   pp.manage_addImage('ucdploneskin-logo', logo)
+
 
 
 

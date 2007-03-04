@@ -1,4 +1,4 @@
-/*
+/ white-space: nowrap;*
  *  This is the file where you put your CSS changes. 
  *  You should preferrably use this and override the 
  *  relevant properties you want to change here instead 
@@ -145,17 +145,23 @@ a.link-parent {
   border: 0;
 }
 
-
-
-#portal-globalnav {
+#portal-globalnav-2 {
   background-color: #D2B84C;
   padding: 0;
   border-top: 1px solid #BF9900;
   border-bottom: 1px solid #002666;
   height: 2em;
+  list-style: none;
+  margin: 0;
+  line-height: normal;
+  white-space: nowrap;
 }
 
-#portal-globalnav li a {
+#portal-globalnav-2 li {
+  display: inline;
+}
+
+#portal-globalnav-2 li a {
   text-decoration: none;
   font-weight: bold;
   color: #002666;
@@ -165,45 +171,53 @@ a.link-parent {
   margin: 0;
   border-color: #BF9900;
   border-style: none &dtml-borderStyle; none none;
+  border-width: &dtml-borderWidth;;
+  height: auto;
+  text-decoration: none;
+  text-transform: &dtml-textTransform;;
 }
 
-#portal-globalnav li a:hover {
+#portal-globalnav-2 li a:hover {
   background-color: #CCAD33;
   color: #77160B;
   border-color: #BF9900;
 }
 
-#portal-globalnav li.selected a {
+#portal-globalnav-2 li.selected a {
   background-color: #CCAD33;
   border-color: #BF9900;
   border-style: none &dtml-borderStyle; none none;
   color: #8B6000;
 }
 
-#portal-globalnav li a.first-tab {
+#portal-globalnav-2 li a.first-tab {
   background-image: url(&dtml-portal_url;/nav_pointer_2.gif);
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 13px;
 }
 
-/* use this if you want a blue nav bar
-
-#portal-globalnav {
+#portal-globalnav-1 {
   background-color: #ACB8C3;
   padding: 0;
   border-top: 1px solid #6D8297;
   border-bottom: 1px solid #002666;
   height: 2em;
-}
-
-#portal-globalnav ul {
-  padding: 0;
+  list-style: none;
   margin: 0;
-  border: 0;
+  line-height: normal;
+  white-space: nowrap;
+
+  <dtml-if checkSecondTabRow>
+    border-bottom: 1px solid #FFFFFF;
+  </dtml-if>
 }
 
-#portal-globalnav li a {
+#portal-globalnav-1 li {
+  display: inline;
+}
+
+#portal-globalnav-1 li a {
   text-decoration: none;
   font-weight: bold;
   color: #002666;
@@ -213,29 +227,31 @@ a.link-parent {
   margin: 0;
   border-color: #8294A6;
   border-style: none &dtml-borderStyle; none none;
+  border-width: &dtml-borderWidth;;
+  height: auto;
+  text-decoration: none;
+  text-transform: &dtml-textTransform;;
 }
 
-#portal-globalnav li a:hover {
+#portal-globalnav-1 li a:hover {
   background-color: #97A6B4;
   color: #77160B;
   border-color: #8294A6;
 }
 
-#portal-globalnav li.selected a {
+#portal-globalnav-1 li.selected a {
   background-color: #97A6B4;
   border-color: #8294A6;
   border-style: none &dtml-borderStyle; none none;
   color: #2F4D6A;
 }
 
-#portal-globalnav li a.first-tab {
+#portal-globalnav-1 li a.first-tab {
   background-image: url(&dtml-portal_url;/nav_pointer_1.gif);
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 13px;
 }
-
-*/
 
 #portal-breadcrumbs {
   background-color: #EAEDF0;

@@ -11,107 +11,139 @@
      tal:condition="portal_tabs">
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
 
-    <ul id="portal-globalnav">
-        <tal:tabs tal:repeat="tab portal_tabs">
+
+    <tal:getTabs tal:define="rowAr python:here.getTabs(portal_tabs)">
+
+      <tal:tabRow tal:repeat="row rowAr">
+
+        <tal:comment replace="nothing">
+          first row should be blue
+        </tal:comment>
+
+        <tal tal:define="global tabStyle string:portal-globalnav-1" />
 
 
-            <tal:comment replace="nothing">
-              hack for comparing tab['id'] and selected_portal_tabs, which evaluate to
-              index_html and front-page respectively when viewing the home page
-            </tal:comment>
+        <tal:comment replace="nothing">
+          second row should be gold
+        </tal:comment>
 
-            <tal:checkTabID tal:condition="python: tab['id'] == 'index_html'">
+        <tal:defineTabStyle tal:condition="repeat/row/index">
+          <tal tal:define="global tabStyle string:portal-globalnav-2" />
+        </tal:defineTabStyle>
 
-                <tal:setTabID tal:define="global tabID string:front-page">
-                </tal:setTabID>
+
+        <tal:comment replace="nothing">
+          check if we only have one row, and the user wants it to be gold
+          (the default)
+        </tal:comment>
+
+        <tal:defineTabStyleConds tal:define="cond1 python:here.portal_properties.ucdploneskin_properties.altPrimaryNavColor
+                                                           == 'gold';
+                                             cond2 not:here/portal_properties/ucdploneskin_properties/secondTabRow">
+
+          <tal:defineTabStyle tal:condition="python:cond1 and cond2">
+            <tal tal:define="global tabStyle string:portal-globalnav-2" condition/>
+          </tal:defineTabStyle>
+
+        </tal:defineTabStyleConds>
+
+
+        <ul tal:attributes="id tabStyle">
+            <tal:tabs tal:repeat="tab row">
+
+                <tal:comment replace="nothing">
+                  hack for comparing tab['id'] and selected_portal_tabs, which evaluate to
+                  index_html and front-page respectively when viewing the home page
+                </tal:comment>
+
+                <tal:checkTabID tal:condition="python: tab['id'] == 'index_html'">
+                   <tal:setTabID tal:define="global tabID string:front-page" />
+                </tal:checkTabID> 
+
+                <tal:checkTabID tal:condition="python: tab['id'] != 'index_html'">
+                    <tal:setTabID tal:define="global tabID tab/id" />
+                </tal:checkTabID>
+
+                <li tal:attributes="id string:portaltab-${tab/id};
+                    class python:test(selected_portal_tab==tabID, 'selected', 'plain');">
+
+                   <tal:comment replace="nothing">
+                     not selected, not first tab
+                   </tal:comment>
  
-            </tal:checkTabID> 
+                   <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
+                         cond2 repeat/tab/index;"
+                         tal:condition="python: cond1 and cond2">
 
-            <tal:checkTabID tal:condition="python: tab['id'] != 'index_html'">
+                       <a tal:content="tab/name"
+                          tal:attributes="href tab/url;
+                                          title tab/description|nothing">
+                          Tab Name
+                       </a>
 
-                <tal:setTabID tal:define="global tabID tab/id">
-                </tal:setTabID>
+                   </span>
 
-            </tal:checkTabID>
+                   <tal:comment replace="nothing">
+                      selected, not first tab
+                   </tal:comment>
 
+                   <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
+                                     cond2 repeat/tab/index;"
+                         tal:condition="python: cond1 and cond2">
 
-            <li tal:attributes="id string:portaltab-${tab/id};
-                                class python:test(selected_portal_tab==tabID, 'selected', 'plain');">
+                       <a tal:content="tab/name"
+                          tal:attributes="title tab/description|nothing">
+                          Tab Name
+                       </a>
 
+                   </span>
 
-               <tal:comment replace="nothing">
-                 not selected, not first tab
-               </tal:comment>
+                   <tal:comment replace="nothing">
+                      not selected, first tab
+                   </tal:comment>
 
-               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
-                                 cond2 repeat/tab/index;"
-                     tal:condition="python: cond1 and cond2">
+                   <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
+                                    cond2 repeat/tab/index;"
+                         tal:condition="python: cond1 and not cond2">
 
-                   <a tal:content="tab/name"
-                      tal:attributes="href tab/url;
-                                      title tab/description|nothing">
-                      Tab Name
-                   </a>
+                       <a tal:content="tab/name"
+                          tal:define="tabclass string: first-tab"
+                          tal:attributes="href tab/url;
+                                         title tab/description|nothing;
+                                         class tabclass">
 
-               </span>
+                          Tab Name
+                      </a>
 
-               <tal:comment replace="nothing">
-                 selected, not first tab
-               </tal:comment>
-
-               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
-                                 cond2 repeat/tab/index;"
-                     tal:condition="python: cond1 and cond2">
-
-                   <a tal:content="tab/name"
-                      tal:attributes="title tab/description|nothing">
-                      Tab Name
-                   </a>
-
-               </span>
-
-               <tal:comment replace="nothing">
-                 not selected, first tab
-               </tal:comment>
-
-               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') != 'selected';
-                                 cond2 repeat/tab/index;"
-                     tal:condition="python: cond1 and not cond2">
-
-                   <a tal:content="tab/name"
-                      tal:define="tabclass string: first-tab"
-                      tal:attributes="href tab/url;
-                                      title tab/description|nothing;
-                                      class tabclass">
-
-                      Tab Name
-                   </a>
-
-               </span>
+                   </span>
 
 
-               <tal:comment replace="nothing">
-                 selected, first tab
-               </tal:comment>
+                   <tal:comment replace="nothing">
+                     selected, first tab
+                   </tal:comment>
 
-               <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
-                                 cond2 repeat/tab/index;"
-                     tal:condition="python: cond1 and not cond2">
+                   <span tal:define="cond1 python:test(selected_portal_tab==tabID, 'selected', 'plain') == 'selected';
+                                     cond2 repeat/tab/index;"
+                         tal:condition="python: cond1 and not cond2">
 
-                   <a tal:content="tab/name"
-                      tal:define="tabclass string: first-tab"
-                      tal:attributes="title tab/description|nothing;
-                                      class tabclass">
-                      Tab Name
-                   </a>
+                       <a tal:content="tab/name"
+                          tal:define="tabclass string: first-tab"
+                          tal:attributes="title tab/description|nothing;
+                                          class tabclass">
+                          Tab Name
+                       </a>
 
-               </span>
+                   </span>
 
+   
+                </li>
 
-            </li>
+            </tal:tabs>
+        </ul>
 
-        </tal:tabs>
-    </ul>
+      </tal:tabRow>
+    </tal:getTabs>
+
 </div>
 
 </body>

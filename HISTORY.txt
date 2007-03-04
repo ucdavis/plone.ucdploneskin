@@ -1,5 +1,10 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 in progress - Released - Mar, 03 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Now supports two rows of portal tabs
+    - Added option for changing the color of the primary row of tabs
+
 UCDPloneSkin 2.0 in progress - Released - Mar, 02 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Added confliglet option for logo to the left of department name
