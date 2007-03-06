@@ -1,5 +1,5 @@
 from Products.CMFCore.utils import getToolByName
-#from types import ListType
+from types import ListType
 
 
 searchbox = context.REQUEST.get('searchbox', None)
@@ -35,14 +35,10 @@ pp_ucd_props.manage_changeProperties(altPrimaryNavColor=altPrimaryNavColor)
 # if the user only selects one element, then we have a single string
 # not an array
 
-#if type(secondTabRow) is ListType:
-
-if secondTabRow:
+if type(secondTabRow) is ListType:
   secondTabRow = ','.join(secondTabRow)
-  pp_ucd_props.manage_changeProperties(secondTabRow=secondTabRow)
 
-else:
-  pp_ucd_props.manage_changeProperties(secondTabRow='')
+pp_ucd_props.manage_changeProperties(secondTabRow=secondTabRow)
 
 
 

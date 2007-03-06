@@ -210,6 +210,7 @@ a.link-parent {
 
   <dtml-if checkSecondTabRow>
     border-bottom: 1px solid #FFFFFF;
+    height: 2.1em;
   </dtml-if>
 }
 
