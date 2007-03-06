@@ -42,7 +42,7 @@
                                              cond2 not:here/portal_properties/ucdploneskin_properties/secondTabRow">
 
           <tal:defineTabStyle tal:condition="python:cond1 and cond2">
-            <tal tal:define="global tabStyle string:portal-globalnav-2" condition/>
+            <tal tal:define="global tabStyle string:portal-globalnav-2" />
           </tal:defineTabStyle>
 
         </tal:defineTabStyleConds>

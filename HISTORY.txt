@@ -3,8 +3,7 @@ Changelog for UCDPloneSkin
 UCDPloneSkin 2.0 in progress - Released - Mar, 05 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed primary nav border problem that occured w/ two rows
-    - Uncommented code for dealing with single selection versus multi-selection
-      of second row tabs, but this still needs fixing
+    - Properly handled case of user choosing one tab for the second row(ar2csv)
 
 UCDPloneSkin 2.0 in progress - Released - Mar, 03 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

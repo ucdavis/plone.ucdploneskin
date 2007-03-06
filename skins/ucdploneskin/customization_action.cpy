@@ -1,6 +1,4 @@
 from Products.CMFCore.utils import getToolByName
-from types import ListType
-
 
 searchbox = context.REQUEST.get('searchbox', None)
 copyright = context.REQUEST.get('copyright', None)
@@ -31,15 +29,15 @@ pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
 pp_ucd_props.manage_changeProperties(altPrimaryNavColor=altPrimaryNavColor)
 
 
-# convert the array to csv
-# if the user only selects one element, then we have a single string
-# not an array
+# break array out to csv
+# handle if user doesn't select any tabs
 
-if type(secondTabRow) is ListType:
+if same_type([], secondTabRow):
   secondTabRow = ','.join(secondTabRow)
+else:
+  secondTabRow = ''
 
 pp_ucd_props.manage_changeProperties(secondTabRow=secondTabRow)
-
 
 
 if deleteBgImage:

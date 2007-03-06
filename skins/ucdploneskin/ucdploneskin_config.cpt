@@ -355,7 +355,7 @@ This page allows you configure and customize UCDPloneSkin.
         </td>
 
         <td valign="top">
-          <select name="secondTabRow" multiple>
+          <select name="secondTabRow:list" multiple>
 
             <tal:tabs tal:repeat="tab portal_tabs">
 
