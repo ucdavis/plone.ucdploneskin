@@ -348,9 +348,10 @@ This page allows you configure and customize UCDPloneSkin.
         <td valign="top">
           Second row of portal tabs<br/>
           <span class="discreet">
-            Here you can choose which tabs, if any,  should display in the
+            Here you can choose which tabs, if any, should display in the
             second row of portal tabs. Hold down control (PC) or command
-            (Mac) to select multiple values.
+            (Mac) to select multiple values.  If you select all the tabs,
+            you'll end up with one row of blue tabs.
           </span>
         </td>
 
@@ -369,45 +370,6 @@ This page allows you configure and customize UCDPloneSkin.
           </select>
         </td>
       </tr>
-
-
-      <tal:hiddenTabColor tal:condition="here/portal_properties/ucdploneskin_properties/secondTabRow">
-        
-        <input type="hidden" name="altPrimaryNavColor"
-           tal:attributes="value here/portal_properties/ucdploneskin_properties/altPrimaryNavColor">
-
-      </tal:hiddenTabColor>
-      
-      <tal:primaryTabColor tal:condition="not:here/portal_properties/ucdploneskin_properties/secondTabRow">
-
-        <tr>
-          <td valign="top">
-            Blue or Gold portal tabs? <br/>
-            <span class="discreet">
-              This option is only available when you have one row of tabs.
-          </td>
-
-          <td valign="top">
-
-            <input type="radio"
-                   name="altPrimaryNavColor"
-                   value="gold"
-                   tal:define="val request/altPrimaryNavColor|nothing"
-                   tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.altPrimaryNavColor
-                                   == 'gold' " />
-            Gold
-
-            <input type="radio"
-                   name="altPrimaryNavColor"
-                   value="blue"
-                   tal:define="val request/altPrimaryNavColor|nothing"
-                   tal:attributes="checked python:context.portal_properties.ucdploneskin_properties.altPrimaryNavColor                                         == 'blue' " />
-            Blue
-
-          </td>
-        </tr>
-
-      </tal:primaryTabColor>
 
       <tr>
         <td>

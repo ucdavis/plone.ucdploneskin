@@ -10,7 +10,6 @@ deleteBgImage = context.REQUEST.get('deleteBgImage', None)
 bgImageNoRepeat = context.REQUEST.get('bgImageNoRepeat', None)
 logo = context.REQUEST.get('logo', None)
 deleteLogo = context.REQUEST.get('deleteLogo', None)
-altPrimaryNavColor = context.REQUEST.get('altPrimaryNavColor', None)
 secondTabRow = context.REQUEST.get('secondTabRow', None)
 
 
@@ -26,7 +25,6 @@ pp_ucd_props.manage_changeProperties(privacyStatement=privacyStatement)
 pp_ucd_props.manage_changeProperties(showPrivacyStatement=showPrivacyStatement)
 pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
 pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
-pp_ucd_props.manage_changeProperties(altPrimaryNavColor=altPrimaryNavColor)
 
 
 # break array out to csv

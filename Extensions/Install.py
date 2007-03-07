@@ -116,9 +116,6 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('secondTabRow'):
       addProperty(pp_ucd_props, 'secondTabRow', '', 'string', out)
 
-    if not pp_ucd_props.hasProperty('altPrimaryNavColor'):
-      addProperty(pp_ucd_props, 'altPrimaryNavColor', 'gold', 'string', out)
-
 
 
     # add quicklink examples if none exist

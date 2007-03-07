@@ -33,19 +33,12 @@
 
 
         <tal:comment replace="nothing">
-          check if we only have one row, and the user wants it to be gold
-          (the default)
+          if we don't have a second row, then the first row should be gold
         </tal:comment>
 
-        <tal:defineTabStyleConds tal:define="cond1 python:here.portal_properties.ucdploneskin_properties.altPrimaryNavColor
-                                                           == 'gold';
-                                             cond2 not:here/portal_properties/ucdploneskin_properties/secondTabRow">
-
-          <tal:defineTabStyle tal:condition="python:cond1 and cond2">
-            <tal tal:define="global tabStyle string:portal-globalnav-2" />
-          </tal:defineTabStyle>
-
-        </tal:defineTabStyleConds>
+        <tal:defineTabStyle tal:condition="not:here/portal_properties/ucdploneskin_properties/secondTabRow">
+          <tal tal:define="global tabStyle string:portal-globalnav-2" />
+        </tal:defineTabStyle>
 
 
         <ul tal:attributes="id tabStyle">
