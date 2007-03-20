@@ -3,6 +3,7 @@ Changelog for UCDPloneSkin
 UCDPloneSkin 2.0 in progress - Released - Mar, 07 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed typo in ploneCustom.css
+    - Added member_search_form.pt
 
 UCDPloneSkin 2.0 in progress - Released - Mar, 07 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
