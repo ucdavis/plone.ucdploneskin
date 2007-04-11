@@ -1,4 +1,27 @@
+Need to hack nav so special pages in the root don't show nav.
+
+
 Changelog for UCDPloneSkin
+
+UCDPloneSkin 2.0 in progress - Released - Apr, 10 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - New left nav works
+      - Added configlet option for left nav icons
+
+UCDPloneSkin 2.0 in progress - Released - Apr, 03 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Continued stylizing new left nav
+    - Adjusted portal tabs spacing
+
+UCDPloneSkin 2.0 in progress - Released - Apr, 02 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Fixed accesskeys again (forgot to commit prior changes) 
+    - Started to stylize new left nav
+
+UCDPloneSkin 2.0 in progress - Released - Mar, 30 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Removed portlet_left_nav, switched to stock plone navigation
+      - Split dept info and quicklinks into separate portlets
 
 UCDPloneSkin 2.0 in progress - Released - Mar, 07 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

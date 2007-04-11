@@ -36,12 +36,19 @@
 
           <table border="0" cellspacing="0" cellpadding="0">
             <tr valign="top">
-              <td>
+
+              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
                 <img tal:attributes="src node/icon" />
               </td>
-              <td class="navTreeText">
+
+              <td tal:condition="not: here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
                 <tal:itemTitle tal:replace="item/Title" />
               </td>
+
+              <td class="navTreeText" tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
+                <tal:itemTitle tal:replace="item/Title" />
+              </td>
+
             </tr>
           </table>
 

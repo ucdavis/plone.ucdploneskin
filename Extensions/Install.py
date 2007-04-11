@@ -116,6 +116,15 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('secondTabRow'):
       addProperty(pp_ucd_props, 'secondTabRow', '', 'string', out)
 
+    if not pp_ucd_props.hasProperty('leftNavShowIcons'):
+      addProperty(pp_ucd_props, 'leftNavShowIcons', '', 'boolean', out)
+
+
+    # navigation settings
+    pp.portal_properties.navtree_properties.manage_changeProperties(includeTop=0)
+    pp.portal_properties.navtree_properties.manage_changeProperties(topLevel=1)
+    pp.portal_properties.navtree_properties.manage_changeProperties(currentFolderOnlyInNavtree=1)
+
 
 
     # add quicklink examples if none exist

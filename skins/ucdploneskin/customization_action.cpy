@@ -11,6 +11,7 @@ bgImageNoRepeat = context.REQUEST.get('bgImageNoRepeat', None)
 logo = context.REQUEST.get('logo', None)
 deleteLogo = context.REQUEST.get('deleteLogo', None)
 secondTabRow = context.REQUEST.get('secondTabRow', None)
+leftNavShowIcons = context.REQUEST.get('leftNavShowIcons', None)
 
 
 portal = context.portal_url.getPortalObject()
@@ -24,7 +25,7 @@ pp_ucd_props.manage_changeProperties(copyright=copyright)
 pp_ucd_props.manage_changeProperties(privacyStatement=privacyStatement)
 pp_ucd_props.manage_changeProperties(showPrivacyStatement=showPrivacyStatement)
 pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
-pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
+pp_ucd_props.manage_changeProperties(leftNavShowIcons=leftNavShowIcons)
 
 
 # break array out to csv
