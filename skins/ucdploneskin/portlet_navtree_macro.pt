@@ -24,15 +24,19 @@
     <span
          tal:define="itemClass string:$item_wf_state_class visualIconPadding;
                      itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
-        
+
+
+        <tal:comment replace="nothing">
+          This should be cleaned up.
+          The two <a> tags that follow should be combined into one, using a 
+          condition.  Also, the padding should have been done using css instead
+          of a table.
+        </tal:comment>
+
         <a tal:attributes="href python:test(linkRemote, item.getRemoteUrl, itemUrl);
                            title item/Description;
-                           class string:$itemClass">
-
-
-          <tal:comment replace="nothing"> 
-            Probably could have used css instead of a table, but this works...
-          </tal:comment>
+                           class string:$itemClass"
+           tal:condition="not: isCurrent">
 
           <table border="0" cellspacing="0" cellpadding="0">
             <tr valign="top">
@@ -45,7 +49,34 @@
                 <tal:itemTitle tal:replace="item/Title" />
               </td>
 
-              <td class="navTreeText" tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
+              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons"
+                  class="navTreeText">
+                <tal:itemTitle tal:replace="item/Title" />
+              </td>
+
+            </tr>
+          </table>
+
+        </a>
+
+
+        <a tal:attributes="title item/Description;
+                           class string:$itemClass"
+           tal:condition="isCurrent">
+
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr valign="top">
+
+              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
+                <img tal:attributes="src node/icon" />
+              </td>
+
+              <td tal:condition="not: here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
+                <tal:itemTitle tal:replace="item/Title" />
+              </td>
+
+              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons"
+                  class="navTreeText">
                 <tal:itemTitle tal:replace="item/Title" />
               </td>
 
@@ -55,6 +86,7 @@
         </a>
         
     </span>
+
 
     <ul tal:attributes="class python:'navTree navTreeLevel'+str(level)"
         tal:define="level python:level+1;"
