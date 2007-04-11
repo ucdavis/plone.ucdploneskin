@@ -346,7 +346,7 @@ This page allows you configure and customize UCDPloneSkin.
 
       <tr>
         <td valign="top">
-          Second row of portal tabs<br/>
+          Portal tabs<br/>
           <span class="discreet">
             Here you can choose which tabs, if any, should display in the
             second row of portal tabs. Hold down control (PC) or command

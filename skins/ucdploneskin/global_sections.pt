@@ -11,6 +11,7 @@
      tal:condition="portal_tabs">
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
 
+    <a name="portal-globalnav"></a>
 
     <tal:getTabs tal:define="rowAr python:here.getTabs(portal_tabs)">
 

@@ -10,6 +10,7 @@
  
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
 body {
     margin-right:1px;
 }
@@ -54,7 +55,6 @@ a.link-parent {
 .documentContent li a:hover {
   border-bottom: 0;
 }
-
 
 .link-external {
   background: 0; 
@@ -228,7 +228,7 @@ a.link-parent {
   color: #002666;
   background-color: #ACB8C3;
   float: left;
-  padding: 0.35em 0.55em 0.35em 0.55em;
+  padding: 0.35em 0.55em 0.4em 0.55em;
   margin: 0;
   border-color: #8294A6;
   border-style: none &dtml-borderStyle; none none;
@@ -391,58 +391,6 @@ a.link-parent {
   line-height: 1.3em;
 }
 
-#in-this-section {
-  font-weight: bold;
-  color: #2F4D6A;
-}
-
-#in-this-section h2 {
-  position: relative;
-  margin: 0;
-  padding: 1.1em 0.4em 1px 14px;
-  border-bottom: 1px solid #D2B84C;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #2F4D6A;
-}
-
-#in-this-section ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 14px 0;
-}
-
-#in-this-section ul li {
-  margin: 0;
-  /* This is a hack to correct line spacing problem in Windows Internet Explorer */
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-	
-#in-this-section li a {
-  display: block;
-  padding: 0.15em 0.4em 0.15em 14px;
-  text-decoration: none;
-  color: #002666;
-  font-weight: normal;
-  border: 0;
-}
-
-#in-this-section li a:hover {
-  background-color: #D9C266;
-  color: #77160B;
-}
-
-#in-this-section li a.selected {
-  color: #000000; 
-  background-color: #DFCC80;
-}
-
-#in-this-section li a.selected:hover {
-  color: #000000;
-  background-color: #DFCC80;
-}
-
 h1, h2, h3, h4, h5, h6 {
   border-bottom: 0; 
   color: #2F4D6A;
@@ -526,19 +474,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #008000 !important;
 }
 
+
 /* this isn't visable in the default skin, but might be 
    useful if you find a spot for the recent changes portlet
 
-#portlet-recent a {
-  color: #002666;
-  border: 0;
-}
+  #portlet-recent a {
+    color: #002666;
+    border: 0;
+  }
 
-#portlet-recent a:hover {
-  color: #77160B;
-}
+  #portlet-recent a:hover {
+    color: #77160B;
+  }
 
 */
+
 
 .actionMenuHeader a {
   border: 0;
@@ -582,6 +532,39 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   background-color: transparent;
 }
 
+.portletHeader {
+  background-color: transparent;
+  border: 0;
+  font-weight: bold;
+  color: #2F4D6A;
+  font-size: 1.2em;
+  padding: 1em 0.4em 0 14px;
+  border-bottom: 1px solid #D2B84C;
+}
+
+#portlet-navigation-tree {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.portletItem {
+  border: 0;
+  padding: 0;
+}
+
+.navTreeItem a, dd.portletItem .navTreeItem {
+  margin: 0;
+  border: 0 !important;
+}
+
+.navTreeItem a {
+  padding: 0 0 0 14px;
+}
+
+.navTreeText {
+  padding-left: 5px;
+}
 
 /* </dtml-with> */
 

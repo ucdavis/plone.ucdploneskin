@@ -1,0 +1,61 @@
+<tal:master define="level options/level|python:0;
+                    children options/children | nothing;
+                    bottomLevel options/bottomLevel | nothing;
+                    normalizeString nocall:context/plone_utils/normalizeString;
+                    viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();
+                    member context/portal_membership/getAuthenticatedMember|nothing;
+                    member_id member/getId|nothing">
+
+<metal:main define-macro="nav_main">
+<tal:navitem repeat="node children">
+<li class="navTreeItem visualNoMarker"
+    tal:define="children   node/children;
+                item       node/item;
+                useView    python:item.portal_type in viewActions;
+                itemUrl    python:test(useView, item.getURL() + '/view', item.getURL());
+                linkRemote python:item.getRemoteUrl and item.Creator != member_id;
+                isCurrent  node/currentItem;"
+    tal:condition="python: bottomLevel &lt;= 0 or level &lt; bottomLevel-1">
+
+    <tal:level define="item_type_class     python: 'visualIcon contenttype-' + normalizeString(item.portal_type);
+                       item_wf_state_class python: 'state-' + normalizeString(item.review_state);">
+
+
+    <span
+         tal:define="itemClass string:$item_wf_state_class visualIconPadding;
+                     itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
+        
+        <a tal:attributes="href python:test(linkRemote, item.getRemoteUrl, itemUrl);
+                           title item/Description;
+                           class string:$itemClass">
+
+
+          <tal:comment replace="nothing"> 
+            Probably could have used css instead of a table, but this works...
+          </tal:comment>
+
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr valign="top">
+              <td>
+                <img tal:attributes="src node/icon" />
+              </td>
+              <td class="navTreeText">
+                <tal:itemTitle tal:replace="item/Title" />
+              </td>
+            </tr>
+          </table>
+
+        </a>
+        
+    </span>
+
+    <ul tal:attributes="class python:'navTree navTreeLevel'+str(level)"
+        tal:define="level python:level+1;"
+        tal:condition="nocall:children">
+        <metal:recurse use-macro="here/portlet_navtree_macro/macros/nav_main"/>
+    </ul>
+    </tal:level>
+</li>
+</tal:navitem>
+</metal:main>
+</tal:master>
