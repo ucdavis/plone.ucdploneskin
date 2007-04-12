@@ -167,7 +167,7 @@ a.link-parent {
   color: #002666;
   background-color: transparent;
   float: left;
-  padding: 0.34em 0.55em 0.34em 0.55em;  
+  padding: 0.4em 0.55em 0.4em 0.55em;  
   margin: 0;
   border-color: #BF9900;
   border-style: none &dtml-borderStyle; none none;
@@ -228,7 +228,7 @@ a.link-parent {
   color: #002666;
   background-color: #ACB8C3;
   float: left;
-  padding: 0.35em 0.55em 0.4em 0.55em;
+  padding: 0.45em 0.55em 0.45em 0.55em;
   margin: 0;
   border-color: #8294A6;
   border-style: none &dtml-borderStyle; none none;
