@@ -150,7 +150,7 @@ a.link-parent {
   padding: 0;
   border-top: 1px solid #BF9900;
   border-bottom: 1px solid #002666;
-  height: 2em;
+  height: 2.1em;
   list-style: none;
   margin: 0;
   line-height: normal;
@@ -159,6 +159,7 @@ a.link-parent {
 
 #portal-globalnav-2 li {
   display: inline;
+
 }
 
 #portal-globalnav-2 li a {
@@ -167,12 +168,13 @@ a.link-parent {
   color: #002666;
   background-color: transparent;
   float: left;
-  padding: 0.4em 0.55em 0.4em 0.55em;  
+  padding: 0 0.8em 0em 0.8em;    
   margin: 0;
   border-color: #BF9900;
   border-style: none &dtml-borderStyle; none none;
   border-width: &dtml-borderWidth;;
-  height: auto;
+  height: 2.1em;
+  line-height: 2.1em;
   text-decoration: none;
   text-transform: &dtml-textTransform;;
 }
@@ -202,14 +204,13 @@ a.link-parent {
   padding: 0;
   border-top: 1px solid #6D8297;
   border-bottom: 1px solid #002666;
-  height: 2em;
+  height: 2.1em;
   list-style: none;
   margin: 0;
   line-height: normal;
   white-space: nowrap;
 
   <dtml-if checkSecondTabRow>
-    height: 2.1em;
 
     <dtml-if checkForOneTabRow>
       border-bottom: 1px solid #FFFFFF;
@@ -228,12 +229,13 @@ a.link-parent {
   color: #002666;
   background-color: #ACB8C3;
   float: left;
-  padding: 0.45em 0.55em 0.45em 0.55em;
+  padding: 0 0.8em 0em 0.8em;
   margin: 0;
   border-color: #8294A6;
   border-style: none &dtml-borderStyle; none none;
   border-width: &dtml-borderWidth;;
-  height: auto;
+  height: 2.1em;
+  line-height: 2.1em;
   text-decoration: none;
   text-transform: &dtml-textTransform;;
 }

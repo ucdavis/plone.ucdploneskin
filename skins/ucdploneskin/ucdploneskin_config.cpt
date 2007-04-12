@@ -346,21 +346,6 @@ This page allows you configure and customize UCDPloneSkin.
 
       <tr>
         <td valign="top">
-          Show icons in the left navigation?
-        </td>
-        <td valign="top">
-
-          <input type="checkbox"
-                 name="leftNavShowIcons"
-                 tal:define="val request/leftNavShowIcons|nothing"
-                 tal:attributes="checked here/portal_properties/ucdploneskin_properties/leftNavShowIcons" />
-          <tal class="fieldRequired" tal:define="err errors/leftNavShowIcons|nothing"
-                tal:condition="err" tal:content="err" />
-        </td>
-      </tr>
-
-      <tr>
-        <td valign="top">
           Portal tabs<br/>
           <span class="discreet">
             Here you can choose which tabs, if any, should display in the
