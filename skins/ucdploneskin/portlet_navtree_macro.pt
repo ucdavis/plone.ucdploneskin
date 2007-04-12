@@ -18,12 +18,9 @@
     tal:condition="python: bottomLevel &lt;= 0 or level &lt; bottomLevel-1">
 
     <tal:level define="item_type_class     python: 'visualIcon contenttype-' + normalizeString(item.portal_type);
-                       item_wf_state_class python: 'state-' + normalizeString(item.review_state);">
-
-
-    <span
-         tal:define="itemClass string:$item_wf_state_class visualIconPadding;
-                     itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
+                       item_wf_state_class python: 'state-' + normalizeString(item.review_state);
+                       itemClass string:$item_wf_state_class visualIconPadding;
+                       itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
 
 
         <tal:comment replace="nothing">
@@ -36,63 +33,14 @@
         <a tal:attributes="href python:test(linkRemote, item.getRemoteUrl, itemUrl);
                            title item/Description;
                            class string:$itemClass"
-           tal:condition="not: isCurrent">
-
-          <table border="0" cellspacing="0" cellpadding="0">
-            <tr valign="top">
-
-              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
-                <img tal:attributes="src node/icon" />
-              </td>
-
-              <td tal:condition="not: here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
-                <tal:itemTitle tal:replace="item/Title" />
-              </td>
-
-              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons"
-                  class="navTreeText">
-                <tal:itemTitle tal:replace="item/Title" />
-              </td>
-
-            </tr>
-          </table>
-
-        </a>
-
+           tal:content="item/Title" 
+           tal:condition="not: isCurrent" />
 
         <a tal:attributes="title item/Description;
                            class string:$itemClass"
-           tal:condition="isCurrent">
+           tal:content="item/Title"
+           tal:condition="isCurrent" />
 
-          <table border="0" cellspacing="0" cellpadding="0">
-            <tr valign="top">
-
-              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
-                <img tal:attributes="src node/icon" />
-              </td>
-
-              <td tal:condition="not: here/portal_properties/ucdploneskin_properties/leftNavShowIcons">
-                <tal:itemTitle tal:replace="item/Title" />
-              </td>
-
-              <td tal:condition="here/portal_properties/ucdploneskin_properties/leftNavShowIcons"
-                  class="navTreeText">
-                <tal:itemTitle tal:replace="item/Title" />
-              </td>
-
-            </tr>
-          </table>
-
-        </a>
-        
-    </span>
-
-
-    <ul tal:attributes="class python:'navTree navTreeLevel'+str(level)"
-        tal:define="level python:level+1;"
-        tal:condition="nocall:children">
-        <metal:recurse use-macro="here/portlet_navtree_macro/macros/nav_main"/>
-    </ul>
     </tal:level>
 </li>
 </tal:navitem>
