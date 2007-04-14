@@ -211,11 +211,7 @@ a.link-parent {
   white-space: nowrap;
 
   <dtml-if checkSecondTabRow>
-
-    <dtml-if checkForOneTabRow>
-      border-bottom: 1px solid #FFFFFF;
-    </dtml-if>
-
+    border-bottom: 1px solid #FFFFFF;
   </dtml-if>
 }
 

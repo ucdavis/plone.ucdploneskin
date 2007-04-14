@@ -1,14 +1,19 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 in progress - Released - Apr, 14 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - option for two rows of portal_tabs or one row of blue portal_tabs now
+      works with automatic tab generation turned off (i.e. portal_actions)
+
 UCDPloneSkin 2.0 in progress - Released - Apr, 12 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - removed icon option from new left nav, didn't work with IE
-    - Adjusted portal tabs spacing for IE and FF/Win
+    - Adjusted portal tabs spacing for IE and FF/Win, correctly this time
 
 UCDPloneSkin 2.0 in progress - Released - Apr, 11 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - removed border in admin left nav
-    - deleted getSections.py as it isn't needed with the new nav
+    - deleted getSections.py as it isn't needed with the new left nav
     - current left nav item is now bold
 
 UCDPloneSkin 2.0 in progress - Released - Apr, 10 2007
