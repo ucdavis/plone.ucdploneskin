@@ -2,7 +2,10 @@ Changelog for UCDPloneSkin
 
 UCDPloneSkin 2.0 in progress - Released - Apr, 16 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
-    - quicklink url can now have ${portal_url} variable
+    - quicklink url can now have ${portal_url} variable, search example does
+    - adjusted spacing around department name header to allow no padding on 
+      logo image
+    - removed <a> underline from events (.listing a)
 
 UCDPloneSkin 2.0 in progress - Released - Apr, 14 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
