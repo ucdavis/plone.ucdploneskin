@@ -21,7 +21,7 @@
           <li tal:repeat="quicklink quickLinkList">
 
             <a tal:attributes="href quicklink/url">
-              <span tal:content="quicklink/text" tal:omit-tag="" />
+              <span tal:replace="quicklink/text" />
             </a>
 
           </li>

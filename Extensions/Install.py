@@ -129,7 +129,7 @@ def afterInstall(self,product,reinstall):
     if not ('quicklink1' in pp_ucd_props.propertyIds()):
       addProperty(pp_ucd_props, 'quicklink1', 'University Library,http://www.lib.ucdavis.edu/', 'string', out)
       addProperty(pp_ucd_props, 'quicklink2', 'MyUCDavis,http://my.ucdavis.edu', 'string', out)
-      addProperty(pp_ucd_props, 'quicklink3', 'Search,search_form', 'string', out)
+      addProperty(pp_ucd_props, 'quicklink3', 'Search this site,${portal_url}/search_form', 'string', out)
 
 
     # check if configlet exists

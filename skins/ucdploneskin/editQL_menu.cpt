@@ -32,6 +32,9 @@
 
 
 <h2>Edit or Remove Quick Links</h2>
+You can either provide a full URL or the relative path to an object in the site.
+The variable ${portal_url} can be used here, although it will be evaluated when displayed in the URL box below.
+
 
 <form tal:define="errors options/state/getErrors"
       tal:attributes="action string:${here/absolute_url}/${template/id};"

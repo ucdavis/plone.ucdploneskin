@@ -1,5 +1,9 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 in progress - Released - Apr, 16 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - quicklink url can now have ${portal_url} variable
+
 UCDPloneSkin 2.0 in progress - Released - Apr, 14 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - option for two rows of portal_tabs or one row of blue portal_tabs now

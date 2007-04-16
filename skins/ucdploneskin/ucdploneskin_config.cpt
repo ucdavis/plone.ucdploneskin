@@ -270,6 +270,8 @@ This page allows you configure and customize UCDPloneSkin.
       <tr>
         <td colspan="2">
           <h2>Add a Quick Link</h2>
+          You can either provide a full URL or the relative path to an object in the site.
+          The variable ${portal_url} can be used here.
         </td>
       </tr>
 
