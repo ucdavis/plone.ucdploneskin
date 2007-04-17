@@ -11,6 +11,10 @@ bgImageNoRepeat = context.REQUEST.get('bgImageNoRepeat', None)
 logo = context.REQUEST.get('logo', None)
 deleteLogo = context.REQUEST.get('deleteLogo', None)
 secondTabRow = context.REQUEST.get('secondTabRow', None)
+useSecondaryMarkFavicon = context.REQUEST.get('useSecondaryMarkFavicon', None)
+customFavicon = context.REQUEST.get('customFavicon', None)
+deleteCustomFavicon  = context.REQUEST.get('deleteCustomFavicon', None)
+
 
 
 portal = context.portal_url.getPortalObject()
@@ -24,6 +28,7 @@ pp_ucd_props.manage_changeProperties(copyright=copyright)
 pp_ucd_props.manage_changeProperties(privacyStatement=privacyStatement)
 pp_ucd_props.manage_changeProperties(showPrivacyStatement=showPrivacyStatement)
 pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
+pp_ucd_props.manage_changeProperties(useSecondaryMarkFavicon=useSecondaryMarkFavicon)
 
 
 # break array out to csv
@@ -64,6 +69,19 @@ if logo:
 
   pp.manage_addImage('ucdploneskin-logo', logo)
 
+
+
+if deleteCustomFavicon:
+  pp.manage_delObjects(['customFavicon'])
+
+if customFavicon:
+
+  try:
+    pp.manage_delObjects(['customFavicon'])
+  except:
+    pass # ignore error in case img doesn't exist
+
+  pp.manage_addImage('customFavicon', customFavicon)
 
 
 

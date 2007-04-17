@@ -45,18 +45,18 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
     <table border="0" cellpadding="5">
 
-      <tr>
-        <td colspan="2" valign="top">
+      <tr valign="top">
+        <td colspan="2">
           <h2>Contact Info</h2>
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Department Name:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="deptName"
                  size="40"
@@ -66,12 +66,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>       
 
-      <tr>
-        <td valign="top">   
+      <tr valign="top">
+        <td>   
           Address Line 1:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="address1"
                  size="40"
@@ -81,12 +81,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Address Line 2:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="address2"
                  size="40"
@@ -96,12 +96,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Address Line 3:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="address3"
                  size="40"
@@ -111,12 +111,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Address Line 4:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="address4"
                  size="40"
@@ -127,12 +127,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
       </tr>
 
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Phone Number 1:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="phone1"
                  size="40"
@@ -142,12 +142,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Phone Number 2:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="phone2"
                  size="40"
@@ -158,12 +158,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
       </tr>
 
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Fax Number 1:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="fax1"
                  size="40"
@@ -173,12 +173,12 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
-        <td valign="top">
+      <tr valign="top">
+        <td>
           Fax Number 2:
         </td>
 
-        <td valign="top">
+        <td>
           <input type="text"
                  name="fax2"
                  size="40"
@@ -189,7 +189,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
       </tr>
 
 
-      <tr>    
+      <tr valign="top">    
         <td colspan="2" valign="top">
           <input type="submit" name="form.button.contactInfo" value="Submit" />
         </td>
@@ -218,14 +218,14 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
         <table border="0" cellpadding="5">
 
-          <tr>
-            <td valign="top">    
+          <tr valign="top">
+            <td>    
               <h2>Edit or Remove Quick Links</h2>
             </td>
           </tr>
     
-          <tr>
-            <td valign="top">
+          <tr valign="top">
+            <td>
               Select: &nbsp;
 
               <select name="qlID">
@@ -242,8 +242,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
             </td>
           </tr>
 
-          <tr>
-            <td valign="top">
+          <tr valign="top">
+            <td>
               <input type="submit" name="form.button.editQL" value="Submit" />
             </td>
           </tr>
@@ -267,7 +267,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
     <table border="0" cellpadding="5">
 
-      <tr>
+      <tr valign="top">
         <td colspan="2">
           <h2>Add a Quick Link</h2>
           You can either provide a full URL or the relative path to an object in the site.
@@ -275,7 +275,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
+      <tr valign="top">
         <td>
           Text:
         </td>
@@ -288,7 +288,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
+      <tr valign="top">
         <td>
           URL
         </td> 
@@ -301,7 +301,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
+      <tr valign="top">
         <td colspan="2">
           <input type="submit" name="form.button.addQL" value="Submit" />
         </td>
@@ -325,14 +325,14 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
     <table border="0" cellpadding="5">
 
-      <tr>
+      <tr valign="top">
         <td colspan="2">
           <h2>Customization</h2>
         </td>
       </tr>
 
       <tr>
-        <td valign="top">
+        <td>
           Show searchbox instead of a link to the main campus search page?
         </td>
         <td valign="top">
@@ -346,7 +346,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
-      <tr>
+      <tr valign="top">
         <td valign="top">
           Portal tabs<br/>
           <span class="discreet">
@@ -461,7 +461,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
           <span tal:condition="exists: here/portal_properties/ucdploneskin-bgImage">
 
             <span class="discreet">
-              Delete image?
+              Delete the department name background image?
             </span>
 
             <input type="checkbox"
@@ -514,7 +514,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
           <span tal:condition="exists: here/portal_properties/ucdploneskin-logo">
 
             <span class="discreet">
-               Delete image?
+               Delete the logo?
             </span>
 
             <input type="checkbox"
@@ -546,6 +546,71 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </tr>
       </span>
 
+
+      <tr>
+        <td>
+          Favicon<br/>
+
+          <span class="discreet">
+            The favicon is displayed in the browser's URL bar and bookmarks
+            menu.  The original campus template doesn't include a favicon
+            file, so this option is disabled by default.  You'll probably end
+            up proxying Plone with Apache and most browsers will find
+            favicon.ico sitting in the root site.  So, unless you like the
+            stock Plone favicon, you might want to customize it.  You have 
+            option of simply enabling the "secondary mark" image or uploading
+            your own.
+          </span>
+
+        </td>
+
+        <td>
+
+          <input type="file"
+                 name="customFavicon"
+                 size="25"
+                 tal:define="val request/customFavicon|nothing" />
+          <tal class="fieldRequired" tal:define="err errors/customFavicon|nothing"
+            tal:condition="err" tal:content="err" />
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+       
+        <td>
+
+          <tal:checkNotCustomFavicon tal:condition="not: exists: here/portal_properties/customFavicon">
+            <span class="discreet">
+               Use the "secondary mark" favicon?
+            </span>
+
+            <input type="checkbox"
+                   name="useSecondaryMarkFavicon"
+                   tal:define="val request/useSecondaryMarkFavicon|nothing"
+                   tal:attributes="checked here/portal_properties/ucdploneskin_properties/useSecondaryMarkFavicon" />
+
+          </tal:checkNotCustomFavicon>
+
+
+          <tal:checkCustomFavicon tal:condition="exists: here/portal_properties/customFavicon">
+
+            <span class="discreet">
+               Delete the custom favicon ?
+            </span>
+
+            <input type="checkbox"
+                   name="deleteCustomFavicon"
+                   tal:define="val request/deleteCustomFavicon|nothing" />
+            <br/>
+
+            <img tal:attributes="src python:portal_url + '/portal_properties/customFavicon'"/>
+
+          </tal:checkCustomFavicon>
+
+        </td>
+      </tr>
 
       <tr>
         <td colspan="2">

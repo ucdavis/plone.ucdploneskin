@@ -116,6 +116,8 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('secondTabRow'):
       addProperty(pp_ucd_props, 'secondTabRow', '', 'string', out)
 
+    if not pp_ucd_props.hasProperty('useSecondaryMarkFavicon'):
+      addProperty(pp_ucd_props, 'useSecondaryMarkFavicon', '', 'boolean', out)
 
     # navigation settings
     pp.portal_properties.navtree_properties.manage_changeProperties(includeTop=0)

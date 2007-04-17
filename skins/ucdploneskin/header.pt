@@ -74,9 +74,16 @@
         </style>
     <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
 
-<!-- favicon is not in the original UCD template
-    <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/favicon.ico" /> 
--->
+
+    <span tal:condition="here/portal_properties/ucdploneskin_properties/useSecondaryMarkFavicon">
+      <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/secondary_mark_2_favicon.gif" /> 
+    </span>
+
+    <span tal:condition="exists: here/portal_properties/ucdploneskin_properties/customFavicon">
+      <link rel="shortcut icon" type="image/x-icon"
+        tal:attributes="href string:$portal_url/portal_properties/customFavicon" />
+    </span>
+
 
     <link rel="home"
           href=""
