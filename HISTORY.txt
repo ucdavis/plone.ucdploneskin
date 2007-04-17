@@ -1,5 +1,10 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0rc2 - Released - Apr, 17 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - fixed a bug in the installer that prevented the new portlets from being set in
+      left_slots
+
 UCDPloneSkin 2.0rc1 - Released - Apr, 16 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - quicklink url can now have ${portal_url} variable, search example does

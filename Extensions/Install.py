@@ -323,8 +323,16 @@ def customizeSlots(portal, pp_up, out):
         left_column, right_column = formSlotsColumn(LEFT_SLOTS, RIGHT_SLOTS, [], [], MAIN_COLUMN)
 
     # REPLACE SITE's column slots
-    portal.left_slots = tuple(left_column)
-    portal.right_slots = tuple(right_column)
+
+    # the two lines that that follow were originally
+    # ... = tuple(left_column)  and   ... =  tuple(right_column)
+    # that didn't work when adding multilple slots, so we're using
+    # globals from config.py
+
+    portal.left_slots = LEFT_SLOTS  
+    portal.right_slots = RIGHT_SLOTS
+
+
     out.write("Complited portal slots customization ...\n")
 
 
