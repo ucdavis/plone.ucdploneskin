@@ -1,5 +1,9 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.0 - Released - Apr, 19 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - Reworded favicon help
+
 UCDPloneSkin 2.0rc2 - Released - Apr, 17 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - fixed a bug in the installer that prevented the new portlets from

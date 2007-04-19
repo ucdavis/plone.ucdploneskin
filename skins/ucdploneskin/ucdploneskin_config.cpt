@@ -558,7 +558,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
             up proxying Plone with Apache and most browsers will find
             favicon.ico sitting in the root site.  So, unless you like the
             stock Plone favicon, you might want to customize it.  You have 
-            option of simply enabling the "secondary mark" image or uploading
+            option of simply enabling a suggested favicon image or uploading
             your own.
           </span>
 
@@ -583,7 +583,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
           <tal:checkNotCustomFavicon tal:condition="not: exists: here/portal_properties/customFavicon">
             <span class="discreet">
-               Use the "secondary mark" favicon?
+               Use Gunrock, the Aggie mascot?
             </span>
 
             <input type="checkbox"
@@ -597,7 +597,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
           <tal:checkCustomFavicon tal:condition="exists: here/portal_properties/customFavicon">
 
             <span class="discreet">
-               Delete the custom favicon ?
+               Delete the custom favicon?
             </span>
 
             <input type="checkbox"
