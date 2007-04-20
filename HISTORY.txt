@@ -2,7 +2,9 @@ Changelog for UCDPloneSkin
 
 UCDPloneSkin 2.0 - Released - Apr, 19 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
-    - Reworded favicon help
+    - reworded favicon help
+    - fixed left nav bug... current item now honors excludeFromNav property
+    - current left nav item now shows work flow color, i.e. red for private
 
 UCDPloneSkin 2.0rc2 - Released - Apr, 17 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

@@ -15,20 +15,17 @@
                 itemUrl    python:test(useView, item.getURL() + '/view', item.getURL());
                 linkRemote python:item.getRemoteUrl and item.Creator != member_id;
                 isCurrent  node/currentItem;"
-    tal:condition="python: bottomLevel &lt;= 0 or level &lt; bottomLevel-1">
+    tal:condition="python: (bottomLevel &lt;= 0 or level &lt; bottomLevel-1) and
+                           not context.restrictedTraverse(node['path']).getExcludeFromNav()">
 
     <tal:level define="item_type_class     python: 'visualIcon contenttype-' + normalizeString(item.portal_type);
                        item_wf_state_class python: 'state-' + normalizeString(item.review_state);
-                       itemClass string:$item_wf_state_class visualIconPadding;
-                       itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
+                       global itemClass string:$item_wf_state_class visualIconPadding;
+                       global itemClass python:test(isCurrent, itemClass + ' navTreeCurrentItem', itemClass);">
 
-
-        <tal:comment replace="nothing">
-          This should be cleaned up.
-          The two <a> tags that follow should be combined into one, using a 
-          condition.  Also, the padding should have been done using css instead
-          of a table.
-        </tal:comment>
+        <tal:style tal:condition="python: isCurrent and item.review_state == 'published'">
+          <tal:defineStyle tal:define="global itemClass python: itemClass + ' navTreeCurrentItemPublished'" />
+        </tal:style>
 
         <a tal:attributes="href python:test(linkRemote, item.getRemoteUrl, itemUrl);
                            title item/Description;
@@ -40,6 +37,7 @@
                            class string:$itemClass"
            tal:content="item/Title"
            tal:condition="isCurrent" />
+
 
     </tal:level>
 </li>
