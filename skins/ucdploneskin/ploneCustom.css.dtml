@@ -489,6 +489,26 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 */
 
 
+/* the following three styles are useful for the Plone Help Center add-on
+    product */
+
+.portletHeader a {
+/* used by Plone Help Center add-on product */
+  color: &dtml-linkColor; !important;
+  font-weight: normal;
+  border-bottom: 0
+}
+
+.portletFooter {
+/* used by  Plone Help Center add-on product */
+  border: 0 !important;
+}
+
+.portletThirdWidth {
+  border-bottom: 1px solid #D2B84C !important;
+}
+
+
 .actionMenuHeader a {
   border: 0;
 }

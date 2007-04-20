@@ -6,6 +6,7 @@ UCDPloneSkin 2.0rc3 - Released - Apr, 20 2007
     - fixed left nav bug... current item now honors excludeFromNav property
       - added proper check for content types that don't have this property
     - current left nav item now shows work flow color, i.e. red for private
+    - added css for PloneHelpCenter
 
 UCDPloneSkin 2.0rc2 - Released - Apr, 17 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
