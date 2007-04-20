@@ -16,7 +16,7 @@
                 linkRemote python:item.getRemoteUrl and item.Creator != member_id;
                 isCurrent  node/currentItem;"
     tal:condition="python: (bottomLevel &lt;= 0 or level &lt; bottomLevel-1) and
-                           not context.restrictedTraverse(node['path']).getExcludeFromNav()">
+                           not here.checkExcludeFromNav(node['path'])">
 
     <tal:level define="item_type_class     python: 'visualIcon contenttype-' + normalizeString(item.portal_type);
                        item_wf_state_class python: 'state-' + normalizeString(item.review_state);
@@ -30,7 +30,7 @@
         <a tal:attributes="href python:test(linkRemote, item.getRemoteUrl, itemUrl);
                            title item/Description;
                            class string:$itemClass"
-           tal:content="item/Title" 
+           tal:content="item/Title"
            tal:condition="not: isCurrent" />
 
         <a tal:attributes="title item/Description;
