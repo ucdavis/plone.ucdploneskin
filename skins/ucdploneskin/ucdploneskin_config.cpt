@@ -546,6 +546,23 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </tr>
       </span>
 
+      <tr>
+        <td>
+          Hide the department name in the header?<br/>
+          <span class="discreet">
+            This option may be useful if you want to use a logo image instead of the department name.
+          </span>
+        </td>
+        <td>
+
+          <input type="checkbox"
+                 name="hideDeptName"
+                 tal:define="val request/hideDeptName|nothing"
+                 tal:attributes="checked here/portal_properties/ucdploneskin_properties/hideDeptName" />
+          <tal class="fieldRequired" tal:define="err errors/hideDeptName|nothing"
+                tal:condition="err" tal:content="err" />
+        </td>
+      </tr>
 
       <tr>
         <td>
@@ -582,14 +599,15 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         <td>
 
           <tal:checkNotCustomFavicon tal:condition="not: exists: here/portal_properties/customFavicon">
-            <span class="discreet">
-               Use Gunrock, the Aggie mascot?
-            </span>
 
             <input type="checkbox"
                    name="useSecondaryMarkFavicon"
                    tal:define="val request/useSecondaryMarkFavicon|nothing"
                    tal:attributes="checked here/portal_properties/ucdploneskin_properties/useSecondaryMarkFavicon" />
+
+            <span class="discreet">
+               Use Gunrock, the Aggie mascot?
+            </span>
 
           </tal:checkNotCustomFavicon>
 

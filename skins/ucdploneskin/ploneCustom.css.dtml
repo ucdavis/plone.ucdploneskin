@@ -115,9 +115,9 @@ a.link-parent {
   z-index: 2;
 }
 
-#dept-name {
+.dept-name {
   margin: 0;
-  line-height: 2.1em;
+  line-height: 2em;
   font-family: georgia, "times new roman", times, serif;
   font-weight: normal;
   font-size: 3.3em;
@@ -134,16 +134,19 @@ a.link-parent {
   </dtml-if>
 }
 
-#dept-name a {
-  padding-left: 13px;
+.dept-name a {
   text-decoration: none;  
   border: 0;
 }
 
-#dept-name a:hover {
+.dept-name a:hover {
   text-decoration: none;  
   color: #77160B;
   border: 0;
+}
+
+.dept-name-text {
+  padding-left: 13px;
 }
 
 #portal-globalnav-2 {
