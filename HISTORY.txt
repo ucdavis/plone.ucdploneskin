@@ -6,6 +6,7 @@ UCDPloneSkin 2.0rc4 - Released - Apr, 23 2007
     - added configlet option to hide department name in the header
     - hard coded an alt tag for the optional logo in the header
     - centered optional header logo with a table hack
+    - tweaked portlet css
 
 UCDPloneSkin 2.0rc3 - Released - Apr, 20 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

@@ -476,41 +476,23 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #008000 !important;
 }
 
-
-/* this isn't visable in the default skin, but might be 
-   useful if you find a spot for the recent changes portlet
-
-  #portlet-recent a {
-    color: #002666;
-    border: 0;
-  }
-
-  #portlet-recent a:hover {
-    color: #77160B;
-  }
-
-*/
-
-
-/* the following three styles are useful for the Plone Help Center add-on
-    product */
+.portlet {
+  border-bottom: 1px solid #D2B84C !important;
+}
 
 .portletHeader a {
-/* used by Plone Help Center add-on product */
   color: &dtml-linkColor; !important;
   font-weight: normal;
   border-bottom: 0
 }
 
 .portletFooter {
-/* used by  Plone Help Center add-on product */
   border: 0 !important;
 }
 
 .portletThirdWidth {
   border-bottom: 1px solid #D2B84C !important;
 }
-
 
 .actionMenuHeader a {
   border: 0;
@@ -560,7 +542,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   font-weight: bold;
   color: #2F4D6A;
   font-size: 1.2em;
-  padding: 1em 0.4em 0 14px;
+  padding: 0em 0.4em 0 14px;
   border-bottom: 1px solid #D2B84C;
 }
 

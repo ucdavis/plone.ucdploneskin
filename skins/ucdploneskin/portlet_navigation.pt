@@ -12,7 +12,7 @@
 
 <tal:checkPath tal:condition="python:here.checkSectionPath()">
 
-  <dl class="portlet" id="portlet-navigation-tree" 
+  <dl id="portlet-navigation-tree" 
       tal:condition="view/display">
       <dt class="portletHeader">
         In this section
