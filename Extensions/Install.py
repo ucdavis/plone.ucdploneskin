@@ -120,7 +120,7 @@ def afterInstall(self,product,reinstall):
       addProperty(pp_ucd_props, 'useSecondaryMarkFavicon', '', 'boolean', out)
 
     if not pp_ucd_props.hasProperty('hideDeptName'):
-      addProperty(pp_ucd_props, 'hideDeptName', '', 'hideDeptName', out)
+      addProperty(pp_ucd_props, 'hideDeptName', '', 'boolean', out)
 
 
 
