@@ -464,6 +464,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #77160B; 
 }	
 
+#region-content {
+   padding:1em;
+}
+
+#content {
+    padding: 0em 1em 1em 1em !important;
+}
+
 .state-private {  
   color: Red !important;
 }
@@ -680,5 +688,4 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
    helpBackgroundColor - background color of information pop-ups (currently not used)
           
  */
-
 

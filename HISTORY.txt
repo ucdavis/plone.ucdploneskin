@@ -1,10 +1,13 @@
 Changelog for UCDPloneSkin
 
 UCDPloneSkin 2.0rc5 - Pending - Apr, 30 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - fixed bgImageNoRepeat submit bug
   [ Scott Beardsley, scott@cse.ucdavis.edu ]
     - fixed 1px live search bug
     - converted heading from a table to divs
     - fixed hideDeptName install typo in ucdploneskin_properties
+    - moved content area closer to the nav (too much whitespace)
 
 UCDPloneSkin 2.0rc4 - Released - Apr, 23 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
