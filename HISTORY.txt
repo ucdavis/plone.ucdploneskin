@@ -3,6 +3,7 @@ Changelog for UCDPloneSkin
 UCDPloneSkin 2.0rc5 - Pending - Apr, 30 2007
   [ Scott Beardsley, scott@cse.ucdavis.edu ]
     - fixed 1px live search bug
+    - converted heading from a table to divs
 
 UCDPloneSkin 2.0rc4 - Released - Apr, 23 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

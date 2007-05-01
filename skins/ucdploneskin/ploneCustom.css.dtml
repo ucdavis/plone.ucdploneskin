@@ -61,6 +61,17 @@ a.link-parent {
   padding: 0;
 }
 
+#portal-header-left {
+  float:left;
+  width:600px;
+}
+
+#portal-header-right {
+  float:right;
+  width:175px;
+  padding-top: 5px;
+}
+
 #portal-top {
   margin: 0;
   padding: 0;
@@ -107,7 +118,7 @@ a.link-parent {
   float: right;
   clear: right;
   background-color: transparent;
-  margin: 0 0 0 0;
+  margin: 1px 5px;
   padding: 0 1em 0 0;
   text-align: right;
   text-transform: &dtml-textTransform;;
@@ -123,6 +134,7 @@ a.link-parent {
   font-size: 3.3em;
   color: #002666;
   background-color: #FFFFFF;
+  clear:both;
 
   <dtml-if checkBgImage>
     background-image: url(&dtml-portal_url;/portal_properties/ucdploneskin-bgImage);
