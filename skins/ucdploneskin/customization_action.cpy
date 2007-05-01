@@ -30,6 +30,7 @@ pp_ucd_props.manage_changeProperties(showPrivacyStatement=showPrivacyStatement)
 pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
 pp_ucd_props.manage_changeProperties(useSecondaryMarkFavicon=useSecondaryMarkFavicon)
 pp_ucd_props.manage_changeProperties(hideDeptName=hideDeptName)
+pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
 
 
 # break array out to csv
