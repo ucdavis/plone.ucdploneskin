@@ -1,0 +1,14 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:five="http://namespaces.zope.org/five">
+
+<browser:page
+    for="*"
+    name="navigation_view"
+    class=".myNavigation.MyNavPortlet"
+    permission="zope.Public"
+    allowed_interface="Products.CMFPlone.browser.interfaces.INavigationPortlet"
+/>
+
+</configure>
+
