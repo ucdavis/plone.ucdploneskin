@@ -5,6 +5,8 @@ UCDPloneSkin 2.0rc6 - Pending - May 2 2007
     - advanced and show all links in livesearch_reply.py link to portal root
       to avoid portal_tab dimming
     - renamed/reregistered css so users can use ploneCustom
+  [ Scott Beardsley, scott@cse.ucdavis.edu ]
+    - fix for bottom-border through middle of images
 
 UCDPloneSkin 2.0rc5 - Pending - May 1 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

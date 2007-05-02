@@ -29,6 +29,15 @@ a.link-parent {
   border: 0;
 }
 
+/* The following two styles are to remove the underline next to images */
+a.discreet {
+  border-bottom:0px none #000;
+}
+
+a.discreet span span {
+  border-bottom: 1px solid #2F4D6A;
+}
+
 .documentContent {
   color: #4C4C4C;
 }
