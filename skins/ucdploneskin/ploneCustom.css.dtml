@@ -314,9 +314,6 @@ a.link-parent {
   padding: 0.5em 0em 0em 0em;
   text-align: center;
   color: #4C4C4C;
-}
-
-#portal-footer p {
   line-height: 1.9em;
 }
 

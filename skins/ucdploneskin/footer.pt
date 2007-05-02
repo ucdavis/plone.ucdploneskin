@@ -3,8 +3,6 @@
 <body>
 <div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
 
-  <p>
-
     <a tal:attributes="href python:portal_url + '/contact-info'" accesskey="9">
       Questions or comments?</a> | 
 
@@ -29,8 +27,6 @@
     <br/>
 
     <span tal:replace="structure here/portal_properties/ucdploneskin_properties/copyright" />
-
-</p>
 
 </div>
 </body>

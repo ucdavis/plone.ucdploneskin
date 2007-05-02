@@ -1,10 +1,16 @@
-<div metal:define-macro="byline"
-     i18n:domain="plone"
-     tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon"
-     tal:define="creator here/Creator;">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      i18n:domain="plone">
+
+<body>
+<div metal:define-macro="byline">
 
 <tal:comment replace="nothing">
-  It is easier to remove this in one place as opposed to every place it is included
+  It is easier to remove this in one place as opposed to every place it is
+  included
 </tal:comment>
 
 </div>
+
+</body>
+
+</html>
