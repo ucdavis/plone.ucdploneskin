@@ -18,7 +18,7 @@ UCDPloneSkin 2.0rc5 - Pending - May 1 2007
     - fixed hideDeptName install typo in ucdploneskin_properties
     - moved content area closer to the nav (too much whitespace)
 
-UCDPloneSkin 2.0rc4 - Released - Apr 23 2007
+UCDPloneSkin 2.0rc4 - Pending - Apr 23 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - fixed header bg image regression
     - added configlet option to hide department name in the header
@@ -26,7 +26,7 @@ UCDPloneSkin 2.0rc4 - Released - Apr 23 2007
     - centered optional header logo with a table hack
     - tweaked portlet css
 
-UCDPloneSkin 2.0rc3 - Released - Apr 20 2007
+UCDPloneSkin 2.0rc3 - Pending - Apr 20 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - reworded favicon help
     - fixed left nav bug... current item now honors excludeFromNav property
@@ -34,12 +34,12 @@ UCDPloneSkin 2.0rc3 - Released - Apr 20 2007
     - current left nav item now shows work flow color, i.e. red for private
     - added css for PloneHelpCenter
 
-UCDPloneSkin 2.0rc2 - Released - Apr 17 2007
+UCDPloneSkin 2.0rc2 - Pending - Apr 17 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - fixed a bug in the installer that prevented the new portlets from
       being set in left_slots
 
-UCDPloneSkin 2.0rc1 - Released - Apr 16 2007
+UCDPloneSkin 2.0rc1 - Pending - Apr 16 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - quicklink url can now have ${portal_url} variable, search example does
     - adjusted spacing around department name header to allow no padding on 
@@ -47,63 +47,63 @@ UCDPloneSkin 2.0rc1 - Released - Apr 16 2007
     - removed <a> underline from events (.listing a)
     - added configlet option for favicon
 
-UCDPloneSkin 2.0 in progress - Released - Apr 14 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 14 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - option for two rows of portal_tabs or one row of blue portal_tabs now
       works with automatic tab generation turned off (i.e. portal_actions)
 
-UCDPloneSkin 2.0 in progress - Released - Apr 12 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 12 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - removed icon option from new left nav, didn't work with IE
     - Adjusted portal tabs spacing for IE and FF/Win, correctly this time
 
-UCDPloneSkin 2.0 in progress - Released - Apr 11 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 11 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - removed border in admin left nav
     - deleted getSections.py as it isn't needed with the new left nav
     - current left nav item is now bold
 
-UCDPloneSkin 2.0 in progress - Released - Apr 10 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 10 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - New left nav works
       - Added configlet option for left nav icons
 
-UCDPloneSkin 2.0 in progress - Released - Apr 03 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 03 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Continued stylizing new left nav
     - Adjusted portal tabs spacing
 
-UCDPloneSkin 2.0 in progress - Released - Apr 02 2007
+UCDPloneSkin 2.0 in progress - Pending - Apr 02 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed accesskeys again (forgot to commit prior changes) 
     - Started to stylize new left nav
 
-UCDPloneSkin 2.0 in progress - Released - Mar 30 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 30 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Removed portlet_left_nav, switched to stock plone navigation
       - Split dept info and quicklinks into separate portlets
 
-UCDPloneSkin 2.0 in progress - Released - Mar 07 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 07 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed typo in ploneCustom.css
     - Added member_search_form.pt
 
-UCDPloneSkin 2.0 in progress - Released - Mar 07 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 07 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed nav border problem that occured when user places all tabs in
       the second row (i.e. one blue row)
 
-UCDPloneSkin 2.0 in progress - Released - Mar 05 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 05 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Fixed primary nav border problem that occured w/ two rows
     - Properly handled case of user choosing one tab for the second row(ar2csv)
 
-UCDPloneSkin 2.0 in progress - Released - Mar 03 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 03 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Now supports two rows of portal tabs
     - Added option for changing the color of the primary row of tabs
 
-UCDPloneSkin 2.0 in progress - Released - Mar 02 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 02 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Added confliglet option for logo to the left of department name
       in the header.
@@ -111,7 +111,7 @@ UCDPloneSkin 2.0 in progress - Released - Mar 02 2007
       Should be redone with CSS
     - Vertically aligned form fields in the configlet
 
-UCDPloneSkin 2.0 in progress - Released - Mar 01 2007
+UCDPloneSkin 2.0 in progress - Pending - Mar 01 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - Added bool configlet option for turning on/off privacy statement link
       It is off by default.  Deleting the "link to privacy statement" would
@@ -119,18 +119,18 @@ UCDPloneSkin 2.0 in progress - Released - Mar 01 2007
       while having this option turned off by default (since it isn't part of
       the original template.
 
-UCDPloneSkin 2.0 in progress - Released - Feb 22 2007
+UCDPloneSkin 2.0 in progress - Pending - Feb 22 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - finished configlet option for header bg image
       - added condition in ploneCustom.css.dtml to avoid 404s if user disables
         image
       - added option for disable image tiling
 
-UCDPloneSkin 2.0 in progress - Released - Feb, 20 2007
+UCDPloneSkin 2.0 in progress - Pending - Feb, 20 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - added configlet option for header background image
 
-UCDPloneSkin 2.0 in progress - Released - Feb 19 2007
+UCDPloneSkin 2.0 in progress - Pending - Feb 19 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - updated docs for clearing left slot after PloneCASLogin install
     - link to contact-info in footer is now absolute using $portal_url
