@@ -1,10 +1,16 @@
 Changelog for UCDPloneSkin
 
-UCDPloneSkin 2.0rc5 - Pending - May 1 2007
+UCDPloneSkin 2.0rc7 - Pending - May 2 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - advanced and show all links in livesearch_reply.py link to portal root
+      to avoid portal_tab dimming
+
+UCDPloneSkin 2.0rc6 - Pending - May 1 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - fixed bgImageNoRepeat submit bug
     - derived navigation class so "in this section" behaves with only one item
       that is marked as excludeFromNav
+    - added portal-logo bottom padding
   [ Scott Beardsley, scott@cse.ucdavis.edu ]
     - fixed 1px live search bug
     - converted heading from a table to divs
