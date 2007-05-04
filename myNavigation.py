@@ -16,8 +16,28 @@ class MyNavPortlet(NavigationPortlet):
       # and its the only item in the folder
       # then we shouldn't display the entire navtree
 
-      if(tree['children'][0]['path'] == context.absolute_url_path()
-         and context.checkExcludeFromNav(context.absolute_url_path()) ):
+      # tree....['path'] returns the path w/o the zope instance
+      # this seems hackish (perhaps a catalog look up would be faster)
+      # but ensures we compare apples to apples
+
+      path = context.restrictedTraverse(tree['children'][0]['path']).absolute_url_path()
+
+      # need to strip off /instance/portal/ from path
+
+      strippedPath = path
+
+      i = 0
+
+      while i < 3:
+        index = strippedPath.find('/')         
+        strippedPath = strippedPath[index+1:len(strippedPath)]
+        i += 1
+
+
+      # done with the setup, now decide what to return
+      
+      if(path == context.absolute_url_path()
+         and context.checkExcludeFromNav(strippedPath)):
         return False
       else:
         return True
@@ -27,4 +47,4 @@ class MyNavPortlet(NavigationPortlet):
       # the currently viewed item is a child
       return False
 
-    return True  # if all other cases fail
+    return True  # default

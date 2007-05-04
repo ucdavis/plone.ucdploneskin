@@ -2,6 +2,11 @@ Changelog for UCDPloneSkin
 
 UCDPloneSkin 2.0rc6 - Pending - May 2 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
+    - changed string comparision in nav class so that it works checks against 
+      the url work with the virtual host monster
+
+UCDPloneSkin 2.0rc6 - Pending - May 2 2007
+  [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - advanced and show all links in livesearch_reply.py link to portal root
       to avoid portal_tab dimming
     - renamed/reregistered css so users can use ploneCustom
