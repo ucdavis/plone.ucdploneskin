@@ -81,7 +81,7 @@ a.discreet span span {
   background: url(&dtml-portal_url;/&dtml-logoName;) no-repeat;
   border: 0;
   padding: 0 0 10px 0;
-  margin: 0.3em 0.0em 0.2em 0.5em;
+  margin: 0.2em 0.0em 0.1em 0.35em;
 }
 
 #portal-logo a {
