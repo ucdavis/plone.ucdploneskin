@@ -3,6 +3,7 @@ Changelog for UCDPloneSkin
 UCDPloneSkin 2.0 - Released - May 4 2007
    - reverted to tables in the header
    - new favicon with transparency
+   - fixed hideDeptName option
 
 UCDPloneSkin 2.0rc7 - Pending - May 3 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]

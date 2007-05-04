@@ -26,11 +26,13 @@
       </td>
 
       <td>
-        <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'" class="dept-name-text">
+        <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'
+                                    and not here.portal_properties.ucdploneskin_properties.hideDeptName" class="dept-name-text">
           <tal:portaltitle replace="portal_title" />
         </span>
 
-        <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'" class="dept-name-text">
+        <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'
+                                    and  not here.portal_properties.ucdploneskin_properties.hideDeptName" class="dept-name-text">
           <a tal:attributes="href python:portal_url;
                              title portal_title;
                              accesskey string:1">  
