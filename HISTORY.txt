@@ -1,6 +1,6 @@
 Changelog for UCDPloneSkin
 
-UCDPloneSkin 2.0rc6 - Pending - May 2 2007
+UCDPloneSkin 2.0rc7 - Pending - May 3 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
     - changed string comparision in nav class so that it works checks against 
       the url work with the virtual host monster
