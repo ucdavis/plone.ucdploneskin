@@ -70,17 +70,6 @@ a.discreet span span {
   padding: 0;
 }
 
-#portal-header-left {
-  float:left;
-  width:600px;
-}
-
-#portal-header-right {
-/*  float:right;
-  width:175px; */
-  padding-top: 5px;
-}
-
 #portal-top {
   margin: 0;
   padding: 0;

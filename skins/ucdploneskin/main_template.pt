@@ -58,16 +58,18 @@
 
 
              <tal:comment replace="nothing">
-               2 column table for right aligning ucd search link
+               2 column table used for alignment - should be redone w/ css
              </tal:comment>
 
-             <div id="portal-header-left">
+             <table border="0" width="100%"> 
+               <tr> 
+                 <td width="1%"> 
                    <a metal:use-macro="here/global_logo/macros/portal_logo">
                      The portal logo, linked to the portal root
                    </a>
-             </div>
+                 </td>
 
-             <div id="portal-header-right">
+                 <td valign="right" width="99%"> 
                    <tal:searchbox tal:condition="python:context.portal_properties.ucdploneskin_properties.searchbox">
                      <div metal:use-macro="here/global_searchbox/macros/quick_search">
                        The quicksearch box, normally placed at the top right
@@ -80,7 +82,10 @@
 	                 Search UC Davis</a>
                      </span>
                    </tal:searchbox>
-             </div>
+                 </td> 
+               
+               </tr>
+             </table>
 
           </div>
 
