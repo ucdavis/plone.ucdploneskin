@@ -20,11 +20,11 @@
   display: none;
 }
 
-#primary-nav-1 ul{
+#portal-globalnav-1 {
   display: none;
 }
 
-#primary-nav-2 ul{
+#portal-globalnav-2 {
   display: none;
 }
 
