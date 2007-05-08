@@ -5,7 +5,7 @@ UCDPloneSkin 2.0 - Released - May 7 2007
    - new favicon with transparency
    - fixed hideDeptName option
    - fixed live_search bug due to copying and pasting original code
-   - update print css for new nav
+   - updated print css for new nav
 
 UCDPloneSkin 2.0rc7 - Pending - May 3 2007
   [ Charles McLaughlin, cmclaughlin@ucdavis.edu ]
