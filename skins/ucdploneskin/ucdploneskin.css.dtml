@@ -116,7 +116,7 @@ a.discreet span span {
   clear: right;
   background-color: transparent;
   margin: 1px 5px;
-  padding: 0 1em 0 0;
+  padding: 0 0.5em 0 0;
   text-align: right;
   text-transform: &dtml-textTransform;;
   white-space: nowrap;
