@@ -9,6 +9,7 @@
      tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
                  selected_portal_tab selected_tabs/portal;"
      tal:condition="portal_tabs">
+
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
 
     <a name="portal-globalnav"></a>
@@ -21,7 +22,7 @@
           first row should be blue
         </tal:comment>
 
-        <tal tal:define="global tabStyle string:portal-globalnav-1" />
+        <tal:defineTabStyle tal:define="global tabStyle string:portal-globalnav-1" />
 
 
         <tal:comment replace="nothing">
@@ -29,7 +30,7 @@
         </tal:comment>
 
         <tal:defineTabStyle tal:condition="repeat/row/index">
-          <tal tal:define="global tabStyle string:portal-globalnav-2" />
+          <tal:defineTabStyle2 tal:define="global tabStyle string:portal-globalnav-2" />
         </tal:defineTabStyle>
 
 
@@ -38,7 +39,7 @@
         </tal:comment>
 
         <tal:defineTabStyle tal:condition="not:here/portal_properties/ucdploneskin_properties/secondTabRow">
-          <tal tal:define="global tabStyle string:portal-globalnav-2" />
+          <tal:defineTabStyle2 tal:define="global tabStyle string:portal-globalnav-2" />
         </tal:defineTabStyle>
 
 

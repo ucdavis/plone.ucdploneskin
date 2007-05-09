@@ -46,6 +46,12 @@
       <div id="portal-top" i18n:domain="plone">
 
         <div id="portal-header">
+
+          <a class="hiddenStructure"
+            accesskey="3"
+            tal:attributes="href string:$portal_url/sitemap"
+            i18n:translate="label_sitemap">Site Map</a>
+
           <a class="hiddenStructure"
              accesskey="2"
              tal:attributes="href string:${request/ACTUAL_URL}#documentContent"
@@ -63,13 +69,13 @@
 
              <table border="0" width="100%"> 
                <tr> 
-                 <td width="1%"> 
+                 <td valign="middle" align="left" width="1%"> 
                    <a metal:use-macro="here/global_logo/macros/portal_logo">
                      The portal logo, linked to the portal root
                    </a>
                  </td>
 
-                 <td valign="right" width="99%"> 
+                 <td valign="middle" align="right" width="99%"> 
                    <tal:searchbox tal:condition="python:context.portal_properties.ucdploneskin_properties.searchbox">
                      <div metal:use-macro="here/global_searchbox/macros/quick_search">
                        The quicksearch box, normally placed at the top right
@@ -97,7 +103,6 @@
 
 
       <div metal:use-macro="here/global_sections/macros/portal_tabs">
-
         The global sections tabs. (Welcome, News etc)
       </div>
 

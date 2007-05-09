@@ -62,7 +62,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/deptName|nothing"
                  tal:attributes="value here/title" />
-          <tal class="fieldRequired" tal:define="err errors/deptName|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/deptName|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>       
 
@@ -77,7 +78,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/address1|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/address1" />
-          <tal class="fieldRequired" tal:define="err errors/address1|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/address1|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -92,7 +94,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/address2|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/address2" />
-          <tal class="fieldRequired" tal:define="err errors/address2|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/address2|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -107,7 +110,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/address3|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/address3" />
-          <tal class="fieldRequired" tal:define="err errors/address3|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/address3|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -122,7 +126,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/address4|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/address4" />
-          <tal class="fieldRequired" tal:define="err errors/address4|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/address4|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -138,7 +143,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/phone1|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/phone1" />
-          <tal class="fieldRequired" tal:define="err errors/phone1|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/phone1|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -153,7 +159,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/phone2|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/phone2" />
-          <tal class="fieldRequired" tal:define="err errors/phone2|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/phone2|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -169,7 +176,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/fax1|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/fax1" />
-          <tal class="fieldRequired" tal:define="err errors/fax1|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/fax1|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -184,7 +192,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/fax2|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/fax2" />
-          <tal class="error" tal:define="err errors/fax2|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="error"
+           tal:define="err errors/fax2|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -233,7 +242,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                 <tal:qlRepeat repeat="quicklink  python:here.getQuickLinks()">
   
                   <option tal:attributes="value quicklink/qlID">
-                    <tal tal:content="quicklink/text" />
+                    <tal:option tal:content="quicklink/text" />
                   </option>
 
                 </tal:qlRepeat>
@@ -284,7 +293,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  name="qlText"
                  tal:define="val request/qlText|nothing" />
-          <tal class="fieldRequired" tal:define="err errors/qlText|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/qlText|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -297,7 +307,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="qlURL"
                  size="40"
                  tal:define="val request/qlURL|nothing" />
-          <tal class="fieldRequired" tal:define="err errors/qlURL|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/qlURL|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -341,8 +352,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="searchbox"
                  tal:define="val request/searchbox|nothing"
                  tal:attributes="checked here/portal_properties/ucdploneskin_properties/searchbox" />
-          <tal class="fieldRequired" tal:define="err errors/searchbox|nothing"
-                tal:condition="err" tal:content="err" />
+          <tal:fieldRequired  class="fieldRequired" tal:define="err errors/searchbox|nothing"
+           tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -364,7 +375,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
 
               <option tal:attributes="value tab/id;
                                       selected python: tab['id'] in context.portal_properties.ucdploneskin_properties.secondTabRow.split(',')">
-                <tal tal:replace="tab/name" />
+                <tal:tabName tal:replace="tab/name" />
               </option>
 
             </tal:tabs>
@@ -387,8 +398,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="showAccessibility"
                  tal:define="val request/showAccessibility|nothing"
                  tal:attributes="checked here/portal_properties/ucdploneskin_properties/showAccessibility" />
-          <tal class="fieldRequired" tal:define="err errors/showAccessibility|nothing"
-                tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/showAccessibility|nothing"
+           tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -408,7 +419,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/copyright|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/copyright" />
-          <tal class="fieldRequired" tal:define="err errors/copyright|nothing" tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired"
+           tal:define="err errors/copyright|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -422,8 +434,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="showPrivacyStatement"
                  tal:define="val request/showPrivacyStatement|nothing"
                  tal:attributes="checked here/portal_properties/ucdploneskin_properties/showPrivacyStatement" />
-          <tal class="fieldRequired" tal:define="err errors/showPrivacyStatement|nothing"
-                tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/showPrivacyStatement|nothing"
+           tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -444,7 +456,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  size="40"
                  tal:define="val request/privacyStatement|nothing"
                  tal:attributes="value here/portal_properties/ucdploneskin_properties/privacyStatement" />
-          <tal class="fieldRequired"
+          <tal:fieldRequired class="fieldRequired"
                tal:define="err errors/privacyStatement|nothing"
 	       tal:condition="err" tal:content="err" />
         </td>
@@ -488,8 +500,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="bgImage"
                  size="25"
                  tal:define="val request/bgImage|nothing" />
-          <tal class="fieldRequired" tal:define="err errors/bgImage|nothing"
-            tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/bgImage|nothing"
+           tal:condition="err" tal:content="err" />
 
         </td>
       </tr>
@@ -532,8 +544,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="logo"
                  size="25"
                  tal:define="val request/logo|nothing" />
-          <tal class="fieldRequired" tal:define="err errors/logo|nothing"
-            tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/logo|nothing"
+           tal:condition="err" tal:content="err" />
 
         </td>
       </tr>
@@ -559,8 +571,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="hideDeptName"
                  tal:define="val request/hideDeptName|nothing"
                  tal:attributes="checked here/portal_properties/ucdploneskin_properties/hideDeptName" />
-          <tal class="fieldRequired" tal:define="err errors/hideDeptName|nothing"
-                tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/hideDeptName|nothing"
+           tal:condition="err" tal:content="err" />
         </td>
       </tr>
 
@@ -587,8 +599,8 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
                  name="customFavicon"
                  size="25"
                  tal:define="val request/customFavicon|nothing" />
-          <tal class="fieldRequired" tal:define="err errors/customFavicon|nothing"
-            tal:condition="err" tal:content="err" />
+          <tal:fieldRequired class="fieldRequired" tal:define="err errors/customFavicon|nothing"
+           tal:condition="err" tal:content="err" />
 
         </td>
       </tr>

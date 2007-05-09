@@ -96,12 +96,6 @@
           i18n:attributes="title title_search_this_site"
           tal:attributes="href string:$portal_url/search_form" />
 
-    <a class="hiddenStructure"
-          accesskey="3"
-          tal:attributes="href string:$portal_url/sitemap"
-          i18n:translate="label_sitemap">Site Map</a>
-
-
     <tal:fixme tal:replace="nothing">
       <link rel="help" href="" title="Help" tal:attributes="href string:$portal_url/help" />
       <link rel="copyright" href="" title="Copyright information" tal:attributes="href string:copyright" />
