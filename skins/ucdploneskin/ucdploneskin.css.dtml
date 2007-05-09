@@ -102,7 +102,7 @@ a.discreet span span {
   text-decoration: none;  
   color: #FFFFFF;
   font-size: 1.1em;
-  margin: 0 4px 0 5px;
+  margin: 0 0.5em 0 0;
   padding: 3px 8px 4px 8px;
   border: 0;
 }	
