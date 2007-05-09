@@ -1,5 +1,9 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.1 - Pending - May 9 2007
+   - reverted to code for setting slots in installer due to 
+     incompatibility with the PloneCASLogin product
+
 UCDPloneSkin 2.0 - Released - May 7 2007
    - reverted to tables in portal header due to vert spacing issues
    - new favicon with transparency
