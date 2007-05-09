@@ -61,7 +61,7 @@ The variable ${portal_url} can be used here, although it will be evaluated when 
                  size="40"
                  tal:define="val request/qlText|nothing"
                  tal:attributes="value quicklink/text" />
-          <tal:fieldRequired class="fieldRequired"
+          <span class="fieldRequired"
            tal:define="err errors/qlText|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
@@ -76,7 +76,7 @@ The variable ${portal_url} can be used here, although it will be evaluated when 
                  size="40"
                  tal:define="val request/qlURL|nothing"
                  tal:attributes="value quicklink/url" />
-          <tal:fieldRequired class="fieldRequired"
+          <span class="fieldRequired"
            tal:define="err errors/qlURL|nothing" tal:condition="err" tal:content="err" />
         </td>
       </tr>
