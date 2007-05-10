@@ -75,14 +75,14 @@
     <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
 
 
-    <span tal:condition="here/portal_properties/ucdploneskin_properties/useSecondaryMarkFavicon">
+    <tal:favIcon tal:condition="here/portal_properties/ucdploneskin_properties/useSecondaryMarkFavicon">
       <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:$portal_url/secondary_mark_2_favicon.gif" /> 
-    </span>
+    </tal:favIcon>
 
-    <span tal:condition="exists: here/portal_properties/ucdploneskin_properties/customFavicon">
+    <tal:favIcon tal:condition="exists: here/portal_properties/ucdploneskin_properties/customFavicon">
       <link rel="shortcut icon" type="image/x-icon"
         tal:attributes="href string:$portal_url/portal_properties/customFavicon" />
-    </span>
+    </tal:favIcon>
 
 
     <link rel="home"
