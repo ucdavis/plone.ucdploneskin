@@ -642,10 +642,38 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         </td>
       </tr>
 
+      <tr valign="bottom">
+
+        <td>
+          Trim the breadcrumbs <br />
+          <span class="discreet">
+            This option will trim the title of individual breadcrumb
+            navigation elelements over a specified length.  Choose 0 to disable
+            this feature.
+          </span>
+        </td>
+
+
+        <td>
+          <select name="trimBreadCrumbs">
+
+            <tal:forLoop repeat="i python: range(0,31)">
+              <option tal:attributes="value i;
+                                      selected python: i == context.portal_properties.ucdploneskin_properties.trimBreadCrumbs">
+                <tal:option tal:content="i" />
+               </option>
+            </tal:forLoop>
+
+          </select>
+        </td>
+
+      </tr>
+
       <tr>
         <td colspan="2">
           <br/>
-          <input type="submit" name="form.button.customization" value="Submit" />
+          <input type="submit" name="form.button.customization"
+                 value="Submit" />
         </td>
       </tr>
 

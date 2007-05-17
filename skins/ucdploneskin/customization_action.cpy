@@ -14,7 +14,8 @@ secondTabRow = context.REQUEST.get('secondTabRow', None)
 useSecondaryMarkFavicon = context.REQUEST.get('useSecondaryMarkFavicon', None)
 customFavicon = context.REQUEST.get('customFavicon', None)
 deleteCustomFavicon  = context.REQUEST.get('deleteCustomFavicon', None)
-hideDeptName  = context.REQUEST.get('hideDeptName', None)
+hideDeptName = context.REQUEST.get('hideDeptName', None)
+trimBreadCrumbs = context.REQUEST.get('trimBreadCrumbs', None)
 
 
 portal = context.portal_url.getPortalObject()
@@ -31,6 +32,7 @@ pp_ucd_props.manage_changeProperties(showAccessibility=showAccessibility)
 pp_ucd_props.manage_changeProperties(useSecondaryMarkFavicon=useSecondaryMarkFavicon)
 pp_ucd_props.manage_changeProperties(hideDeptName=hideDeptName)
 pp_ucd_props.manage_changeProperties(bgImageNoRepeat=bgImageNoRepeat)
+pp_ucd_props.manage_changeProperties(trimBreadCrumbs=trimBreadCrumbs)
 
 
 # break array out to csv

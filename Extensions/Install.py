@@ -122,6 +122,9 @@ def afterInstall(self,product,reinstall):
     if not pp_ucd_props.hasProperty('hideDeptName'):
       addProperty(pp_ucd_props, 'hideDeptName', '', 'boolean', out)
 
+    if not pp_ucd_props.hasProperty('trimBreadCrumbs'):
+      addProperty(pp_ucd_props, 'trimBreadCrumbs', '0', 'int', out)
+              
 
 
     # navigation settings
