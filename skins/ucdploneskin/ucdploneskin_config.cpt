@@ -657,7 +657,7 @@ This page allows you configure and customize UCDPloneSkin.  You may need to clea
         <td>
           <select name="trimBreadCrumbs">
 
-            <tal:forLoop repeat="i python: range(0,31)">
+            <tal:forLoop repeat="i python: range(0,51)">
               <option tal:attributes="value i;
                                       selected python: i == context.portal_properties.ucdploneskin_properties.trimBreadCrumbs">
                 <tal:option tal:content="i" />
