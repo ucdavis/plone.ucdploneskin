@@ -3,6 +3,7 @@ Changelog for UCDPloneSkin
 UCDPloneSkin 2.2 - Released - May 17 2007
    - option for trimming long bread crumb elements
      consider searching for the next white space and trim after that
+   - embeded version number in html header (need to remember to update it)
 
 UCDPloneSkin 2.1 - Released - May 9 2007
    - reverted to code for setting slots in installer due to 
