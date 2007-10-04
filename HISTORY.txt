@@ -1,5 +1,8 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.2.2 - Released - Oct 04 2007
+   - Updated copyright string to 2007
+
 UCDPloneSkin 2.2.1 - Released - Sept 28 2007
    - set blockquote color to white
 

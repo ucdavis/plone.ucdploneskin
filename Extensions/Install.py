@@ -102,7 +102,7 @@ def afterInstall(self,product,reinstall):
       addProperty(pp_ucd_props, 'showAccessibility', '1', 'boolean', out)
 
     if not pp_ucd_props.hasProperty('copyright'):
-      addProperty(pp_ucd_props, 'copyright', 'Copyright &copy; The Regents of the University of California, Davis campus 2005-06. All Rights Reserved.', 'string', out)
+      addProperty(pp_ucd_props, 'copyright', 'Copyright &copy; The Regents of the University of California, Davis campus 2005-07. All Rights Reserved.', 'string', out)
 
     if not pp_ucd_props.hasProperty('privacyStatement'):
       addProperty(pp_ucd_props, 'privacyStatement', 'http://manuals.ucdavis.edu/ppm/310/310-70a.htm', 'string', out)
