@@ -20,6 +20,10 @@ def install(self):
     if lower_SKIN_NAME in skinsTool.objectIds():
         raise AttributeError("%s skin layer already exist in portal skins. Installation Impossible." % lower_SKIN_NAME)
 
+    print >> out, "Installing dependency PloneLanguageTool"
+    qi=getToolByName(self, 'portal_quickinstaller', None)
+    qi.installProduct("PloneLanguageTool")
+
     out.write("%s generated product" % GENERATOR_PRODUCT)
     return out.getvalue()
 

@@ -1,5 +1,8 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.2.3 - Released - Oct 11 2007
+   - PloneLanguageTool is now a dependency to avoid problems (thanks Dewight)
+
 UCDPloneSkin 2.2.2 - Released - Oct 04 2007
    - Updated copyright string to 2007
 

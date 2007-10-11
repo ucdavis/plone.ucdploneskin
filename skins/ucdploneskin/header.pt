@@ -31,7 +31,7 @@
 
     <meta name="generator" content="Plone - http://plone.org" />
 
-    <meta name="UCDPloneSkin" content="Version 2.2.2" />
+    <meta name="UCDPloneSkin" content="Version 2.2.3" />
 
     <meta tal:define="metatags python:putils.listMetaTags(here).items()"
           tal:condition="metatags"
