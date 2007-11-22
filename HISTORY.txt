@@ -1,6 +1,6 @@
 Changelog for UCDPloneSkin
 
-UCDPloneSkin 2.2.4 - In progress - Nov 21 2007
+UCDPloneSkin 2.2.4 - Released - Nov 21 2007
    - Stylize the login portlet in case user re-enables it
    - Public draft content is no longer red in the navigation
    - Improved selected tab detection
