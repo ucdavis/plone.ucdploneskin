@@ -4,16 +4,22 @@
 ##bind namespace=
 ##bind script=script
 ##bind subpath=traverse_subpath
-##parameters=default_tab, obj=None, portal_tabs=[]
+##parameters=default_tab, obj=None, portal_tabs
 ##title=
 ##
-from AccessControl import Unauthorized
 
-valid_actions = []
 
-# hack job - the tab will only be selected if we're viewing that page
-# not sure what the first arg to append does, but this seems to work
+try:
 
-valid_actions.append((1, context.id))
+  if context.aq_inner.aq_parent.getDefaultPage() == 'front-page':
+    return {'portal':context.id}
 
-return {'portal':valid_actions[-1][1]}
+  elif context.aq_inner.aq_parent.getDefaultPage() == context.id:
+    return {'portal':context.aq_inner.aq_parent.id}
+
+except:
+  pass  # ignore errorsin case we're viewing special pages such as
+        #plone_control_panel
+
+
+return {'portal':context.id}
