@@ -4,6 +4,7 @@ UCDPloneSkin 2.2.4 - In progress - Nov 21 2007
    - Stylize the login portlet in case user re-enables it
    - Public draft content is no longer red in the navigation
    - Improved selected tab detection
+   - Changed the quicklink examples to dummy values to encourage people to change them
 
 UCDPloneSkin 2.2.3 - Released - Oct 11 2007
    - PloneLanguageTool is now a dependency to avoid problems (thanks Dewight)
