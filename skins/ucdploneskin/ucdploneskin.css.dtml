@@ -609,6 +609,25 @@ blockquote {
   border-left: 4px solid #FFFFFF;
 }
 
+/* stylize the login porlet in case the user enables it */
+
+#portlet-login {
+  background-color: transparent;
+  margin-left: 14px;
+  margin-right: 14px;
+  padding-bottom: 15px;
+}
+
+#portlet-login .portletHeader {
+  padding: 0;
+}
+
+#portlet-login .portletHeader {
+  border: 0;
+}
+
+
+
 /* </dtml-with> */
 
 /* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */

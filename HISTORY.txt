@@ -1,5 +1,8 @@
 Changelog for UCDPloneSkin
 
+UCDPloneSkin 2.2.4 - In progress - Nov 21 2007
+   - Stylize the login portlet in case user re-enables it
+
 UCDPloneSkin 2.2.3 - Released - Oct 11 2007
    - PloneLanguageTool is now a dependency to avoid problems (thanks Dewight)
 
