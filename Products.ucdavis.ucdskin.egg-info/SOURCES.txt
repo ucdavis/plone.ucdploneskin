@@ -38,3 +38,7 @@ Products/ucdavis/skins/Products_ucdavis_custom_images/CONTENT.txt
 Products/ucdavis/skins/Products_ucdavis_custom_templates/CONTENT.txt
 Products/ucdavis/skins/Products_ucdavis_styles/CONTENT.txt
 Products/ucdavis/skins/Products_ucdavis_styles/base_properties.props
+docs/HISTORY.txt
+docs/INSTALL.txt
+docs/LICENSE.GPL
+docs/LICENSE.txt
