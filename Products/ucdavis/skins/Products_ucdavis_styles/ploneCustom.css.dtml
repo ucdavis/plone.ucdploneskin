@@ -12,7 +12,6 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 
-body {background-color:pink}
 
 
 
