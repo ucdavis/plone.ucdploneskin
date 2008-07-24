@@ -1,17 +1,76 @@
-/*
- *  This is the file where you put your CSS changes. 
- *  You should preferrably use this and override the 
- *  relevant properties you want to change here instead 
- *  of customizing plone.css to survive upgrades. Writing
- *  your own plone.css only makes sense for very heavy 
- *  customizations. Useful variables from Plone are 
- *  documented at the bottom of this file.
- */
- 
+
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+body {
+font-family:verdana,arial,helvetica,sans-serif;
+font-size:69%;
+margin:0pt;
+padding:0pt;
+}
 
+a {color: #002666; text-decoration:none;}
+.state-published {color:#002666 !important;}
+
+
+#portal-column-two {display: none;}
+
+#portal-breadcrumbs {
+    background-color:#EAEDF0;
+    border-bottom-color:#FFFFFF;
+    color:#002666;
+    text-align:right;
+}
+
+#portal-column-one {
+    background-color:#E5D699;
+}
+#portal-column-one .visualPadding {
+    padding:2.9em 0em 1em;
+}
+
+.portletItem, .portletHeader, .portlet {
+    border: 0px;
+}
+.portlet {
+    background: transparent;
+    color: #2F4D6A;
+}
+.portletHeader {
+    font-weight: bold;
+    border-bottom: 1px solid #D2B84C;
+    background: transparent;
+    padding: 0px 5px 0px 14px;
+    text-transform: capitalize;
+    color:#2F4D6A;
+    font-size:1.2em;
+}
+.portletHeader a {color:#2F4D6A;}
+.portletItem {
+    border: 0px; background: transparent;
+    padding: 0px;
+}
+
+.navTreeItem a {padding:0pt 0pt 0pt 14px;}
+.navTreeItem a, dd.portletItem .navTreeItem a, dd.portletItem a {
+    border: 0px;
+    display:block;
+    text-decoration:none;
+    text-transform: capitalize
+}
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
+    border: 0px; background: #DFCC80;
+}
+.navTreeCurrentItemPublished {
+    color:#000000 !important;
+    font-weight:bold;
+}
+.navTreeCurrentItem {
+    color:#000000 !important;
+    font-weight:bold;
+    background: #DFCC80; border: 0px !important;
+}
+.navTree li {margin-bottom:0px;}
 
 
 
