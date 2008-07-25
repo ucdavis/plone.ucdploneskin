@@ -37,9 +37,19 @@
     	permission="zope2.View"
     />
     
+    <!-- The global sections -->
+    <browser:viewlet
+        name="ucdskin.global_sections"
+		layer=".interfaces.IThemeSpecific"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.GlobalSectionsViewlet"
+        permission="zope2.View" 
+        />
+
     <!-- The logo -->
     <browser:viewlet
         name="ucdskin.logo"
+		layer=".interfaces.IThemeSpecific"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.LogoViewlet"
         permission="zope2.View" 
