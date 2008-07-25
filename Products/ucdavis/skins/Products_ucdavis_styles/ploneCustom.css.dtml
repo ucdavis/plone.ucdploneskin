@@ -23,7 +23,6 @@ a {
     background-color: #EAEDF0;
     border-bottom-color: #FFFFFF;
     color: #002666;
-	padding-right: 0em;
     text-align: right;
 }
 
@@ -38,10 +37,12 @@ a {
 .portletItem, .portletHeader, .portlet {
     border: 0px;
 }
+
 .portlet {
     background: transparent;
     color: #2F4D6A;
 }
+
 .portletHeader {
     font-weight: bold;
     border-bottom: 1px solid #D2B84C;
@@ -89,6 +90,7 @@ a {
 	border-bottom:0 none;
 	border-top:0 none;
 	padding:0.4em 0 0 0;
+	padding-right:2em;
 }
 
 #portal-personaltools {
