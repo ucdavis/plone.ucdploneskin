@@ -10,6 +10,15 @@
         name="ucdskin"
         />
 
+    <!-- Viewlet Managers registration -->
+    <browser:viewletManager
+        name="ucdskin.portalbarheader"
+        provides=".interfaces.IPortalBarHeader"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        />
+        
+
     <!-- Viewlets registration -->
     
     <browser:viewlet name="ucdskin.site_actions"
@@ -19,7 +28,7 @@
         permission="zope2.View"
     />
 	<browser:viewlet name="ucdskin.personal_bar"
-		manager="plone.app.layout.viewlets.interfaces.IContentViews"
+		manager=".interfaces.IPortalBarHeader"
 		layer=".interfaces.IThemeSpecific"
 		class="plone.app.layout.viewlets.common.PersonalBarViewlet"
 		permission="zope2.View"
@@ -52,7 +61,7 @@
     <!-- The breadcrumbs -->
     <browser:viewlet
         name="ucdskin.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        manager=".interfaces.IPortalBarHeader"
         class=".viewlets.PathBarViewlet"
         permission="zope2.View" 
         />

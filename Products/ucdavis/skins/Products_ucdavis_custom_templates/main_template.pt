@@ -90,7 +90,7 @@
           </tr>
           <tr>
             <td colspan="2">
-                New viewlet manager goes here! Will contain path and personal bar.
+                <div tal:replace="structure provider:ucdskin.portalbarheader" />
             </td>
           </tr>
           <tr>
