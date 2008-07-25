@@ -35,3 +35,5 @@ useSecondaryMarkFavicon:boolean=False
 hideDeptName:boolean=False
 
 trimBreadCrumbs:int=0
+
+logoLinkTarget:string=http://www.ucdavis.edu/
