@@ -21,14 +21,18 @@ a {
 
 
 #portal-breadcrumbs {
-	border-bottom-color: #002666;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	padding-left: 2em;
-	padding-right: 2em;
-	text-align: right;
-	text-transform: none;
-	line-height: 1.6em;
+	background-color:#EAEDF0;
+	border-bottom-color:#FFFFFF;
+	color:#002666;
+	font-size:95%;
+	line-height:2.1em;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	padding:0em 1em 0em 3em;
+	text-align:right;
+	text-transform:none;
 }
 
 #portal-breadcrumbs a {text-decoration: none;}
