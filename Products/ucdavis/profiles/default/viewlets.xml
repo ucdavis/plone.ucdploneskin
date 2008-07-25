@@ -14,8 +14,13 @@
      <viewlet name="plone.site_actions" />
      <viewlet name="plone.global_sections" />
      <viewlet name="plone.logo" />
-
     </hidden>
+    <order manager="plone.portalheader" skinname="ucdskin">
+     <viewlet name="plone.skip_links"/>
+     <viewlet name="plone.searchbox"/>
+     <viewlet name="plone.logo"/>
+     <viewlet name="ucdskin.global_sections" />
+    </order>
     <order manager="plone.portalfooter" skinname="ucdskin">
 		<viewlet name="ucdskin.site_actions" />     
       <viewlet name="plone.footer" />
