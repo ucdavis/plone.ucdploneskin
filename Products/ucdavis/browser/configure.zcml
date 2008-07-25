@@ -30,6 +30,12 @@
 		class="plone.app.layout.viewlets.common.PersonalBarViewlet"
 		permission="zope2.View"
 	/>
+    <browser:viewlet name="ucdskin.footer"
+		manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+		layer=".interfaces.IThemeSpecific"
+		template="footer.pt"    	
+    	permission="zope2.View"
+    />
     
     <!-- Zope 3 browser resources -->
 
