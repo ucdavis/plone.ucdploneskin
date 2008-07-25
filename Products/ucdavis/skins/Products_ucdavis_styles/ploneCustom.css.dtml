@@ -3,13 +3,17 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 body {
-font-family:verdana,arial,helvetica,sans-serif;
-font-size:69%;
-margin:0pt;
-padding:0pt;
+	font-family:verdana,arial,helvetica,sans-serif;
+	font-size:69%;
+	margin:0pt;
+	padding:0pt;
 }
 
-a {color: #002666; text-decoration:none;}
+a {
+	color: #002666; 
+	text-decoration:none;
+}
+
 .state-published {color:#002666 !important;}
 
 
@@ -25,6 +29,7 @@ a {color: #002666; text-decoration:none;}
 #portal-column-one {
     background-color:#E5D699;
 }
+
 #portal-column-one .visualPadding {
     padding:2.9em 0em 1em;
 }
@@ -45,32 +50,38 @@ a {color: #002666; text-decoration:none;}
     color:#2F4D6A;
     font-size:1.2em;
 }
+
 .portletHeader a {color:#2F4D6A;}
+
 .portletItem {
     border: 0px; background: transparent;
     padding: 0px;
 }
 
 .navTreeItem a {padding:0pt 0pt 0pt 14px;}
+
 .navTreeItem a, dd.portletItem .navTreeItem a, dd.portletItem a {
     border: 0px;
     display:block;
     text-decoration:none;
     text-transform: capitalize
 }
+
 .navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
     border: 0px; background: #DFCC80;
 }
+
 .navTreeCurrentItemPublished {
     color:#000000 !important;
     font-weight:bold;
 }
+
 .navTreeCurrentItem {
     font-weight:bold;
     background: #DFCC80; border: 0px !important;
 }
-.navTree li {margin-bottom:0px;}
 
+.navTree li {margin-bottom:0px;}
 
 #portal-personaltools-wrapper ul {
 	background-color:#FFFFFF;
