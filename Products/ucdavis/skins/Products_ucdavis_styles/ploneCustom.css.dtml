@@ -161,6 +161,27 @@ a {
 	text-transform:none;
 }
 
+#portal-siteactions {
+	float: none;
+	text-align: center;
+}
+#portal-siteactions li a {
+	border: 0px;
+	border-bottom:1px solid #2F4D6A;
+	text-decoration:none;
+	color:#002666;
+	text-decoration:none;
+	text-transform: none;
+	padding: 0px; margin: 0px;
+}
+#portal-siteactions li:after {
+	content: " | "
+}
+#portal-siteactions li a:hover {
+	border: 0px; background: transparent;
+	color: #77160B;
+}
+
 #portal-footer {
 	background-color:#FFFFFF;
 	border-bottom:medium none #FFFFFF;
