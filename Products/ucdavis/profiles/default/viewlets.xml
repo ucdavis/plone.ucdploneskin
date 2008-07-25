@@ -8,4 +8,13 @@
     <hidden manager="plone.portaltop" skinname="ucdskin">
      <viewlet name="plone.path_bar"/>
     </hidden>
+    <hidden manager="plone.portalheader" skinname="ucdskin">
+     <viewlet name="plone.site_actions"/>
+    </hidden>
+    <order manager="plone.portalfooter" skinname="ucdskin">
+     <viewlet name="plone.footer"/>
+     <viewlet name="ucdskin.site_actions"/>
+     <viewlet name="plone.colophon"/>
+     <viewlet name="plone.analytics"/>
+    </order>
 </object>
