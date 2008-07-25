@@ -19,13 +19,31 @@ a {
 
 #portal-column-two {}
 
+
 #portal-breadcrumbs {
-    background-color: #EAEDF0;
+	border-bottom-color: #002666;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: right;
+	text-transform: none;
+	line-height: 1.6em;
+}
+
+#portal-breadcrumbs a {text-decoration: none;}
+
+.breadcrumbSeparator {font-size: 120%;}
+
+/* #portal-breadcrumbs {
+    background-color: pink;
     border-bottom-color: #FFFFFF;
     color: #002666;
     text-align: right;
     text-transform: none;
 }
+
+*/
 
 #portal-column-one {
     background-color:#E5D699;
