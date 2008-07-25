@@ -17,13 +17,14 @@ a {
 .state-published {color:#002666 !important;}
 
 
-#portal-column-two {display: none;}
+#portal-column-two {}
 
 #portal-breadcrumbs {
     background-color: #EAEDF0;
     border-bottom-color: #FFFFFF;
     color: #002666;
     text-align: right;
+    text-transform: none;
 }
 
 #portal-column-one {
