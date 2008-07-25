@@ -11,5 +11,5 @@
                                title tab/description|nothing">
             Tab Name
             </a></li></tal:tabs>
-    </ul>XXX
+    </ul>
 </tal:tabs>
