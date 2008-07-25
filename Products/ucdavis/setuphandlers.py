@@ -9,10 +9,3 @@ def setupVarious(context):
         return
 
     # Add additional setup code here
-
-def setupUCDCAS(context):
-    """ Import steps to configure collective.castle for UC Davis
-        CAS implementation
-    """
-    portal = context.getSite()
-    portal.acl_users.cas.logout_url = 'foobar'
