@@ -52,7 +52,6 @@ a {
 	list-style-position:outside;
 	list-style-type:none;
 	margin:0pt;
-	padding:0em 1em 0em 3em;
 	text-align:right;
 	text-transform:none;
 }
