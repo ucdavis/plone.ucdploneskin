@@ -20,10 +20,11 @@ a {
 #portal-column-two {display: none;}
 
 #portal-breadcrumbs {
-    background-color:#EAEDF0;
-    border-bottom-color:#FFFFFF;
-    color:#002666;
-    text-align:right;
+    background-color: #EAEDF0;
+    border-bottom-color: #FFFFFF;
+    color: #002666;
+	padding-right: 0em;
+    text-align: right;
 }
 
 #portal-column-one {
