@@ -12,12 +12,6 @@
 
     <!-- Viewlets registration -->
     
-    <browser:viewlet name="ucdskin.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        layer=".interfaces.IThemeSpecific"
-        class="plone.app.layout.viewlets.common.PathBarViewlet"
-        permission="zope2.View"
-    />
     <browser:viewlet name="ucdskin.site_actions"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         layer=".interfaces.IThemeSpecific"
