@@ -72,6 +72,23 @@ a {color: #002666; text-decoration:none;}
 .navTree li {margin-bottom:0px;}
 
 
+#portal-personaltools-wrapper ul {
+	background-color:#FFFFFF;
+	border-bottom:0 none;
+	border-top:0 none;
+	padding:0.4em 0 0 0;
+}
+
+#portal-personaltools {
+	color:Black;
+	line-height:1.6em;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	text-align:right;
+	text-transform:none;
+}
 
 /* </dtml-with> */
 
