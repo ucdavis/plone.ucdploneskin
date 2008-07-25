@@ -1,0 +1,37 @@
+title:string=ucdskin's configurable properties
+
+address1:string=Room# Building
+
+address2:string=University of California, Davis
+
+address3:string=One Shields Avenue
+
+address4:string=Davis, CA 95616
+
+phone1:string:(530) 752-9999
+
+phone2:string=
+
+fax1:string=(530) 752-9999
+
+fax2:string=
+
+searchbox:boolean=False
+
+showAccessibility:boolean=True
+
+copyright:string=Copyright &copy; The Regents of the University of California, Davis campus 2005-07. All Rights Reserved.
+
+privacyStatement:string=http://manuals.ucdavis.edu/ppm/310/310-70a.htm
+
+bgImageNoRepeat:boolean=False
+
+showPrivacyStatement:boolean=False
+
+secondTabRow:boolean=False
+
+useSecondaryMarkFavicon:boolean=False
+
+hideDeptName:boolean=False
+
+trimBreadCrumbs:int:0
