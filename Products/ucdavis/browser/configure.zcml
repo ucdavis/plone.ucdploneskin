@@ -37,6 +37,14 @@
     	permission="zope2.View"
     />
     
+    <!-- The logo -->
+    <browser:viewlet
+        name="ucdskin.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.LogoViewlet"
+        permission="zope2.View" 
+        />
+
     <!-- Zope 3 browser resources -->
 
     <!-- Resource directory for images -->
