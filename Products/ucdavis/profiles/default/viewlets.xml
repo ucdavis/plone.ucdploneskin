@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <object>
-	<hidden manager="plone.portaltop" skinname="ucdskin">
-		<viewlet name="plone.path_bar" />	
-	</hidden>
-	<order manager="plone.contentviews" skinname="ucdskin" >
-		<viewlet name="plone.path_bar" insert-after="plone.contentviews"/>	
-	</order>
+    <order manager="plone.contentviews" skinname="ucdskin">
+     <viewlet name="ucdskin.path_bar"/>
+     <viewlet name="plone.contentviews"/>
+     <viewlet name="plone.contentactions"/>
+    </order>
+    <hidden manager="plone.portaltop" skinname="ucdskin">
+     <viewlet name="plone.path_bar"/>
+    </hidden>
 </object>
