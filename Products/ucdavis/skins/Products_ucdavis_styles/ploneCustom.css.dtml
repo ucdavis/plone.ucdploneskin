@@ -2,6 +2,35 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+
+
+/* Global CSS */
+
+
+
+/* Top */
+
+
+
+/* Left Column */
+
+
+
+/* All Portlets */
+
+
+
+/* Content Column */
+
+
+
+/* Right Column */
+
+
+
+/*  Bottom  */
+
+
 body {
 	font-family:verdana,arial,helvetica,sans-serif;
 	font-size:69%;
