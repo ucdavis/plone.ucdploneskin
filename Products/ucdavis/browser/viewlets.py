@@ -17,6 +17,20 @@ class LogoViewlet(ViewletBase):
 
         self.portal_title = self.portal_state.portal_title()
 
+class PathBarViewlet(ViewletBase):
+    index = ViewPageTemplateFile('path_bar.pt')
+
+    def update(self):
+        super(PathBarViewlet, self).update()
+
+        self.navigation_root_url = self.portal_state.navigation_root_url()
+
+        self.is_rtl = self.portal_state.is_rtl()
+
+        breadcrumbs_view = getMultiAdapter((self.context, self.request),
+                                           name='breadcrumbs_view')
+        self.breadcrumbs = breadcrumbs_view.breadcrumbs()
+
 
 class GlobalSectionsViewlet(ViewletBase):
     index = ViewPageTemplateFile('sections.pt')
