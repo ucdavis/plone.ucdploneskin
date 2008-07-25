@@ -1,9 +1,12 @@
 <div id="portal-breadcrumbs"
      i18n:domain="plone">
 
-    <span id="breadcrumbs-you-are-here" i18n:translate="you_are_here">You
-are here: ;-) </span>
-    <a i18n:translate="tabs_home" tal:attributes="href view/navigation_root_url">Home</a>
+    <span id="breadcrumbs-you-are-here" i18n:translate="ucdavis_home"><a tal:attributes="href context/ucdploneskin_properties/logoLinkTarget">UC Davis home</a> </span>
+            <span class="breadcrumbSeparator">
+                <tal:ltr condition="not: view/is_rtl">&rarr;</tal:ltr>
+                <tal:rtl condition="view/is_rtl">&raquo;</tal:rtl>
+            </span>
+    <a tal:attributes="href view/navigation_root_url" tal:content="context/@@plone_portal_state/portal_title">Home</a>
     <span tal:condition="view/breadcrumbs" class="breadcrumbSeparator">
         <tal:ltr condition="not: view/is_rtl">&rarr;</tal:ltr>
         <tal:rtl condition="view/is_rtl">&raquo;</tal:rtl>
