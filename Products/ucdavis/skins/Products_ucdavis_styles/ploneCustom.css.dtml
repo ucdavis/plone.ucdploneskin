@@ -148,6 +148,21 @@ a {
 .LSResult fieldset {margin-top: 12px; padding-top: 5px;}
 
 
+.portletCalendar {color: #000; padding: 0 5px 0 14px; width: inherit;}
+.portletCalendar dt, .portletCalendar dd {background: transparent; border: 0px; border: 1px solid #002666}
+.portletCalendar dt {background: #DFCC80; font-size: 1em; color: #000;}
+.portletCalendar dt a#calendar-previous {display: inline; float: left;}
+.portletCalendar dt a#calendar-next {display: inline; float: right;}
+.ploneCalendar .weekdays th {
+ background-color:#DFCC80;
+ line-height:1.6em;
+ text-align:center;
+ border: #002666 1px solid;
+}
+.ploneCalendar .event {background: #DFCC80; font-weight: bold}
+#portal-column-one .ploneCalendar .event {background: #F2EBCC;}
+
+
 .navTreeItem a, .portletItem p {padding:0pt 0pt 0pt 14px;}
 
 .navTreeItem a, dd.portletItem .navTreeItem a, dd.portletItem a {
@@ -197,6 +212,29 @@ a {
 	padding:0.5em 0 0;
 	text-align:center;
 }
+
+#portal-siteactions {
+	float: none;
+	text-align: center;
+}
+#portal-siteactions li a {
+	border: 0px;
+	border-bottom:1px solid #2F4D6A;
+	text-decoration:none;
+	color:#002666;
+	text-decoration:none;
+	text-transform: none;
+	padding: 0px; margin: 0px;
+}
+#portal-siteactions li:after {
+	content: " | "
+}
+#portal-siteactions li a:hover {
+	border: 0px; background: transparent;
+	color: #77160B;
+}
+
+
 
 /* </dtml-with> */
 
