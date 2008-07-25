@@ -52,7 +52,7 @@
     <!-- The breadcrumbs -->
     <browser:viewlet
         name="ucdskin.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
         class=".viewlets.PathBarViewlet"
         permission="zope2.View" 
         />
