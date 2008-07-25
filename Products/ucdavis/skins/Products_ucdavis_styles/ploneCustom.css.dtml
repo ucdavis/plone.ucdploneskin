@@ -90,6 +90,18 @@ a {color: #002666; text-decoration:none;}
 	text-transform:none;
 }
 
+#portal-footer {
+	background-color:#FFFFFF;
+	border-bottom:medium none #FFFFFF;
+	border-top:1px solid #002666;
+	color:#4C4C4C;
+	float:none;
+	line-height:1.9em;
+	margin:0 0 1em;
+	padding:0.5em 0 0;
+	text-align:center;
+}
+
 /* </dtml-with> */
 
 /* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */
