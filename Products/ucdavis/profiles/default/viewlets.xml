@@ -1,20 +1,24 @@
 <?xml version="1.0"?>
 <object>
     <order manager="plone.contentviews" skinname="ucdskin">
-     <viewlet name="ucdskin.path_bar"/>
-     <viewlet name="plone.contentviews"/>
-     <viewlet name="plone.contentactions"/>
+     <viewlet name="ucdskin.path_bar" />
+	 <viewlet name="ucdskin.personal_bar" />
+     <viewlet name="plone.contentviews" />
+     <viewlet name="plone.contentactions" />
     </order>
+	<hidden manager="plone.portaltop" skinname="ucdskin">
+	 <viewlet name="plone.personal_bar" />
+	</hidden>
     <hidden manager="plone.portaltop" skinname="ucdskin">
-     <viewlet name="plone.path_bar"/>
+     <viewlet name="plone.path_bar" />
     </hidden>
     <hidden manager="plone.portalheader" skinname="ucdskin">
-     <viewlet name="plone.site_actions"/>
+     <viewlet name="plone.site_actions" />
     </hidden>
     <order manager="plone.portalfooter" skinname="ucdskin">
-     <viewlet name="plone.footer"/>
-     <viewlet name="ucdskin.site_actions"/>
-     <viewlet name="plone.colophon"/>
-     <viewlet name="plone.analytics"/>
+     <viewlet name="plone.footer" />
+     <viewlet name="ucdskin.site_actions" />
+     <viewlet name="plone.colophon" />
+     <viewlet name="plone.analytics" />
     </order>
 </object>

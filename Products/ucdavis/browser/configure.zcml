@@ -24,6 +24,12 @@
         class="plone.app.layout.viewlets.common.SiteActionsViewlet"
         permission="zope2.View"
     />
+	<browser:viewlet name="ucdskin.personal_bar"
+		manager="plone.app.layout.viewlets.interfaces.IContentViews"
+		layer=".interfaces.IThemeSpecific"
+		class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+		permission="zope2.View"
+	/>
     
     <!-- Zope 3 browser resources -->
 
