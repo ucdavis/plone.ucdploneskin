@@ -6,31 +6,6 @@
 
 /* Global CSS */
 
-
-
-/* Top */
-
-
-
-/* Left Column */
-
-
-
-/* All Portlets */
-
-
-
-/* Content Column */
-
-
-
-/* Right Column */
-
-
-
-/*  Bottom  */
-
-
 body {
 	font-family:verdana,arial,helvetica,sans-serif;
 	font-size:69%;
@@ -46,7 +21,10 @@ a {
 .state-published {color:#002666 !important;}
 
 
-#portal-column-two {}
+/* Top */
+
+
+
 
 #portal-globalnav {
 	background-color:#D2B84C;
@@ -61,6 +39,7 @@ a {
 	padding:0pt;
 	white-space:nowrap;
 }
+
 
 
 #portal-breadcrumbs {
@@ -82,15 +61,30 @@ a {
 
 .breadcrumbSeparator {font-size: 120%;}
 
-/* #portal-breadcrumbs {
-    background-color: pink;
-    border-bottom-color: #FFFFFF;
-    color: #002666;
-    text-align: right;
-    text-transform: none;
+
+#portal-personaltools-wrapper ul {
+	background-color:#FFFFFF;
+	border-bottom:0 none;
+	border-top:0 none;
+	padding:0.4em 0 0 0;
+	padding-right:2em;
 }
 
-*/
+#portal-personaltools {
+	color:Black;
+	line-height:1.6em;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	text-align:right;
+	text-transform:none;
+}
+
+
+/* Left Column */
+
+
 
 #portal-column-one {
     background-color:#E5D699;
@@ -100,13 +94,18 @@ a {
     padding:2.9em 0em 1em;
 }
 
-.portletItem, .portletHeader, .portlet {
-    border: 0px;
-}
+
+
+
+/* All Portlets */
 
 .portlet {
     background: transparent;
     color: #2F4D6A;
+}
+
+.portlet, .portletHeader, .portletItem {
+    border: 0px;
 }
 
 .portletHeader {
@@ -125,9 +124,7 @@ a {
     border: 0px; background: transparent;
     padding: 0px;
 }
-.portletFooter span, .portletFooter a {
-	padding: 0px 5px 0px 0px;
-}
+
 .portletItem .portletItemDetails {
 	text-align: left; 
     padding: 0px 0px 5px 10px;
@@ -138,6 +135,11 @@ a {
 .portletItem a {
 	padding-left: 14px;
 }
+
+.portletFooter span, .portletFooter a {
+	padding: 0px 5px 0px 0px;
+}
+
 
 .portletItem div.LSBox {padding-left: 14px;}
 .portletItem div.LSBox input.searchField {width: 90px;}
@@ -171,45 +173,18 @@ a {
 
 .navTree li {margin-bottom:0px;}
 
-#portal-personaltools-wrapper ul {
-	background-color:#FFFFFF;
-	border-bottom:0 none;
-	border-top:0 none;
-	padding:0.4em 0 0 0;
-	padding-right:2em;
-}
 
-#portal-personaltools {
-	color:Black;
-	line-height:1.6em;
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin:0;
-	text-align:right;
-	text-transform:none;
-}
+/* Content Column */
 
-#portal-siteactions {
-	float: none;
-	text-align: center;
-}
-#portal-siteactions li a {
-	border: 0px;
-	border-bottom:1px solid #2F4D6A;
-	text-decoration:none;
-	color:#002666;
-	text-decoration:none;
-	text-transform: none;
-	padding: 0px; margin: 0px;
-}
-#portal-siteactions li:after {
-	content: " | "
-}
-#portal-siteactions li a:hover {
-	border: 0px; background: transparent;
-	color: #77160B;
-}
+
+
+/* Right Column */
+
+#portal-column-two {}
+
+
+/*  Bottom  */
+
 
 #portal-footer {
 	background-color:#FFFFFF;
