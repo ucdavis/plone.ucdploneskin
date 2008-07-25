@@ -1,6 +1,4 @@
 <div id="portal-footer" i18n:domain="plone">
-
-   
-
+	<span tal:replace="structure here/ucdploneskin_properties/copyright" />
 </div>
 

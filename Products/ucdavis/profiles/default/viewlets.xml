@@ -16,9 +16,11 @@
      <viewlet name="plone.site_actions" />
     </hidden>
     <order manager="plone.portalfooter" skinname="ucdskin">
-     <viewlet name="plone.footer" />
-     <viewlet name="ucdskin.site_actions" />
-     <viewlet name="plone.colophon" />
-     <viewlet name="plone.analytics" />
+		<viewlet name="ucdskin.site_actions" />     
+      <viewlet name="plone.footer" />
+      <viewlet name="plone.analytics" />
     </order>
+    <hidden manager="plone.portalfooter" skinname="ucdskin">
+    	<viewlet name="plone.colophon" />
+    </hidden>
 </object>
