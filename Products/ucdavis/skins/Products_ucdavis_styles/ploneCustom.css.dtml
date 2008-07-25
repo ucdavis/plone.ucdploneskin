@@ -19,6 +19,20 @@ a {
 
 #portal-column-two {}
 
+#portal-globalnav {
+	background-color:#D2B84C;
+	border-bottom:1px solid #002666;
+	border-top:1px solid #BF9900;
+	height:2.1em;
+	line-height:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	padding:0pt;
+	white-space:nowrap;
+}
+
 
 #portal-breadcrumbs {
 	background-color:#EAEDF0;
