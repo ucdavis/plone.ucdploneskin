@@ -8,12 +8,11 @@
     </order>
 	<hidden manager="plone.portaltop" skinname="ucdskin">
 	 <viewlet name="plone.personal_bar" />
+         <viewlet name="plone.path_bar" />
 	</hidden>
-    <hidden manager="plone.portaltop" skinname="ucdskin">
-     <viewlet name="plone.path_bar" />
-    </hidden>
     <hidden manager="plone.portalheader" skinname="ucdskin">
      <viewlet name="plone.site_actions" />
+     <viewlet name="plone.global_sections" />
     </hidden>
     <order manager="plone.portalfooter" skinname="ucdskin">
 		<viewlet name="ucdskin.site_actions" />     
