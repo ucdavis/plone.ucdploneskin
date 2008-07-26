@@ -4,7 +4,10 @@
 
 
 
-/* Global CSS */
+/* -------------------------------------------- */
+/*                                              */
+/*   Global CSS                                 */
+/* -------------------------------------------- */
 
 body {
 	font-family:verdana,arial,helvetica,sans-serif;
@@ -21,10 +24,13 @@ a {
 .state-published {color:#002666 !important;}
 
 
-/* Top */
 
 
 
+/* -------------------------------------------- */
+/*                                              */
+/*   Top                                        */
+/* -------------------------------------------- */
 
 #portal-globalnav {
 	background-color:#D2B84C;
@@ -39,8 +45,6 @@ a {
 	padding:0pt;
 	white-space:nowrap;
 }
-
-
 
 #portal-breadcrumbs {
 	background-color:#EAEDF0;
@@ -81,9 +85,13 @@ a {
 }
 
 
-/* Left Column */
 
 
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Left Column                                */
+/* -------------------------------------------- */
 
 #portal-column-one {
     background-color:#E5D699;
@@ -96,7 +104,16 @@ a {
 
 
 
-/* All Portlets */
+
+/* -------------------------------------------- */
+/*                                              */
+/*   All Portlets                               */
+/* -------------------------------------------- */
+/*   7.25.08 * Hi! One thing I noticed is we put padding-left: 14px on the .portlet a's 
+/*   which affects all a's... we had it so that the bg color would stretch to the whole column,
+/*   which is good, but, should we just declare every specific a tag to have padding or no padding..?
+/*   --- trish
+/* -------------------------------------------- */
 
 .portlet {
     background: transparent;
@@ -140,6 +157,8 @@ a {
 }
 
 
+/* ----- Search Portlet ----- */
+
 .portletItem div.LSBox {padding-left: 14px;}
 .portletItem div.LSBox input.searchField {width: 90px;}
 .portletItem fieldset.livesearchContainer {width: inherit;}
@@ -147,34 +166,40 @@ a {
 .LSResult fieldset {margin-top: 12px; padding-top: 5px;}
 
 
+/* ----- Calendar Portlet ----- */
+
 .portletCalendar {color: #000; padding: 0 5px 0 14px; width: inherit;}
 .portletCalendar dt, .portletCalendar dd {background: transparent; border: 1px solid #002666}
 .portletCalendar dt {background: #DFCC80; font-size: 1em; color: #000; border-bottom: 0px;}
 .portletCalendar dt a#calendar-previous {}
 .portletCalendar dt a#calendar-next {}
 .ploneCalendar .weekdays th {
- background-color:#DFCC80;
- line-height:1.6em;
- text-align:center;
- border-bottom: #002666 1px solid;
- border-top: 0px;
+	background-color:#DFCC80;
+	line-height:1.6em;
+	text-align:center;
+	border-bottom: #002666 1px solid;
+	border-top: 0px;
 }
-.ploneCalendar .event {background: #DFCC80; font-weight: bold}
+
+.ploneCalendar td {text-align: right;}
+.portletCalendar .portletItem a {padding-left: 0px;}
+.ploneCalendar .event, .ploneCalendar .todayevent {background: #DFCC80; font-weight: bold}
 #portal-column-one .ploneCalendar .event {background: #F2EBCC;}
 
 
-.navTreeItem a, .portletItem p {padding:0pt 0pt 0pt 14px;}
+/* ----- Navigation Portlet ----- */
 
-.navTreeItem a, dd.portletItem .navTreeItem a, dd.portletItem a {
+.navTreeItem a, .portletItem p {padding: 0pt 0pt 0pt 14px;}
+
+.navTreeItem a, dd.portletItem .navTreeItem a, 
+dd.portletItem a {
     border: 0px;
-    display:block;
-    text-decoration:none;
+    display: block;
+    text-decoration: none;
     text-transform: capitalize
 }
 
-.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
-    border: 0px; background: #DFCC80;
-}
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {border: 0px; background: #DFCC80;}
 
 .navTreeCurrentItemPublished {
     color:#000000 !important;
@@ -189,17 +214,43 @@ a {
 .navTree li {margin-bottom:0px;}
 
 
-/* Content Column */
+/* ----- Portlet Manager ----- */
+
+.portlets-manager form, .portlets-manager h4 {padding: 0 5px 0 14px;}
+
+
+/* ----- Static Text Portlet ----- */
+
+.portletStaticText dd.portletItem a {display: inline; padding-left: 0px;} 
 
 
 
-/* Right Column */
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Content Column                             */
+/* -------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Right Column                               */
+/* -------------------------------------------- */
 
 #portal-column-two {}
 
 
-/*  Bottom  */
 
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Bottom                                     */
+/* -------------------------------------------- */
 
 #portal-footer {
 	background-color:#FFFFFF;
