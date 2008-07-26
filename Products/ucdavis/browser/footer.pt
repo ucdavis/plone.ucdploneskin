@@ -1,7 +1,8 @@
 <div id="portal-footer" i18n:domain="plone">
 	<span tal:replace="structure here/ucdploneskin_properties/copyright" />
 
-	<br>
+	<br/>
+
 	<span il8n:translate="box_last_modified">
 		<b>Last updated: </b>
 	</span>

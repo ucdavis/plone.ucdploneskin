@@ -301,6 +301,7 @@ dd.portletItem a {
 	border-top:1px solid #002666;
 	padding: 0.5em 0 0;
 	margin-top: 0px;
+	margin-bottom: 0.5em;
 }
 #portal-siteactions li a {
 	border: 0px;
@@ -311,8 +312,11 @@ dd.portletItem a {
 	text-transform: none;
 	padding: 0px; margin: 0px;
 }
-#portal-siteactions li:after {
+#portal-siteactions li:before {
 	content: " | "
+}
+#portal-siteactions li:first-child:before {
+	content: ""
 }
 #portal-siteactions li a:hover {
 	border: 0px; background: transparent;
