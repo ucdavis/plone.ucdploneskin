@@ -16,7 +16,7 @@ body {
 	padding:0pt;
 }
 
-a {
+a, a:link, a:visited {
 	color: #002666; 
 	text-decoration:none;
 }
@@ -60,9 +60,10 @@ a {
 	text-transform:none;
 }
 
-#portal-breadcrumbs a {text-decoration: none;}
-
 .breadcrumbSeparator {font-size: 120%;}
+#portal-breadcrumbs {font-weight: bold;}
+#portal-breadcrumbs a {text-decoration: none; font-weight: normal;}
+#portal-breadcrumbs a:after {}
 
 
 #portal-personaltools-wrapper ul {
@@ -143,7 +144,7 @@ a {
 
 .portletItem .portletItemDetails {
 	text-align: left; 
-    padding: 0px 0px 5px 10px;
+	padding: 0px 0px 5px 10px;
 	font-size: 0.9em; 
 	color: #76797C;
 	line-height: 0.9em;
@@ -155,6 +156,8 @@ a {
 .portletFooter span, .portletFooter a {
 	padding: 0px 5px 0px 0px;
 }
+
+.portletItem a:visited, .portletFooter a:visited {color: #002666;}
 
 
 /* ----- Search Portlet ----- */
@@ -214,14 +217,30 @@ dd.portletItem a {
 .navTree li {margin-bottom:0px;}
 
 
-/* ----- Portlet Manager ----- */
-
-.portlets-manager form, .portlets-manager h4 {padding: 0 5px 0 14px;}
-
-
 /* ----- Static Text Portlet ----- */
 
 .portletStaticText dd.portletItem a {display: inline; padding-left: 0px;} 
+
+
+/* ----- Login Portlet ----- */
+
+.portletLogin .portletItem form {padding: 3px 5px 0px 14px}
+
+
+/* ----- Collection Portlet ----- */
+
+.portletCollection dd a {padding-bottom: 0.25em; padding-top: 0.2em;}
+.portletCollection a:hover, dd.portletItem .portletCollection a:hover {border: 0px; background: #DFCC80;}
+.portletCollection .portletFooter a:hover {background: transparent}
+.navTreeCurrentItem {
+    font-weight: bold;
+    background: #DFCC80; border: 0px !important;
+}
+
+
+/* ----- Portlet Manager ----- */
+
+.portlets-manager form, .portlets-manager h4 {padding: 0 5px 0 14px;}
 
 
 
