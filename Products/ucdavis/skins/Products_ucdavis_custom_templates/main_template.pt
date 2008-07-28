@@ -77,8 +77,7 @@
             <tal:comment replace="nothing"> Start of the left column </tal:comment>
             <td id="portal-column-one"
                 metal:define-slot="column_one_slot"
-                tal:condition="sl"
-                rowspan="3">
+                tal:condition="sl">
               <div class="visualPadding">
                 <metal:portlets define-slot="portlets_one_slot">
                   <tal:block replace="structure provider:plone.leftcolumn" />
@@ -87,85 +86,90 @@
               </div>
               <tal:comment replace="nothing"> End of the left column </tal:comment>
             </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-                <div tal:replace="structure provider:ucdskin.portalbarheader" />
+            <td>
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td tal:attributes="colspan python:test(sr, '2', nothing)">
+                      <div tal:replace="structure provider:ucdskin.portalbarheader" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <tal:comment replace="nothing"> Start of main content block </tal:comment>
+                    <td id="portal-column-content"
+                        tal:define="tabindex python:Iterator(mainSlot=False)">
+        
+                      <metal:block define-slot="content">
+                        <div metal:define-macro="content"
+                             tal:define="show_border context/@@plone/showEditableBorder"
+                             tal:attributes="class python:test(show_border,'documentEditable','')">
+        
+                          <div tal:replace="structure provider:plone.contentviews" />
+        
+                          <div id="region-content"
+                               class="documentContent">
+        
+                            <span id="contentTopLeft"></span>
+                            <span id="contentTopRight"></span>
+                            
+                            <a name="documentContent"></a>
+        
+                            <div metal:use-macro="here/global_statusmessage/macros/portal_message">
+                              Portal status message
+                            </div>
+                            
+                            <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
+        
+                            <metal:slot metal:define-slot="body">
+                            <tal:comment replace="nothing">
+                                The div with ID #content will only show up if we're actually on a content
+                                view, never on edit forms, control panels etc. It's meant to only wrap the
+                                actual content that gets rendered on a page, not the other UI elements.
+                            </tal:comment>
+                            <div id="content"
+                                 tal:omit-tag="not:context/@@plone_context_state/is_view_template">
+                              <metal:header metal:define-slot="header" tal:content="nothing">
+                                Visual Header
+                              </metal:header>
+                              <metal:bodytext metal:define-slot="main" tal:content="nothing">
+                                Page body text
+                              </metal:bodytext>
+                            </div>
+                            </metal:slot>
+        
+                            <metal:sub metal:define-slot="sub">
+                            
+                              <div tal:replace="structure provider:plone.belowcontent" />
+                            
+                            </metal:sub>
+        
+                            <span id="contentBottomLeft"></span>
+                            <span id="contentBottomRight"></span>
+        
+                          </div>
+        
+                        </div>
+        
+                      </metal:block>
+                    </td>
+                    <tal:comment replace="nothing"> End of main content block </tal:comment>
+        
+                    <tal:comment replace="nothing"> Start of right column </tal:comment>
+                    <td id="portal-column-two"
+                        metal:define-slot="column_two_slot"
+                        tal:condition="sr">
+                      <div class="visualPadding">
+                        <metal:portlets define-slot="portlets_two_slot">
+                          <tal:block replace="structure provider:plone.rightcolumn" />
+                        </metal:portlets>
+                        &nbsp;
+                      </div>
+                    </td>
+                    <tal:comment replace="nothing"> End of the right column </tal:comment>
+                  </tr>
+                </tbody>
+              </table>
             </td>
-          </tr>
-          <tr>
-
-            <tal:comment replace="nothing"> Start of main content block </tal:comment>
-            <td id="portal-column-content"
-                tal:define="tabindex python:Iterator(mainSlot=False)">
-
-              <metal:block define-slot="content">
-                <div metal:define-macro="content"
-                     tal:define="show_border context/@@plone/showEditableBorder"
-                     tal:attributes="class python:test(show_border,'documentEditable','')">
-
-                  <div tal:replace="structure provider:plone.contentviews" />
-
-                  <div id="region-content"
-                       class="documentContent">
-
-                    <span id="contentTopLeft"></span>
-                    <span id="contentTopRight"></span>
-                    
-                    <a name="documentContent"></a>
-
-                    <div metal:use-macro="here/global_statusmessage/macros/portal_message">
-                      Portal status message
-                    </div>
-                    
-                    <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
-
-                    <metal:slot metal:define-slot="body">
-                    <tal:comment replace="nothing">
-                        The div with ID #content will only show up if we're actually on a content
-                        view, never on edit forms, control panels etc. It's meant to only wrap the
-                        actual content that gets rendered on a page, not the other UI elements.
-                    </tal:comment>
-                    <div id="content"
-                         tal:omit-tag="not:context/@@plone_context_state/is_view_template">
-                      <metal:header metal:define-slot="header" tal:content="nothing">
-                        Visual Header
-                      </metal:header>
-                      <metal:bodytext metal:define-slot="main" tal:content="nothing">
-                        Page body text
-                      </metal:bodytext>
-                    </div>
-                    </metal:slot>
-
-                    <metal:sub metal:define-slot="sub">
-                    
-                      <div tal:replace="structure provider:plone.belowcontent" />
-                    
-                    </metal:sub>
-
-                    <span id="contentBottomLeft"></span>
-                    <span id="contentBottomRight"></span>
-
-                  </div>
-
-                </div>
-
-              </metal:block>
-            </td>
-            <tal:comment replace="nothing"> End of main content block </tal:comment>
-
-            <tal:comment replace="nothing"> Start of right column </tal:comment>
-            <td id="portal-column-two"
-                metal:define-slot="column_two_slot"
-                tal:condition="sr">
-              <div class="visualPadding">
-                <metal:portlets define-slot="portlets_two_slot">
-                  <tal:block replace="structure provider:plone.rightcolumn" />
-                </metal:portlets>
-                &nbsp;
-              </div>
-            </td>
-            <tal:comment replace="nothing"> End of the right column </tal:comment>
           </tr>
         </tbody>
       </table>

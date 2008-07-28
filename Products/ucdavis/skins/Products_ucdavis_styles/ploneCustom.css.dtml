@@ -139,7 +139,10 @@ a, a:link, a:visited {
 }
 
 
-
+/* center and right column table */
+#portal-crcols {
+  width:100%;
+}
 
 
 /* -------------------------------------------- */
