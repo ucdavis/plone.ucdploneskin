@@ -16,6 +16,7 @@
         provides=".interfaces.IPortalBarHeader"
         permission="zope2.View"
         class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        layer=".interfaces.IThemeSpecific"
         />
         
 
@@ -27,23 +28,23 @@
         class="plone.app.layout.viewlets.common.SiteActionsViewlet"
         permission="zope2.View"
     />
-	<browser:viewlet name="ucdskin.personal_bar"
-		manager=".interfaces.IPortalBarHeader"
-		layer=".interfaces.IThemeSpecific"
-		class="plone.app.layout.viewlets.common.PersonalBarViewlet"
-		permission="zope2.View"
-	/>
+    <browser:viewlet name="ucdskin.personal_bar"
+        manager=".interfaces.IPortalBarHeader"
+        layer=".interfaces.IThemeSpecific"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="zope2.View"
+    />
     <browser:viewlet name="plone.footer"
-		manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-		layer=".interfaces.IThemeSpecific"
-		template="footer.pt"    	
-    	permission="zope2.View"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="footer.pt"    	
+        permission="zope2.View"
     />
     
     <!-- The global sections -->
     <browser:viewlet
         name="ucdskin.global_sections"
-		layer=".interfaces.IThemeSpecific"
+        layer=".interfaces.IThemeSpecific"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.GlobalSectionsViewlet"
         permission="zope2.View" 
@@ -52,7 +53,7 @@
     <!-- The logo -->
     <browser:viewlet
         name="ucdskin.logo"
-		layer=".interfaces.IThemeSpecific"
+        layer=".interfaces.IThemeSpecific"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.LogoViewlet"
         permission="zope2.View" 
@@ -61,6 +62,7 @@
     <!-- The breadcrumbs -->
     <browser:viewlet
         name="ucdskin.path_bar"
+        layer=".interfaces.IThemeSpecific"
         manager=".interfaces.IPortalBarHeader"
         class=".viewlets.PathBarViewlet"
         permission="zope2.View" 

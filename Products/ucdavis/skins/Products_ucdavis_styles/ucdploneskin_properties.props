@@ -28,8 +28,6 @@ bgImageNoRepeat:boolean=False
 
 showPrivacyStatement:boolean=False
 
-secondTabRow:boolean=False
-
 useSecondaryMarkFavicon:boolean=False
 
 hideDeptName:boolean=False
@@ -37,3 +35,9 @@ hideDeptName:boolean=False
 trimBreadCrumbs:int=0
 
 logoLinkTarget:string=http://www.ucdavis.edu/
+
+#secondTabRow:boolean=False
+
+secondTabRow:string=events,news
+
+columnOneBackground:string=#E5D699

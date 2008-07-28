@@ -1,5 +1,3 @@
-Fix section tabs to handle double rows -- steve
-
 Configlet needs to modify new ucdploneskin_properties
 (first copying to custom folder if not yet done)
 
