@@ -147,6 +147,11 @@ a, a:link, a:visited {
   vertical-align:top;
 }
 
+portal-crcols td {
+  padding:0;
+  margin:0;
+}
+
 
 /* -------------------------------------------- */
 /*                                              */
@@ -270,7 +275,7 @@ dd.portletItem a {
 .portletCollection a:hover, dd.portletItem .portletCollection a:hover {border: 0px; background: #DFCC80;}
 .portletCollection .portletFooter a:hover {background: transparent}
 .navTreeCurrentItem {
-    font-weight: bold;
+	font-weight: bold;
     background: #DFCC80; border: 0px !important;
 }
 
@@ -300,8 +305,60 @@ dd.portletItem a {
 #portal-column-two {}
 
 
+/* -------------------------------------------- */
+/*                                              */
+/*   Content Actions Menu (View, Sharing, etc)  */
+/* -------------------------------------------- */
 
+.contentActions {
+	background-color:#DFCC80;
+	border-left:1px solid #D2B84C;
+	border-right:1px solid #D2B84C;
+	color:#002666;
+	height:1.6em;
+	padding:0 0 0 1em;
+	position:relative;
+	text-align:right;
+	text-transform:lowercase;
+	z-index:2;
+}
 
+.contentViews {
+	border-style:solid;
+	line-height:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	background-color:transparent;
+	border-color:#D2B84C;
+	border-style:solid;
+	border-width:0 0 1px;
+	line-height:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding-left:1em;
+}
+
+.contentViews .selected a {
+	background-color:#DFCC80;
+	border-bottom:1px solid #DFCC80;
+	color:#002666;
+}
+
+.contentViews li a {
+	background-color:transparent;
+	border:1px solid #D2B84C;
+	color:#002666;
+	height:auto;
+	line-height:normal;
+	margin-right:0.5em;
+	padding:0 1em;
+	text-decoration:none;
+	text-transform:none;
+	z-index:1;
+}
 
 /* -------------------------------------------- */
 /*                                              */
