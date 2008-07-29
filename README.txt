@@ -19,6 +19,16 @@ Installation for development
             # e.g.: develop = src/my.package
             develop =
                 src/Products.ucdavis.ucdskin
+            ...
+            [instance] section (or [client1] if zeo)
+	    ...
+	    # If you want Zope to know about any additional eggs, list them here.
+	    # This should include any development eggs you listed in develop-eggs above,
+	    # e.g. eggs = ${buildout:eggs} ${plone:eggs} my.package
+	   eggs =
+	       ${buildout:eggs}
+	       ${plone:eggs}
+	       Products.ucdavis.ucdskin
 
     
         If another package depends on the Products.ucdavis.ucdskin egg or includes
