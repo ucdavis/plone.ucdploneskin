@@ -87,7 +87,7 @@
               <tal:comment replace="nothing"> End of the left column </tal:comment>
             </td>
             <td>
-              <table width="100%">
+              <table id="portal-crcols">
                 <tbody>
                   <tr>
                     <td tal:attributes="colspan python:test(sr, '2', nothing)">

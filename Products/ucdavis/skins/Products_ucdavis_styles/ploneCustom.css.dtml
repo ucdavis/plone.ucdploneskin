@@ -143,6 +143,9 @@ a, a:link, a:visited {
 #portal-crcols {
   width:100%;
 }
+#portal-columns td {
+  vertical-align:top;
+}
 
 
 /* -------------------------------------------- */
