@@ -169,6 +169,10 @@ ul#portal-globalnav-2 {background: #ACB8C3;}
 }
 #portal-columns td {
   vertical-align:top;
+  border:none;
+  border-collapse:collapse;
+  margin:0;
+  padding:0;
 }
 
 portal-crcols td {
