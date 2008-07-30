@@ -1,11 +1,12 @@
 <div id="portal-breadcrumbs"
      i18n:domain="plone">
 
-    <span id="breadcrumbs-you-are-here" i18n:translate="ucdavis_home"><a tal:attributes="href context/ucdploneskin_properties/logoLinkTarget">UC Davis home</a> </span>
+    <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'" id="breadcrumbs-you-are-here" i18n:translate="ucdavis_home"><a tal:attributes="href context/ucdploneskin_properties/logoLinkTarget">UC Davis home</a>
             <span class="breadcrumbSeparator">
                 <tal:ltr condition="not: view/is_rtl">&gt;</tal:ltr>
                 <tal:rtl condition="view/is_rtl">&lt;</tal:rtl>
             </span>
+	</span>
     <a tal:attributes="href view/navigation_root_url" tal:content="context/@@plone_portal_state/portal_title">Home</a>
     <span tal:condition="view/breadcrumbs" class="breadcrumbSeparator">
         <tal:ltr condition="not: view/is_rtl">&gt;</tal:ltr>
