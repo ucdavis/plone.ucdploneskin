@@ -167,17 +167,11 @@ ul#portal-globalnav-2 {background: #ACB8C3;}
 #portal-crcols {
   width:100%;
 }
+
 #portal-columns td {
   vertical-align:top;
   border:none;
   border-collapse:collapse;
-  margin:0;
-  padding:0;
-}
-
-portal-crcols td {
-  padding:0;
-  margin:0;
 }
 
 
@@ -320,9 +314,6 @@ dd.portletItem a {
 /*                                              */
 /*   Content Column                             */
 /* -------------------------------------------- */
-
-
-
 
 
 /* -------------------------------------------- */
