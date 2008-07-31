@@ -59,7 +59,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 #portal-globalnav ul {
 	background-color:#D2B84C;
 	border-bottom:1px solid #002666;
-	border-top:1px solid #BF9900;
 	height:2.1em;
 	margin:0pt;
 	padding:0pt;
@@ -79,29 +78,36 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 #portal-globalnav li.selected a {background: #CCAD33; border: 0px; border-right: 1px solid #bf9900; color: #8B6000}
 #portal-globalnav li a:hover {color: #77160B; background: #CCAD33; border-color: #BF9900}
-#portal-globalnav li#portaltab-index_html a {background: url(nav_pointer_2.gif) left center no-repeat; padding-left: 13px;}
-#portal-globalnav li#portaltab-index_html a:hover {background: #CCAD33 url(nav_pointer_2.gif) left center no-repeat;}
+#portal-globalnav li#portaltab-index_html a {background: url(nav_pointer_1.gif) left center no-repeat; padding-left: 14px;}
+#portal-globalnav li#portaltab-index_html a:hover {background: #97A6B4 url(nav_pointer_1.gif) left center no-repeat;}
 
 #portal-globalnav-1 li a {
 	border-right: 1px solid #BF9900;
 	color:#002666;
 }
-#portal-globalnav-1 li.selected a {background: #CCAD33; border-right: 1px solid #bf9900; color: #8B6000}
-#portal-globalnav-1 li a:hover {color: #77160B; background: #CCAD33; border-color: #BF9900}
-#portal-globalnav-1 li#portaltab-index_html a:hover {background: #CCAD33 url(nav_pointer_2.gif) left center no-repeat;}
+#portal-globalnav-2 li.selected a {background: #CCAD33; border-right: 1px solid #bf9900; color: #8B6000}
+#portal-globalnav-2 li a:hover {color: #77160B; background: #CCAD33; border-color: #BF9900}
+#portal-globalnav-2 li#portaltab-news a {background: url(nav_pointer_2.gif) left center no-repeat; padding-left: 14px}
+#portal-globalnav-2 li#portaltab-news a:hover {background: #CCAD33 url(nav_pointer_2.gif) left center no-repeat;}
 
-ul#portal-globalnav-1 {border-bottom: 1px solid #fff;}
+ul#portal-globalnav-2 {
+	border-bottom: 1px solid #002666;
+	border-top: 1px solid #BF9900;
+}
 
-ul#portal-globalnav-2 {background: #ACB8C3;}
+ul#portal-globalnav-1 {
+	background: #ACB8C3;
+	border-bottom: 1px solid #fff;
+}
 
-#portal-globalnav-2 li a {
+#portal-globalnav-1 li a {
 	border-right: 1px solid #8294A6;
 	color: #002666;
 }
-#portal-globalnav-2 li.selected a {background: #97A6B4; border-right: 1px solid #8294A6; color: #2F4D6A}
-#portal-globalnav-2 li a:hover {color: #77160B; background: #97A6B4; border-color: #8294A6}
-#portal-globalnav-2 li#portaltab-news a {background: url(nav_pointer_1.gif) left center no-repeat; padding-left: 13px;}
-#portal-globalnav-2 li#portaltab-news a:hover {background: #97A6B4 url(nav_pointer_1.gif) left center no-repeat;}
+#portal-globalnav-1 li.selected a {background: #97A6B4; border-right: 1px solid #8294A6; color: #2F4D6A}
+#portal-globalnav-1 li a:hover {color: #77160B; background: #97A6B4; border-color: #8294A6}
+#portal-globalnav-1 li#portaltab-news a {background: url(nav_pointer_2.gif) left center no-repeat; padding-left: 13px;}
+#portal-globalnav-1 li#portaltab-news a:hover {background: #97A6B4 url(nav_pointer_2.gif) left center no-repeat;}
 
 
 /* ----- Breadcrumbs ----- */
