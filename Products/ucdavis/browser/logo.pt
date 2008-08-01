@@ -6,3 +6,22 @@
    i18n:domain="plone">
     <img src="logo.jpg" alt=""
          tal:replace="structure view/logo_tag" /></a>
+	<div class="dept-name">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tbody>
+				<tr>
+					<td>
+						<span> </span>
+					</td>
+					<td>
+			        <span tal:condition="python:here.getSectionFromURL() == 'section-front-page'">			
+					<span class="dept-name-text"><span tal:content="context/@@plone_portal_state/portal_title" /> </span>
+					</span>
+			        <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'">			
+					<span class="dept-name-text"><a tal:attributes="href view/navigation_root_url" tal:content="context/@@plone_portal_state/portal_title" /> </span>
+					</span>
+					</td>
+					</tr>
+			</tbody>
+		</table>
+	</div>

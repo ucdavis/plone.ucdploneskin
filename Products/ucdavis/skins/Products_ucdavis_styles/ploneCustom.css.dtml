@@ -55,6 +55,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	background-color: #002666;
 }
 
+.dept-name {
+	background-color:#FFFFFF;
+	clear:both;
+	color:#002666;
+	font-family:georgia,"times new roman",times,serif;
+	font-size:3.3em;
+	font-weight:normal;
+	line-height:2em;
+	margin:0;
+}
+
+.dept-name-text {
+	padding-left:13px;
+}
+
 /* ----- Global Nav ----- */
 
 #portal-globalnav {
