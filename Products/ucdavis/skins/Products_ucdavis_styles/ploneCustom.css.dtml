@@ -55,6 +55,25 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	background-color: #002666;
 }
 
+#portal-logo img {
+	border:0 none;
+	margin:0.25em 0 0.25em 13px;
+	padding:0;
+}
+
+
+.searchSection {
+	display: none;
+}
+
+.LSBox {
+	clear:left;
+	display:block;
+	float:left;
+	padding-right:1px;
+	text-align:right;
+}
+
 #portal-searchbox {
 	background-color:transparent;
 	clear:right;
@@ -79,7 +98,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 .dept-name-text {
-	padding-left:13px;
+	padding-left: 13px;
 }
 
 /* ----- Global Nav ----- */
