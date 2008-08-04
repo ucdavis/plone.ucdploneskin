@@ -7,7 +7,14 @@
                 <tal:rtl condition="view/is_rtl">&lt;</tal:rtl>
             </span>
 	</span>
-    <a tal:attributes="href view/navigation_root_url" tal:content="context/@@plone_portal_state/portal_title">Home</a>
+    <span tal:condition="python:here.getSectionFromURL() != 'section-front-page'">
+	<a tal:attributes="href view/navigation_root_url" tal:content="context/@@plone_portal_state/portal_title">Home</a>
+	</span>
+	
+	<span tal:condition="python:here.getSectionFromURL() == 'section-front-page'">
+	<span style="color: rgb(0, 0, 0); font-weight: bold;" tal:content="context/@@plone_portal_state/portal_title">Home</span>
+	</span>
+
     <span tal:condition="view/breadcrumbs" class="breadcrumbSeparator">
         <tal:ltr condition="not: view/is_rtl">&gt;</tal:ltr>
         <tal:rtl condition="view/is_rtl">&lt;</tal:rtl>
