@@ -1,0 +1,11 @@
+<div id="portal-footer" i18n:domain="plone">
+	<span tal:replace="structure here/ucdploneskin_properties/copyright" />
+
+	<br/>
+
+	<span il8n:translate="box_last_modified">
+		<b>Last updated: </b>
+	</span>
+	<span tal:replace="python:here.toLocalizedTime(here.ModificationDate(),long_format=0)" />
+</div>
+

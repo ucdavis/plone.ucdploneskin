@@ -1,0 +1,87 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="Products.ucdavis">
+
+    <!-- 'ucdskin' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="ucdskin"
+        />
+
+    <!-- Viewlet Managers registration -->
+    <browser:viewletManager
+        name="ucdskin.portalbarheader"
+        provides=".interfaces.IPortalBarHeader"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        layer=".interfaces.IThemeSpecific"
+        />
+        
+
+    <!-- Viewlets registration -->
+    
+    <browser:viewlet name="ucdskin.site_actions"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+        permission="zope2.View"
+    />
+    <browser:viewlet name="ucdskin.personal_bar"
+        manager=".interfaces.IPortalBarHeader"
+        layer=".interfaces.IThemeSpecific"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="zope2.View"
+    />
+    <browser:viewlet name="plone.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="footer.pt"    	
+        permission="zope2.View"
+    />
+    
+    <!-- The global sections -->
+    <browser:viewlet
+        name="ucdskin.global_sections"
+        layer=".interfaces.IThemeSpecific"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.GlobalSectionsViewlet"
+        permission="zope2.View" 
+        />
+
+    <!-- The logo -->
+    <browser:viewlet
+        name="ucdskin.logo"
+        layer=".interfaces.IThemeSpecific"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.LogoViewlet"
+        permission="zope2.View" 
+        />
+
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="ucdskin.path_bar"
+        layer=".interfaces.IThemeSpecific"
+        manager=".interfaces.IPortalBarHeader"
+        class=".viewlets.PathBarViewlet"
+        permission="zope2.View" 
+        />
+
+    <!-- Zope 3 browser resources -->
+
+    <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="Products.ucdavis.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="Products.ucdavis.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+</configure>

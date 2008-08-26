@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<properties>
+
+  <property id="address1" name="Address Line 1" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="address2" name="Address Line 2" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="address3" name="Address Line 3" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="address4" name="Address Line 4" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="phone1" name="Phone #1" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="phone2" name="Phone #2" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="fax1" name="Fax #1" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="fax2" name="Fax #2" widget="cssmanager_widget_text">
+
+  </property>
+
+  <property id="columnOneBackground" name="Column One Background" widget="cssmanager_widget_color">
+  	The color for the background of the left column. Colors can be specified as words or hex values
+  </property>
+
+  <property id="headlinecolor" name="Headline Color" widget="cssmanager_widget_color">
+  	The color for the headlines h1, h2.... Colors can be specified as words or hex values
+  </property>
+
+
+</properties>

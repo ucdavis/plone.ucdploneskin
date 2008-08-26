@@ -1,76 +1,53 @@
-Description
+Introduction
+============
 
-  This is a Plone product that implements the UCD web template.
+Installation for development
 
-Install
+    UC davis development team advises to use buildout for your projects, built with Plone
+    3.x.
+    
+    The buildout way:
+    
+        1. download skin from svn repository in your src directory of your plone instance
+        	$cd {path to your src of your plone instance}
+        	$svn co https://svn.cse.ucdavis.edu/repo/UCDPloneSkin/branches/ucdskin3/src/ ./
+        2. Edit your buildout.cfg and add the following information::
+    
+            [buildout]
+            ...
+            # Reference any eggs you are developing here, one per line
+            # e.g.: develop = src/my.package
+            develop =
+                src/Products.ucdavis.ucdskin
+            ...
+            [instance] section (or [client1] if zeo)
+	    ...
+	    # If you want Zope to know about any additional eggs, list them here.
+	    # This should include any development eggs you listed in develop-eggs above,
+	    # e.g. eggs = ${buildout:eggs} ${plone:eggs} my.package
+	   eggs =
+	       ${buildout:eggs}
+	       ${plone:eggs}
+	       Products.ucdavis.ucdskin
 
-  Extract the archive to your Zope Products directory, then restart Zope.
-  Click the 'Preferences' link in Plone, then click the 'Add/Remove Products'
-  link.  Select the product, then click the 'Install' button.
+    
+        If another package depends on the Products.ucdavis.ucdskin egg or includes
+        its zcml directly you do not need to specify anything in the buildout
+        configuration: buildout will detect this automatically.
 
-  This product is known to work with Plone 2.5.x.
+        After updating the configuration you need to run the ''bin/buildout'',
+        which will take care of updating your system.
 
-  See https://svn.cse.ucdavis.edu/trac/UCDPloneSkin/wiki/Install for the
-  latest installation instructions.
+    Go to the 'Site Setup' page in the Plone interface and click on the
+    'Add/Remove Products' link.
+    
+    Choose the product (check its checkbox) and click the 'Install' button.
+    
+    Uninstall -- This can be done from the same management screen, but only
+    if you installed it from the quick installer.
 
-Basic Customization
-
-  Click the 'Preferences' link in Plone, scroll down to
-  'Add-on Product Configuration', then click 'UCDPloneSkin'.  There you can
-  change the portal title and department contact info as well as add, edit
-  and remove Quick Links.
-
-Further Customization
-
-  The portal tabs and "In This Section" links are automatically generated.
-  Use the "Exclude From Navigation" property of any Plone object if you want
-  to prevent it from showing up in those navigation elements.
-
-  If you find a need to rename the home page or specify a different object as
-  the home page, please use the ZMI to make sure the short name is
-  "front-page".  The name is used in a few conditional statements that
-  determine how certain skin elements should display, such as the breadcrumbs
-  and browser title bar.
-
-  If you choose to turn off the "Automatically generate tabs" option and use
-  portal_actions instead, be very careful that the action Id that you specify 
-  matches the short name of the object that the tab should link to.  The tab Id
-  needs to match the object Id so we can determine which tab is currently
-  selected, compare, and dim the selected tab.
-
-  If you install PloneCASLogin after installing this skin, it will add a
-  portlet_login item to the left slot.  To remove this, go to the ZMI and go
-  to your plone site's property tab.  There you can clear the left slot.
-
-  Also, if you use CAS you should consider turning off member folder creation
-  in portal_membership.  If you don't, random CAS users will have valid member
-  folders where they can create content.
+    Note: You may have to empty your browser cache to see the effects of the
+    product installation.
 
 Credits
-
-  Author: Charles McLaughlin, cmclaughlin@ucdavis.edu
-  Feedback and questions are welcome.
-
-  Thanks to University Communications for designing the web template.  Refer
-  to their website for information about the original html template:
-
-    http://ucomm.ucdavis.edu/pubguide/web_templates.html
-
-  Thanks to Brian Gingold for testing this product.
-
-  This skin was initially created with the Plone Skin Dump product:
-    http://quintagroup.com/services/plone-development/products/skin-dump
-
-
-Known Issues
-  
-  The spacing doesn't exactly match the original template
-
-  There is a 1px gap between Quick Links and In This Section <li> elements
-
-  RSS is hidden, but not turned off, to see it: add "/RSS" to the end of a
-  smart folder
-
-  The uninstaller doesn't reset all settings, such as time format 
-
-  See https://svn.cse.ucdavis.edu/trac/UCDPloneSkin/report for more issues
+    Lets put our credits here

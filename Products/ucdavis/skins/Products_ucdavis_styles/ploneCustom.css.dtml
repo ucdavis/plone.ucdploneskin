@@ -1,0 +1,571 @@
+
+/* <dtml-with ucdploneskin_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Global CSS                                 */
+/* -------------------------------------------- */
+
+body {
+	font-family:verdana,arial,helvetica,sans-serif;
+	font-size:69%;
+	margin:0pt;
+	padding:0pt;
+}
+
+a, a:link, a:visited {
+	color: #002666; 
+	text-decoration:none;
+}
+
+.state-published {color:#002666 !important;}
+
+h1, h2, h3, h4, h5, h6 {
+	border-bottom: 0;
+	color: &dtml-headlinecolor;;
+	font-weight: bold;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	border-bottom: 0;
+	text-decoration: underline;
+	color: &dtml-headlinecolor; !important;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	border-bottom: 0;
+	text-decoration: none;
+	color: &dtml-headlinecolor; !important;
+}
+.documentDescription {
+	color: #666;
+	font-weight: normal;
+}
+
+
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Top                                        */
+/* -------------------------------------------- */
+
+#portal-header {
+	background-color: #002666;
+}
+
+#portal-logo img {
+	border:0 none;
+	margin:0.25em 0 0.25em 13px;
+	padding:0;
+}
+
+
+.searchSection {
+	display: none;
+}
+
+.LSBox {
+	clear:left;
+	display:block;
+	float:left;
+	padding-right:1px;
+	text-align:right;
+}
+
+#portal-searchbox {
+	background-color:transparent;
+	clear:right;
+	float:right;
+	margin:1px 5px;
+	padding:0 0.5em 0 0;
+	text-align:right;
+	text-transform:none;
+	white-space:nowrap;
+	z-index:2;
+}
+
+.dept-name {
+	background-color:#FFFFFF;
+	clear:both;
+	color:#002666;
+	font-family:georgia,"times new roman",times,serif;
+	font-size:3.3em;
+	font-weight:normal;
+	line-height:2em;
+	margin:0;
+}
+
+.dept-name-text {
+	padding-left: 13px;
+}
+
+/* ----- Global Nav ----- */
+
+#portal-globalnav {
+  padding:0;
+}
+#portal-globalnav ul {
+	background-color:#D2B84C;
+	border-bottom:1px solid #002666;
+	height:2.1em;
+	margin:0pt;
+	padding:0pt;
+}
+#portal-globalnav li a {
+	background-color:transparent;
+	border: 0px;
+	border-right: 1px solid #BF9900;
+	color:#002666;
+	float:left;
+	font-weight:bold;
+	line-height:2.1em;
+	margin:0;
+	padding:0 0.8em 0;
+	text-decoration:none;
+	text-transform:none;
+}
+#portal-globalnav li.selected a {background: #CCAD33; border: 0px; border-right: 1px solid #bf9900; color: #8B6000}
+#portal-globalnav li a:hover {color: #77160B; background: #CCAD33; border-color: #BF9900}
+ul#portal-globalnav-1 li:first-child a {background: url(nav_pointer_1.gif) left center no-repeat; padding-left: 14px;}
+ul#portal-globalnav-1 li:first-child a:hover {background: #97A6B4 url(nav_pointer_1.gif) left center no-repeat;}
+
+#portal-globalnav-1 li a {
+	border-right: 1px solid #BF9900;
+	color:#002666;
+}
+#portal-globalnav-2 li.selected a {background: #CCAD33; border-right: 1px solid #bf9900; color: #8B6000}
+#portal-globalnav-2 li a:hover {color: #77160B; background: #CCAD33; border-color: #BF9900}
+#portal-globalnav-2 li:first-child a {background: url(nav_pointer_2.gif) left center no-repeat; padding-left: 14px}
+#portal-globalnav-2 li:first-child a:hover {background: #CCAD33 url(nav_pointer_2.gif) left center no-repeat;}
+
+ul#portal-globalnav-2 {
+	border-bottom: 1px solid #002666;
+	border-top: 1px solid #BF9900;
+}
+
+ul#portal-globalnav-1 {
+	background: #ACB8C3;
+	border-bottom: 1px solid #fff;
+}
+
+#portal-globalnav-1 li a {
+	border-right: 1px solid #8294A6;
+	color: #002666;
+}
+#portal-globalnav-1 li.selected a {background: #97A6B4; border-right: 1px solid #8294A6; color: &dtml-headlinecolor;}
+#portal-globalnav-1 li a:hover {color: #77160B; background: #97A6B4; border-color: #8294A6}
+#portal-globalnav-1 li:first-child a {background: url(nav_pointer_2.gif) left center no-repeat; padding-left: 13px;}
+#portal-globalnav-1 li:first-child a:hover {background: #97A6B4 url(nav_pointer_2.gif) left center no-repeat;}
+
+
+/* ----- Breadcrumbs ----- */
+
+#portal-breadcrumbs {
+	background-color:#EAEDF0;
+	border-bottom-color:#FFFFFF;
+	color:#002666;
+	font-size:95%;
+	line-height:2.1em;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	text-align:right;
+	text-transform:none;
+}
+
+#portal-breadcrumbs {font-weight: bold;}
+.breadcrumbSeparator {font-weight: normal;}
+#portal-breadcrumbs a {text-decoration: none; font-weight: normal;}
+#portal-breadcrumbs a:after {}
+
+
+#portal-personaltools-wrapper ul {
+	background-color:#FFFFFF;
+	border-bottom:0 none;
+	border-top:0 none;
+	padding:0.4em 0 0 0;
+	padding-right:2em;
+}
+
+#portal-personaltools {
+	color:Black;
+	line-height:1.6em;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	text-align:right;
+	text-transform:none;
+}
+
+
+
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Left Column                                */
+/* -------------------------------------------- */
+
+#portal-column-one {
+    background-color:&dtml-columnOneBackground;;
+}
+
+#portal-column-one .visualPadding {
+    padding:2.9em 0em 1em;
+}
+
+
+/* center and right column table */
+#portal-crcols {
+  width:100%;
+}
+
+#portal-columns td {
+  vertical-align:top;
+  border:none;
+  border-collapse:collapse;
+}
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   All Portlets                               */
+/* -------------------------------------------- */
+
+.portlet {
+    background: transparent;
+    color: &dtml-headlinecolor;;
+}
+
+.portlet, .portletHeader, .portletItem {
+    border: 0px;
+}
+
+.portletHeader {
+    font-weight: bold;
+    border-bottom: 1px solid #D2B84C;
+    background: transparent;
+    padding: 0px 5px 0px 14px;
+    text-transform: capitalize;
+    color:&dtml-headlinecolor;;
+    font-size:1.2em;
+}
+
+.portletHeader a {color:&dtml-headlinecolor;;}
+
+.portletItem, .portletFooter {
+    border: 0px; background: transparent;
+    padding: 0px;
+}
+
+.portletItem .portletItemDetails {
+	text-align: left; 
+	padding: 0px 0px 5px 10px;
+	font-size: 0.9em; 
+	color: #76797C;
+	line-height: 0.9em;
+}
+.portletItem a {
+	padding-left: 14px;
+}
+
+.portletFooter span, .portletFooter a {
+	padding: 0px 5px 0px 0px;
+}
+
+.portletItem a:visited, .portletFooter a:visited {color: #002666;}
+
+
+/* ----- Search Portlet ----- */
+
+.portletItem div.LSBox {padding-left: 14px;}
+.portletItem div.LSBox input.searchField {width: 90px;}
+.portletItem fieldset.livesearchContainer {width: inherit;}
+.LSResult {padding-top: 0px}
+.LSResult fieldset {margin-top: 12px; padding-top: 5px;}
+
+
+/* ----- Calendar Portlet ----- */
+
+.portletCalendar {color: #000; padding: 0 5px 0 14px; width: inherit;}
+.portletCalendar dt, .portletCalendar dd {background: transparent; border: 1px solid #002666}
+.portletCalendar dt {background: #DFCC80; font-size: 1em; color: #000; border-bottom: 0px;}
+.portletCalendar dt a#calendar-previous {}
+.portletCalendar dt a#calendar-next {}
+.ploneCalendar .weekdays th {
+	background-color:#DFCC80;
+	line-height:1.6em;
+	text-align:center;
+	border-bottom: #002666 1px solid;
+	border-top: 0px;
+}
+
+.ploneCalendar td {text-align: right;}
+.portletCalendar .portletItem a {padding-left: 0px;}
+.ploneCalendar .event, .ploneCalendar .todayevent {background: #DFCC80; font-weight: bold}
+#portal-column-one .ploneCalendar .event {background: #F2EBCC;}
+
+
+/* ----- Navigation Portlet ----- */
+
+.navTreeItem a, .portletItem p {padding: 0pt 0pt 0pt 14px;}
+
+.navTreeItem a, dd.portletItem .navTreeItem a, 
+dd.portletItem a {
+    border: 0px;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize
+}
+
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {border: 0px; background: #DFCC80;}
+
+.navTreeCurrentItemPublished {
+    color:#000000 !important;
+    font-weight:bold;
+}
+
+.navTreeCurrentItem {
+    font-weight:bold;
+    background: #DFCC80; border: 0px !important;
+}
+
+.navTree li {margin-bottom:0px;}
+
+
+/* ----- Static Text Portlet ----- */
+
+.portletStaticText dd.portletItem a {display: inline; padding-left: 0px;} 
+
+
+/* ----- Login Portlet ----- */
+
+.portletLogin .portletItem form {padding: 3px 5px 0px 14px}
+
+
+/* ----- Collection Portlet ----- */
+
+.portletCollection dd a {padding-bottom: 0.25em; padding-top: 0.2em;}
+.portletCollection a:hover, dd.portletItem .portletCollection a:hover {border: 0px; background: #DFCC80;}
+.portletCollection .portletFooter a:hover {background: transparent}
+.navTreeCurrentItem {
+	font-weight: bold;
+    background: #DFCC80; border: 0px !important;
+}
+
+
+/* ----- Portlet Manager ----- */
+
+.portlets-manager form, .portlets-manager h4 {padding: 0 5px 0 14px;}
+
+
+/* ----- Dept Info Portlet ----- */
+
+.portlet-static-ownership {padding: 1.2em 0pt 0.5em; margin: 0em 14px 20px; border-bottom: 1px solid #C4A440; border-top: 1px solid #C4A440}
+.portlet-static-ownership .portletHeader {display: none;}
+.portlet-static-ownership p {line-height: 1.3em; padding-left: 0px;}
+.portlet-static-ownership p.address {padding-top: 5px;}
+.portlet-static-ownership p.title {font-weight: bold; font-size: 1.1em; margin-bottom: 0px;}
+
+
+
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Content Column                             */
+/* -------------------------------------------- */
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Right Column                               */
+/* -------------------------------------------- */
+
+#portal-column-two {}
+
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Content Actions Menu (View, Sharing, etc)  */
+/* -------------------------------------------- */
+
+.contentActions {
+	background-color:#DFCC80;
+	border-left:1px solid #D2B84C;
+	border-right:1px solid #D2B84C;
+	color:#002666;
+	height:1.6em;
+	padding:0 0 0 1em;
+	position:relative;
+	text-align:right;
+	text-transform:lowercase;
+	z-index:2;
+}
+
+.contentViews {
+	border-style:solid;
+	line-height:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	background-color:transparent;
+	border-color:#D2B84C;
+	border-style:solid;
+	border-width:0 0 1px;
+	line-height:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding-left:1em;
+}
+
+.contentViews .selected a {
+	background-color:#DFCC80;
+	border-bottom:1px solid #DFCC80;
+	color:#002666;
+}
+
+.contentViews li a {
+	background-color:transparent;
+	border:1px solid #D2B84C;
+	color:#002666;
+	height:auto;
+	line-height:normal;
+	margin-right:0.5em;
+	padding:0 1em;
+	text-decoration:none;
+	text-transform:none;
+	z-index:1;
+}
+
+/* -------------------------------------------- */
+/*                                              */
+/*   Bottom                                     */
+/* -------------------------------------------- */
+
+#portal-footer {
+	background-color:#FFFFFF;
+	border-bottom:medium none #FFFFFF;
+	border-top: 0px;
+	color:#4C4C4C;
+	float:none;
+	line-height:1.9em;
+	margin:0 0 1em;
+	padding: 0 0 0;
+	text-align:center;
+}
+
+#portal-siteactions {
+	float: none;
+	text-align: center;
+	border-top:1px solid #002666;
+	padding: 0.5em 0 0;
+	margin-top: 0px;
+	margin-bottom: 0.5em;
+}
+#portal-siteactions li a {
+	border: 0px;
+	border-bottom:1px solid &dtml-headlinecolor;;
+	text-decoration:none;
+	color:#002666;
+	text-decoration:none;
+	text-transform: none;
+	padding: 0px; margin: 0px;
+}
+#portal-siteactions li:before {
+	content: " | "
+}
+#portal-siteactions li:first-child:before {
+	content: ""
+}
+#portal-siteactions li a:hover {
+	border: 0px; background: transparent;
+	color: #77160B;
+}
+
+
+
+/* </dtml-with> */
+
+/* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */
+
+ /* You can insert colors and other variables from Plone's 
+    base_properties by doing:
+    
+    & dtml-variableName ; (without the spaces, excluded here to not make it render)
+    
+    Example:
+    
+    myLink {
+        color: & dtml-fontColor ;   (again, without the spaces)
+    }
+ 
+   This means you can generate your own elements that use Plone's defaults,
+   and respect any customizations people have done. See base_properties for
+   the default values.
+ 
+   These are the available properties:
+   
+   logoName - the file name of the portal logo
+   
+   fontFamily - the font family used for all text that is not headers
+   
+   fontBaseSize - the base font size that everything is calculated from
+   
+   fontColor - the main font color
+   
+   fontSmallSize - used for various elements like buttons and discreet text
+   
+   discreetColor - the font color of discreet text
+
+   backgroundColor - the background color 
+   
+   linkColor - the color used on normal links
+
+   linkActiveColor - color used on active links
+
+   linkVisitedColor - color used on visited links
+   
+   borderWidth - the width of most borders in Plone
+   
+   borderStyle - the style of the border lines, normally solid
+   
+   borderStyleAnnotations - style of border lines on comments etc
+   
+   globalBorderColor - the border color used on the main tabs, the portlets etc
+   
+   globalBackgroundColor - background color for the selected tabs, portlet headings etc
+   
+   globalFontColor - the color of the font in the tabs and in portlet headings
+   
+   headingFontFamily - font family for h1/h2/h3/h4/h5/h6 headlines
+   
+   contentViewBorderColor - the content view tabs border color
+   
+   contentViewBackgroundColor - the content view tabs background color
+   
+   contentViewFontColor - the font color used in the content view tabs
+   
+   inputFontColor - the font color used for input elements
+   
+   textTransform - whether to lowercase text in portlets, tabs etc.
+   
+   evenRowBackgroundColor - the background color of even rows in listings
+   
+   oddRowBackgroundColor - the background color of even rows in listings
+   
+   notifyBorderColor - border color of notification elements like the status message, the calendar focus
+   
+   notifyBackgroundColor - background color of notification elements like the status message, the calendar focus
+   
+   helpBackgroundColor - background color of information pop-ups (currently not used)
+          
+ */
+
+

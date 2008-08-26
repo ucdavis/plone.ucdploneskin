@@ -1,0 +1,20 @@
+<tal:tabs tal:condition="view/portal_tabs"
+          i18n:domain="plone">
+    <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+
+    <div id="portal-globalnav">
+
+      <ul tal:repeat="portal_tabs view/portal_tab_rows" tal:attributes="id python:view.portal_tab_styles[repeat['portal_tabs'].index]">
+          <tal:tabs tal:repeat="tab portal_tabs"><li tal:attributes="id string:portaltab-${tab/id};
+                              class python:view.selected_portal_tab==tab['id'] and 'selected' or 'plain'">
+              <a href="" 
+                 tal:content="tab/name"
+                 tal:attributes="href tab/url;
+                                 title tab/description|nothing">
+              Tab Name
+              </a></li></tal:tabs>
+      </ul>
+    
+    </div>
+  
+</tal:tabs>

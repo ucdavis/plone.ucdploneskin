@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="Products.ucdavis.various"
+               version="20080724-01"
+               handler="Products.ucdavis.setuphandlers.setupVarious"
+               title="ucdskin: miscellaneous import steps">
+    <dependency step="skins" />
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>

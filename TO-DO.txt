@@ -1,0 +1,7 @@
+Configlet needs to modify new ucdploneskin_properties
+(first copying to custom folder if not yet done)
+
+Move old trunk to a branch (for future maintenance)
+
+Move existing Products.ucdavis.ucdskin into a new trunk
+

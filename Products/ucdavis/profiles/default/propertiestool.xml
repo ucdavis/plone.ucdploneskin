@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+  <object name="site_properties" meta_type="Plone Property Sheet">
+   <property name="localTimeFormat" type="string">%B %d, %Y</property>
+   <property name="localLongTimeFormat"
+     type="string">%Y-%m-%d %I:%M %p</property>
+  </object>
