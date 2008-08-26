@@ -41,3 +41,5 @@ logoLinkTarget:string=http://www.ucdavis.edu/
 secondTabRow:string=events,news
 
 columnOneBackground:string=#E5D699
+
+headlinecolor:string=#2F4D6A
