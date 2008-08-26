@@ -10,7 +10,8 @@ Installation for development
     
         1. download skin from svn repository in your src directory of your plone instance
         	$cd {path to your src of your plone instance}
-        	$svn co https://svn.cse.ucdavis.edu/repo/UCDPloneSkin/branches/ucdskin3/src/ ./
+        	$svn co svn co https://svn.cse.ucdavis.edu/repo/UCDPloneSkin/trunk Products.ucdavis.ucdskin
+        	
         2. Edit your buildout.cfg and add the following information::
     
             [buildout]
