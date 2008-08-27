@@ -1,21 +1,5 @@
 title:string=ucdskin's configurable properties
 
-address1:string=Room# Building
-
-address2:string=University of California, Davis
-
-address3:string=One Shields Avenue
-
-address4:string=Davis, CA 95616
-
-phone1:string=(530) 752-9999
-
-phone2:string=
-
-fax1:string=(530) 752-9999
-
-fax2:string=
-
 searchbox:boolean=False
 
 showAccessibility:boolean=True
@@ -40,6 +24,33 @@ logoLinkTarget:string=http://www.ucdavis.edu/
 
 secondTabRow:string=events,news
 
-columnOneBackground:string=#E5D699
+#the color names are given according to the offical palette guide found here http://ucomm.ucdavis.edu/pubguide/palette.html, see column and rows
 
-headlinecolor:string=#2F4D6A
+ucdColorA1:string=#002666
+
+ucdColorA1_topBannerBkgrd:string=#002666
+
+ucdColorB1:string=#BF9900
+
+ucdColorB2:string=#F2EBCC
+
+ucdColorB4:string=#E5D699
+
+ucdColorB5:string=#DFCC80
+
+ucdColorB7:string=#D2B84C
+
+ucdColorB8:string=#CCAD33
+
+ucdColorC1:string=#2F4D6A
+
+ucdColorC4:string=#ACB8C3
+
+ucdColorC5:string=#97A6B4
+
+ucdColorC6:string=#8294A6
+
+ucdColorD0:string=#000000
+
+ucdColorF1:string=#77160B
+

@@ -2,45 +2,60 @@
 
 <properties>
 
-  <property id="address1" name="Address Line 1" widget="cssmanager_widget_text">
-
+  <property id="ucdColorA1_topBannerBkgrd" name="Top banner background" widget="cssmanager_widget_color">
+  	Applies to the color for the top banner background....
   </property>
 
-  <property id="address2" name="Address Line 2" widget="cssmanager_widget_text">
+  <property id="ucdColorA1" name="Department name" widget="cssmanager_widget_color">
+  	Applies to the color for the department name, navigation text...
+  </property>
+ 
 
+  <property id="ucdColorB4" name="Column One Background" widget="cssmanager_widget_color">
+  	Applies to color for the background of the left column.
+  </property>
+  <property id="ucdColorB5" name="Background headers" widget="cssmanager_widget_color">
+  	Applies to color for the background of headers for calendar.
   </property>
 
-  <property id="address3" name="Address Line 3" widget="cssmanager_widget_text">
-
+  <property id="ucdColorC1" name="Headline Color" widget="cssmanager_widget_color">
+	Applies to the color for the headlines h1, h2...., for the tab headers, portlet....
   </property>
 
-  <property id="address4" name="Address Line 4" widget="cssmanager_widget_text">
-
+  <property id="ucdColorC4" name="First row tab background" widget="cssmanager_widget_color">
+  	Applies to color for the background of the first tab.
   </property>
 
-  <property id="phone1" name="Phone #1" widget="cssmanager_widget_text">
-
+  <property id="ucdColorC5" name="First row tab over background" widget="cssmanager_widget_color">
+  	Applies to color for the background of the first row tab when mouse over selection
   </property>
 
-  <property id="phone2" name="Phone #2" widget="cssmanager_widget_text">
-
+  <property id="ucdColorB7" name="Second row tab background" widget="cssmanager_widget_color">
+  	Applies to color for the background of the second row tab.
   </property>
 
-  <property id="fax1" name="Fax #1" widget="cssmanager_widget_text">
-
+  <property id="ucdColorB8" name="Second row tab over background" widget="cssmanager_widget_color">
+  	Applies to color for the background of the second row tab when mouse over selection
   </property>
 
-  <property id="fax2" name="Fax #2" widget="cssmanager_widget_text">
-
+  <property id="ucdColorB1" name="Second row tab borders" widget="cssmanager_widget_color">
+  	Applies to color for the second row tab borders.
   </property>
 
-  <property id="columnOneBackground" name="Column One Background" widget="cssmanager_widget_color">
-  	The color for the background of the left column. Colors can be specified as words or hex values
+  <property id="ucdColorF1" name="Mouse over tabs" widget="cssmanager_widget_color">
+  	Applies to text in tabs when mouse over
   </property>
 
-  <property id="headlinecolor" name="Headline Color" widget="cssmanager_widget_color">
-  	The color for the headlines h1, h2.... Colors can be specified as words or hex values
+  <property id="ucdColorC6" name="First row tab borders" widget="cssmanager_widget_color">
+  	Applies to the color for first row tab borders
   </property>
 
+  <property id="ucdColorD0" name="Published item in navigation tree" widget="cssmanager_widget_color">
+  	Applies to the color published item in navigation tree
+  </property>
+
+ <property id="ucdColorB2" name="Background color for ?????" widget="cssmanager_widget_color">
+  	Applies to color for the background ???.
+  </property>
 
 </properties>
