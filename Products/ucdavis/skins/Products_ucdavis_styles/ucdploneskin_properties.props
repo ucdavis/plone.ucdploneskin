@@ -24,6 +24,9 @@ logoLinkTarget:string=http://www.ucdavis.edu/
 
 secondTabRow:string=events,news
 
+#base_properties customization
+#see base_properies.props for some of the color changes
+
 #the color names are given according to the offical palette guide found here http://ucomm.ucdavis.edu/pubguide/palette.html, see column and rows
 
 ucdColorA1:string=#002666
@@ -54,3 +57,6 @@ ucdColorD0:string=#000000
 
 ucdColorF1:string=#77160B
 
+ucdColorD6:string=#666666
+
+ucdColorQ1:string=#8B6000

@@ -11,23 +11,28 @@ fontSmallSize:string=85%
 
 backgroundColor:string=White
 
-linkColor:string=#436976
-linkActiveColor:string=Red
-linkVisitedColor:string=Purple
+#linkColor:string=#436976
+#linkActiveColor:string=Red
+#linkVisitedColor:string=Purple
+
+linkColor:string=#002666
+linkActiveColor:string=#002666
+linkVisitedColor:string=#2F4D6A
 
 borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
-globalBorderColor:string=#8cacbb
+globalBorderColor:string=#BF9900
 globalBackgroundColor:string=#dee7ec
-globalFontColor:string=#436976
+globalFontColor:string=#002666
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
-contentViewBorderColor:string=#74ae0b
-contentViewBackgroundColor:string=#cde2a7
-contentViewFontColor:string=#578308
+#changed with ucdavis colors
+contentViewBorderColor:string=#D2B84C
+contentViewBackgroundColor:string=#DFCC80
+contentViewFontColor:string=#002666
 
 inputFontColor:string=Black
 
