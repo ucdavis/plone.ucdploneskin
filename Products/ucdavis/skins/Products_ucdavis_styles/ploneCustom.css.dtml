@@ -298,7 +298,7 @@ ul#portal-globalnav-1 {
 	padding: 0px 0px 5px 10px;
 	font-size: 0.9em; 
 	color: #76797C;
-	line-height: 0.9em;
+	line-height: 1.67em;
 }
 .portletItem a {
 	padding-left: 14px;
