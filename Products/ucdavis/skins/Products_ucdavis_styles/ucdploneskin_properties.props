@@ -22,7 +22,7 @@ logoLinkTarget:string=http://www.ucdavis.edu/
 
 #secondTabRow:boolean=False
 
-secondTabRow:string=events,news
+secondTabRow:string=undergraduate-program,graduate-program,research
 
 #base_properties customization
 #see base_properies.props for some of the color changes
