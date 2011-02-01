@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='Products.ucdavis.ucdskin',
       version=version,
-      description="A Plone 3 skin for UC Davis departments.",
+      description="A Plone 4 skin for UC Davis departments.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -16,7 +16,7 @@ setup(name='Products.ucdavis.ucdskin',
         ],
       keywords='web zope plone theme',
       author='UCD Plone Group',
-      author_email='jeremy@ucdavis.edu',
+      author_email='cbeck@ucdavis.edu',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),

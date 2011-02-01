@@ -12,7 +12,7 @@
     meta_type="Filesystem Directory View"
     directory="Products.ucdavis:skins/Products_ucdavis_styles"/>
 
- <skin-path name="ucdskin" based-on="Plone Default">
+ <skin-path name="ucdskin" based-on="Plone Classic Theme">
   <layer name="Products_ucdavis_custom_images"
      insert-after="custom"/>
   <layer name="Products_ucdavis_custom_templates"

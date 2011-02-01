@@ -41,7 +41,7 @@ class GlobalSectionsViewlet(ViewletBase):
         actions = context_state.actions()
         portal_tabs_view = getMultiAdapter((self.context, self.request),
                                            name='portal_tabs_view')
-        self.portal_tabs = portal_tabs_view.topLevelTabs(actions=actions)
+        self.portal_tabs = portal_tabs_view.topLevelTabs()
 
         selectedTabs = self.context.restrictedTraverse('selectedTabs')
         self.selected_tabs = selectedTabs('index_html',

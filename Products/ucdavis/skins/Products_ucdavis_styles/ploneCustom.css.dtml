@@ -110,7 +110,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 #portal-globalnav ul {
 	background-color: &dtml-ucdColorB7;;
-	border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-ucdColorA1;;
+	border-bottom: none;
 	height:2.1em;
 	margin:0pt;
 	padding:0pt;
@@ -138,6 +138,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 ul#portal-globalnav-1 li:first-child a {background: url(nav_pointer_1.gif) left center no-repeat; padding-left: 14px;}
 ul#portal-globalnav-1 li:first-child a:hover {background: &dtml-ucdColorC5; url(nav_pointer_1.gif) left center no-repeat;}
 
+
 #portal-globalnav-1 li a {
 	border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-ucdColorB1;;
 	color: &dtml-ucdColorA1;;
@@ -158,7 +159,7 @@ ul#portal-globalnav-2 {
 
 ul#portal-globalnav-1 {
 	background: &dtml-ucdColorC4;;
-	border-bottom: &dtml-borderWidth; &dtml-borderStyle; #fff;
+	border-bottom: none;
 }
 
 #portal-globalnav-1 li a {
@@ -217,8 +218,13 @@ ul#portal-globalnav-1 {
 	background-color:#FFFFFF;
 	border-bottom:0 none;
 	border-top:0 none;
-	padding:0.4em 0 0 0;
+	padding:0.2em 0 0 0;
 	padding-right:2em;
+}
+
+#portal-personaltools li {
+    display: inline;
+    margin-left: 1em;
 }
 
 #portal-personaltools {
@@ -230,6 +236,10 @@ ul#portal-globalnav-1 {
 	margin:0;
 	text-align:right;
 	text-transform:none;
+	padding: 0 2em;
+	background-color: transparent;
+	border-bottom: none;
+	border-top: none;
 }
 
 
